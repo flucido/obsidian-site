@@ -1,0 +1,69 @@
+archetype: intake
+emotional_intent: "User should feel in control of their information, with no pressure to complete"
+target_pad:
+  pleasure: 1.2
+  arousal: -0.2
+  dominance: 1.5
+
+structure:
+  max_sections: 3
+  max_elements_per_section: 9
+  recommended_flow:
+    - context: "Why we're asking, how data will be used"
+    - form: "Multi-step form with draft state"
+    - confirmation: "What happens next, how to return or edit"
+
+section_specs:
+  context:
+    elements:
+      - heading: "text-2xl, clear purpose statement"
+      - explanation: "Why this information is needed"
+      - privacy_note: "How data will be protected"
+      - time_estimate: "How long this will take"
+    max_elements: 4
+    spacing:
+      above: space-0
+      below: space-6
+    rules:
+      - "Privacy note must be specific, not 'see our privacy policy'"
+      - "Time estimate must be accurate, not 'just a few minutes'"
+
+  form:
+    elements:
+      - progress_indicator: "Step X of Y"
+      - form_fields: "Maximum 5 per step"
+      - save_draft_button: "Always visible"
+      - navigation: "Previous/Next with clear labels"
+    max_elements: 9
+    spacing:
+      above: space-6
+      below: space-6
+    rules:
+      - "Every field has a visible label"
+      - "Every field explains why it's needed (if not obvious)"
+      - "Draft state persists across sessions"
+      - "No required fields that aren't truly required"
+      - "User can skip any non-essential field"
+
+  confirmation:
+    elements:
+      - heading: "text-xl, confirmation tone"
+      - summary: "What the user submitted (editable)"
+      - next_steps: "What happens next, timeline"
+      - edit_link: "How to return and change answers"
+    max_elements: 4
+    spacing:
+      above: space-7
+      below: space-8
+    rules:
+      - "Summary must be editable, not just readable"
+      - "Next steps must include specific timeline"
+      - "Edit link must persist for at least 30 days"
+
+critique_checklist:
+  - "Draft state works across page navigation?"
+  - "Every field explains why it's needed?"
+  - "User can skip non-essential fields?"
+  - "Confirmation summary is editable?"
+  - "Edit link persists and works?"
+  - "No urgency language or pressure?"

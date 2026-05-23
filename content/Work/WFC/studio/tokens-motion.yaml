@@ -1,0 +1,44 @@
+# NeroDesign Motion Tokens
+# Evidence: T1-001 (P2 timing — 200-400ms), T1-002 (LPP — 400-600ms), Principle 4 (emotional calibration)
+
+# Design Philosophy:
+# - No surprise motion: users must consent to or expect animation
+# - Duration respects neurological processing time (P2/LPP windows)
+# - Motion serves function (orientation, feedback), not decoration
+# - Reduced motion support is mandatory, not optional
+
+durations:
+  instant: 0ms
+  fast: 150ms
+  normal: 250ms
+  slow: 400ms
+  deliberate: 600ms
+
+easing:
+  default: "ease-out"
+  entrance: "ease-out"
+  exit: "ease-in"
+  emphasis: "ease-in-out"
+  spring: "cubic-bezier(0.34, 1.56, 0.64, 1)"
+
+rules:
+  - no-autoplay: "No animation plays without user interaction or explicit consent"
+  - no-surprise: "Motion must be expected — triggered by user action or preceded by visual cue"
+  - respect-prefers-reduced-motion: "All motion must reduce or disable when user prefers reduced motion"
+  - max-concurrent-animations: 3
+  - no-layout-shift: "Animation must not cause layout shift (use transform/opacity, not width/height)"
+
+reduced-motion:
+  trigger: "@media (prefers-reduced-motion: reduce)"
+  behavior:
+    - "Replace all animations with instant state changes"
+    - "Replace transitions with opacity crossfade only"
+    - "Disable all parallax, scroll-triggered, and auto-play motion"
+    - "Keep focus indicators (these are accessibility, not decoration)"
+
+prohibited:
+  - auto-playing-video-with-sound: "Never autoplay video with audio"
+  - parallax-without-consent: "Parallax scrolling requires explicit user opt-in"
+  - infinite-loading-spinners: "Use progress indicators with estimated time, not infinite spinners"
+  - urgency-animation: "No pulsing, flashing, or shaking elements to create urgency"
+  - scroll-jacking: "Never override native scroll behavior"

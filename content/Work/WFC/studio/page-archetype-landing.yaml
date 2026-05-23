@@ -1,0 +1,90 @@
+archetype: landing
+emotional_intent: "Calm orientation — user should feel they've arrived somewhere safe and clear"
+target_pad:
+  pleasure: 1.8
+  arousal: -0.3
+  dominance: 1.0
+
+structure:
+  max_sections: 5
+  max_elements_per_section: 9
+  recommended_flow:
+    - hero: "Who we are, who we help, one clear action"
+    - trust: "Credentials, testimonials, or affiliations"
+    - overview: "Brief summary of services (3-5 items max)"
+    - reassurance: "FAQ, process explanation, or 'what to expect'"
+    - gentle_cta: "Low-pressure invitation to engage"
+
+section_specs:
+  hero:
+    elements:
+      - heading: "text-3xl, display typeface"
+      - subheading: "text-lg, text-secondary"
+      - primary_cta: "One clear action"
+      - secondary_cta: "Optional, lower visual weight"
+    max_elements: 4
+    spacing:
+      above: space-0
+      below: space-8
+    rules:
+      - "No auto-playing media"
+      - "No carousel or slider"
+      - "Hero image (if used) must be calm, not stimulating"
+
+  trust:
+    elements:
+      - credentials: "Logos, certifications, affiliations"
+      - testimonial: "One strong testimonial, not multiple"
+    max_elements: 3
+    spacing:
+      above: space-7
+      below: space-7
+    rules:
+      - "Credentials must be real and verifiable"
+      - "Testimonial must include name and context (not anonymous)"
+
+  overview:
+    elements:
+      - section_heading: "text-2xl"
+      - service_items: "3-5 items, each with title and one-line description"
+    max_elements: 7
+    spacing:
+      above: space-7
+      below: space-7
+    rules:
+      - "Each service item links to a detail page"
+      - "No pricing in overview (pricing belongs on dedicated page)"
+
+  reassurance:
+    elements:
+      - section_heading: "text-2xl"
+      - faq_items: "3-5 questions, expandable"
+      - process_steps: "3-4 steps, numbered, simple language"
+    max_elements: 9
+    spacing:
+      above: space-7
+      below: space-7
+    rules:
+      - "FAQ answers must be specific, not generic"
+      - "Process steps must use plain language, no jargon"
+
+  gentle_cta:
+    elements:
+      - heading: "text-xl, invitational tone"
+      - primary_cta: "Low-pressure action"
+      - secondary_info: "What happens after clicking"
+    max_elements: 3
+    spacing:
+      above: space-8
+      below: space-9
+    rules:
+      - "CTA text must be invitational, not demanding"
+      - "Always include what happens after (e.g., 'We'll email you a link to book')"
+
+critique_checklist:
+  - "Hero loads without layout shift?"
+  - "Total page elements within 9-17 per section?"
+  - "No auto-playing or surprise motion?"
+  - "Trust signals are real and verifiable?"
+  - "CTA is invitational, not demanding?"
+  - "Page works with prefers-reduced-motion?"

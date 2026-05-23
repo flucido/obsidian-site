@@ -1,0 +1,93 @@
+# NeroDesign Color Tokens
+# Calibrated for high-sensitivity sectors: wellness, mental health, education, care
+# Evidence: T1-003 (PAD model), T1-004 (emotion coordinates), T1-007 (processing fluency)
+
+# Design Philosophy:
+# - Low-arousal default palette (Alpha-state supporting)
+# - Engagement colors available but opt-in (never surprise with high arousal)
+# - All palettes must pass WCAG AA contrast minimum
+# - No pure black (#000000) — use near-black for reduced visual harshness
+
+palette:
+  default:
+    name: "Calm Base"
+    description: "Low-arousal default palette for general high-sensitivity use"
+    target_pad: { pleasure: 1.5, arousal: -0.5, dominance: 0.8 }
+    colors:
+      background-primary: "#F7F5F2"
+      background-secondary: "#EDEAE5"
+      background-tertiary: "#E0DCD5"
+      text-primary: "#2C2825"
+      text-secondary: "#5C5650"
+      text-tertiary: "#8A8279"
+      border-subtle: "#D4CFC8"
+      border-medium: "#B8B1A8"
+      accent-primary: "#6B8E7B"
+      accent-hover: "#5A7D6A"
+      accent-focus: "#4A6D5A"
+      success: "#5A8A6A"
+      warning: "#C49A3C"
+      error: "#B85A4A"
+      info: "#5A7A9A"
+
+  engagement:
+    name: "Focused Engagement"
+    description: "Moderate-arousal palette for task-completion and conversion contexts"
+    target_pad: { pleasure: 2.0, arousal: 0.5, dominance: 1.2 }
+    colors:
+      background-primary: "#F5F3EF"
+      background-secondary: "#E8E4DE"
+      background-tertiary: "#D8D2CA"
+      text-primary: "#2A2622"
+      text-secondary: "#58524C"
+      text-tertiary: "#867E74"
+      border-subtle: "#CFC9C0"
+      border-medium: "#B3ABA0"
+      accent-primary: "#7A9B6D"
+      accent-hover: "#688A5B"
+      accent-focus: "#567949"
+      success: "#4A7A5A"
+      warning: "#B88A2C"
+      error: "#A84A3A"
+      info: "#4A6A8A"
+
+  trust:
+    name: "Trust and Authority"
+    description: "High-dominance palette for credibility-critical contexts"
+    target_pad: { pleasure: 1.8, arousal: 0.0, dominance: 1.5 }
+    colors:
+      background-primary: "#F4F2EE"
+      background-secondary: "#E5E1DB"
+      background-tertiary: "#D3CDC4"
+      text-primary: "#282420"
+      text-secondary: "#544E48"
+      text-tertiary: "#827A70"
+      border-subtle: "#CCC5BB"
+      border-medium: "#ADA599"
+      accent-primary: "#5A7A8A"
+      accent-hover: "#4A6A7A"
+      accent-focus: "#3A5A6A"
+      success: "#4A7A6A"
+      warning: "#B89A3C"
+      error: "#A85A4A"
+      info: "#4A6A8A"
+
+interaction:
+  hover-saturation-increase: 0.15
+  focus-ring-width: "2px"
+  focus-ring-offset: "2px"
+  focus-ring-style: "solid"
+  transition-duration: motion.durations.fast   # 150ms — see motion.yaml
+  transition-easing: motion.easing.default     # ease-out — see motion.yaml
+
+prohibited:
+  - pure-black: "#000000"
+  - pure-white: "#FFFFFF"
+  - high-saturation-red: "Any red with saturation > 70%"
+  - neon-colors: "Any color with lightness > 80% and saturation > 80%"
+  - flashing-contrast: "Adjacent colors with contrast ratio > 15:1"
+
+accessibility:
+  minimum-contrast-ratio: "4.5:1"
+  large-text-contrast-ratio: "3:1"
+  enhanced-contrast-ratio: "7:1"

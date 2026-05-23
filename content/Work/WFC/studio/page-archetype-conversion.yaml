@@ -1,0 +1,81 @@
+archetype: conversion
+emotional_intent: "User should feel confident and in control when making a commitment"
+target_pad:
+  pleasure: 2.0
+  arousal: 0.3
+  dominance: 1.5
+
+structure:
+  max_sections: 4
+  max_elements_per_section: 9
+  recommended_flow:
+    - value: "What the user gets"
+    - details: "Specifics, pricing, terms"
+    - reassurance: "Risk reduction, guarantees"
+    - action: "Clear, reversible commitment"
+
+section_specs:
+  value:
+    elements:
+      - heading: "text-3xl, clear value statement"
+      - benefits: "3-5 specific benefits, not vague claims"
+      - social_proof: "One strong testimonial or data point"
+    max_elements: 7
+    spacing:
+      above: space-0
+      below: space-7
+    rules:
+      - "Benefits must be specific and verifiable"
+      - "No exaggerated claims ('life-changing', 'guaranteed results')"
+      - "Social proof must be real and attributable"
+
+  details:
+    elements:
+      - pricing: "Clear, complete pricing information"
+      - what_included: "What the user receives"
+      - terms: "Key terms, cancellation policy"
+    max_elements: 5
+    spacing:
+      above: space-7
+      below: space-7
+    rules:
+      - "Pricing must be complete (no 'starting at' without context)"
+      - "Cancellation policy must be visible before commitment"
+      - "No hidden fees or surprise charges"
+
+  reassurance:
+    elements:
+      - guarantee: "Specific guarantee terms"
+      - faq: "2-3 conversion-specific questions"
+      - support: "How to get help before committing"
+    max_elements: 5
+    spacing:
+      above: space-7
+      below: space-7
+    rules:
+      - "Guarantee must be specific and actionable"
+      - "Support contact must be real and responsive"
+      - "No fake scarcity ('only 3 spots left!')"
+
+  action:
+    elements:
+      - cta: "Clear, descriptive action text"
+      - outcome: "What happens immediately after"
+      - exit: "Clear way to decline without guilt"
+    max_elements: 3
+    spacing:
+      above: space-7
+      below: space-8
+    rules:
+      - "CTA text describes the action, not the business goal"
+      - "Outcome must be specific ('You'll receive a confirmation email within 5 minutes')"
+      - "Exit option must be equally visible to CTA"
+      - "No guilt-trip decline text"
+
+critique_checklist:
+  - "Pricing is complete and transparent?"
+  - "Cancellation policy visible before commitment?"
+  - "Guarantee is specific and actionable?"
+  - "Exit option equally visible to CTA?"
+  - "No fake scarcity or urgency?"
+  - "CTA text describes user action?"

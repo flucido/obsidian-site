@@ -1,5 +1,5 @@
 node_modules/
 .next/
-content/
+
 .env
 .env.local

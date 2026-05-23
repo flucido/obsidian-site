@@ -1,0 +1,79 @@
+archetype: content
+emotional_intent: "User should be able to engage deeply with content, including difficult topics, at their own pace"
+target_pad:
+  pleasure: 0.5
+  arousal: 0.2
+  dominance: 1.2
+
+structure:
+  max_sections: 4
+  max_elements_per_section: 9
+  recommended_flow:
+    - heading: "Clear topic statement"
+    - content: "Readable body text with generous spacing"
+    - related: "Optional related content (low pressure)"
+    - action: "Gentle next step (not forced)"
+
+section_specs:
+  heading:
+    elements:
+      - title: "text-3xl, display typeface"
+      - subtitle: "text-lg, text-secondary, optional context"
+    max_elements: 2
+    spacing:
+      above: space-0
+      below: space-6
+    rules:
+      - "Title must accurately reflect content"
+      - "No clickbait or misleading titles"
+
+  content:
+    elements:
+      - body_paragraphs: "Maximum 5 sentences each"
+      - subheadings: "text-xl, logical hierarchy"
+      - images: "Supportive, not decorative"
+      - pull_quotes: "Optional, for emphasis"
+    max_elements: 9
+    spacing:
+      above: space-6
+      below: space-7
+    rules:
+      - "Body text max-width: 65ch"
+      - "Line height: 1.625 minimum"
+      - "Paragraph gap: space-4 (16px)"
+      - "Images must have descriptive alt text"
+      - "No auto-playing media within content"
+
+  related:
+    elements:
+      - heading: "text-xl, 'Related' or 'Learn more'"
+      - related_items: "2-4 items, each with title and one-line description"
+    max_elements: 6
+    spacing:
+      above: space-7
+      below: space-7
+    rules:
+      - "Related content must be genuinely relevant"
+      - "No more than 4 related items"
+      - "Each item links to a real page, not a placeholder"
+
+  action:
+    elements:
+      - heading: "text-lg, invitational"
+      - cta: "One gentle action"
+    max_elements: 2
+    spacing:
+      above: space-7
+      below: space-8
+    rules:
+      - "Action must be relevant to content topic"
+      - "No unrelated CTAs (e.g., newsletter signup on grief content)"
+      - "CTA must acknowledge content context"
+
+critique_checklist:
+  - "Body text within 65ch max-width?"
+  - "Paragraphs maximum 5 sentences?"
+  - "Images have descriptive alt text?"
+  - "Related content is genuinely relevant?"
+  - "CTA is contextually appropriate?"
+  - "No auto-playing media?"

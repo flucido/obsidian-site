@@ -35,3 +35,19 @@ for dir in "${DIRS[@]}"; do
 done
 
 echo "Sync complete."
+
+# Commit and push content changes
+cd "$(dirname "$0")"
+if git diff --quiet HEAD -- content/ && git ls-files --others --exclude-standard content/ | grep -q .; then
+  git add content/
+  git commit -m "chore: sync vault content $(date '+%Y-%m-%d %H:%M')"
+  git push
+  echo "Content pushed."
+elif ! git diff --quiet HEAD -- content/; then
+  git add content/
+  git commit -m "chore: sync vault content $(date '+%Y-%m-%d %H:%M')"
+  git push
+  echo "Content pushed."
+else
+  echo "No content changes to push."
+fi

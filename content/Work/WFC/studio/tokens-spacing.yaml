@@ -1,0 +1,52 @@
+# NeroDesign Spacing Tokens
+# Evidence: T2-004 (9-17 element constraint), T1-007 (processing fluency), Principle 6 (cognitive breathing room)
+
+# Design Philosophy:
+# - Generous spacing reduces cognitive load
+# - Consistent scale creates processing fluency
+# - Base unit of 4px for fine-grained control
+# - Maximum content width to prevent visual overwhelm
+
+scale:
+  base-unit: 4
+  values:
+    space-0: 0
+    space-1: 4px
+    space-2: 8px
+    space-3: 12px
+    space-4: 16px
+    space-5: 24px
+    space-6: 32px
+    space-7: 48px
+    space-8: 64px
+    space-9: 96px
+    space-10: 128px
+
+layout:
+  max-content-width: 720px
+  max-wide-content: 960px
+  min-content-width: 320px
+  sidebar-max-width: 280px
+
+components:
+  button-padding-x: space-4
+  button-padding-y: space-2
+  input-padding: space-3
+  card-padding: space-5
+  form-field-gap: space-4
+  form-section-gap: space-6
+  nav-item-gap: space-3
+
+archetypes:
+  landing-section-gap: space-8
+  intake-field-group-gap: space-5
+  content-paragraph-gap: space-4
+  content-heading-above: space-7
+  content-heading-below: space-5
+  conversion-action-gap: space-6
+  follow-up-card-gap: space-5
+
+prohibited:
+  - zero-gap-form-fields: "Form fields must never be adjacent without spacing"
+  - cramped-navigation: "Nav items must have minimum space-3 gap"
+  - full-width-text: "Text blocks must not exceed max-content-width without explicit justification"

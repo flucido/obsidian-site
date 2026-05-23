@@ -1,0 +1,66 @@
+archetype: follow-up
+emotional_intent: "User should feel their past interactions are accessible and their ongoing relationship is valued"
+target_pad:
+  pleasure: 2.0
+  arousal: -0.2
+  dominance: 1.2
+
+structure:
+  max_sections: 3
+  max_elements_per_section: 7
+  recommended_flow:
+    - confirmation: "What was completed, summary"
+    - history: "Past interactions, saved items"
+    - next_steps: "What the user can do next"
+
+section_specs:
+  confirmation:
+    elements:
+      - heading: "text-2xl, confirmation tone"
+      - summary: "What was completed"
+      - reference: "Reference number or identifier"
+      - contact: "How to reach out with questions"
+    max_elements: 4
+    spacing:
+      above: space-0
+      below: space-7
+    rules:
+      - "Summary must include all key details"
+      - "Reference must be copyable and saveable"
+      - "Contact information must be real and responsive"
+
+  history:
+    elements:
+      - heading: "text-xl, 'Your history' or 'Past interactions'"
+      - items: "List of past interactions with dates and status"
+      - detail_link: "Link to view full details of each"
+    max_elements: 5
+    spacing:
+      above: space-7
+      below: space-7
+    rules:
+      - "History must be accessible for at least 90 days"
+      - "Each item must show date, status, and key details"
+      - "Detail view must be printable or saveable"
+
+  next_steps:
+    elements:
+      - heading: "text-xl, 'What's next' or 'Continue your journey'"
+      - options: "2-3 specific next actions"
+      - support: "How to get help"
+    max_elements: 5
+    spacing:
+      above: space-7
+      below: space-8
+    rules:
+      - "Next steps must be relevant to user's completed action"
+      - "No more than 3 options (decision fatigue)"
+      - "Support option always available"
+
+critique_checklist:
+  - "Summary includes all key details?"
+  - "Reference is copyable and saveable?"
+  - "History accessible for 90+ days?"
+  - "Next steps are relevant and limited to 3?"
+  - "Support option always available?"
+  - "Detail views are printable or saveable?"

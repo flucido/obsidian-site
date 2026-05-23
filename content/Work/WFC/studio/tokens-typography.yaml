@@ -1,0 +1,72 @@
+# NeroDesign Typography Tokens
+# Evidence: T1-007 (processing fluency), T2-004 (9-17 element constraint), Principle 1 (sensory safety)
+
+# Design Philosophy:
+# - High processing fluency: familiar, readable typefaces
+# - Limited type scale: too many sizes increase cognitive load
+# - Generous line height: reduces visual crowding
+# - Clear hierarchy: users should instantly know what is heading vs. body
+
+typefaces:
+  primary:
+    family: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+    rationale: "Maximum processing fluency — users' devices already render these fonts"
+    fallback: "sans-serif"
+  display:
+    family: "'Georgia', 'Times New Roman', serif"
+    rationale: "Serif for display headings adds warmth without sacrificing readability"
+    fallback: "serif"
+  monospace:
+    family: "'SF Mono', 'Cascadia Code', 'Consolas', monospace"
+    rationale: "For code, credentials, reference numbers"
+    fallback: "monospace"
+
+scale:
+  text-xs:
+    size: 0.75rem
+    line-height: 1.5
+    weight: 400
+    usage: "Captions, timestamps, fine print"
+  text-sm:
+    size: 0.875rem
+    line-height: 1.5
+    weight: 400
+    usage: "Secondary text, hints, helper text"
+  text-base:
+    size: 1rem
+    line-height: 1.625
+    weight: 400
+    usage: "Body text, default"
+  text-lg:
+    size: 1.125rem
+    line-height: 1.5
+    weight: 400
+    usage: "Lead paragraphs, introductory text"
+  text-xl:
+    size: 1.5rem
+    line-height: 1.3
+    weight: 600
+    usage: "Section headings (h3)"
+  text-2xl:
+    size: 2rem
+    line-height: 1.2
+    weight: 600
+    usage: "Page headings (h2)"
+  text-3xl:
+    size: 2.5rem
+    line-height: 1.15
+    weight: 600
+    usage: "Hero headings (h1)"
+
+hierarchy:
+  max-headings-per-page: 7
+  heading-sequence: "Never skip heading levels (h1 -> h2 -> h3)"
+  body-max-width: "65ch"
+  paragraph-max-length: 5
+
+prohibited:
+  - all-caps-body-text: "All caps increases cognitive load for reading"
+  - more-than-two-typefaces: "Use maximum 2 typefaces (primary + display)"
+  - font-size-below-text-xs: "Never go below 12px"
+  - line-height-below-1-4: "Never go below 1.4 line-height for body text"
+  - decorative-fonts-for-body: "No script, display, or decorative fonts for body content"
