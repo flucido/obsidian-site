@@ -169,6 +169,45 @@ export interface ContentFile {
   title: string;
 }
 
+export interface ContentSection {
+  name: string;
+  files: ContentFile[];
+}
+
+/**
+ * Returns a flat list of sections for a directory: one section for the
+ * top-level files, then one section per immediate subdirectory that
+ * contains .md files. Useful for building navigation indexes.
+ */
+export function getContentSections(baseDir: string, label?: string): ContentSection[] {
+  const fullPath = path.join(CONTENT_DIR, baseDir);
+  const sectionLabel = label ?? (baseDir.split('/').pop() || baseDir);
+  const sections: ContentSection[] = [];
+
+  try {
+    const topFiles = getContentFiles(baseDir);
+    if (topFiles.length > 0) {
+      sections.push({ name: sectionLabel, files: topFiles });
+    }
+
+    const entries = fs.readdirSync(fullPath, { withFileTypes: true });
+    const subdirs = entries
+      .filter((e) => e.isDirectory())
+      .sort((a, b) => a.name.localeCompare(b.name));
+
+    for (const subdir of subdirs) {
+      const subFiles = getContentFiles(`${baseDir}/${subdir.name}`);
+      if (subFiles.length > 0) {
+        const subLabel =
+          subdir.name.charAt(0).toUpperCase() + subdir.name.slice(1);
+        sections.push({ name: `${sectionLabel} · ${subLabel}`, files: subFiles });
+      }
+    }
+  } catch {}
+
+  return sections;
+}
+
 export function getContentFiles(dir: string): ContentFile[] {
   const fullPath = path.join(CONTENT_DIR, dir);
   const results: ContentFile[] = [];

@@ -21,12 +21,7 @@ function ContentIndex({ title, sections }: { title: string; sections: ContentSec
   );
 }
 
-export default function WorkIndex() {
-  const sections = [
-    ...getContentSections('Work/WFC', 'WFC'),
-    ...getContentSections('Work/LTC', 'LTC'),
-    ...getContentSections('Work/Shared', 'Shared'),
-  ].filter((s) => s.files.length > 0);
-
-  return <ContentIndex title="Work" sections={sections} />;
+export default function OpsIndex() {
+  const sections = getContentSections('Ops', 'Ops').filter((s) => s.files.length > 0);
+  return <ContentIndex title="Ops" sections={sections} />;
 }
