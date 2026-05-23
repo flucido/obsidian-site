@@ -80,6 +80,51 @@ function getCalloutIcon(type: string): string {
   return icons[type] || '📝';
 }
 
+export function renderTables(markdown: string): string {
+  // Match a block of lines that all start with |
+  return markdown.replace(
+    /^(\|.+\|\n)+/gm,
+    (block) => {
+      const lines = block.trimEnd().split('\n').filter(Boolean);
+      if (lines.length < 2) return block;
+
+      // Second line must be the separator (|---|---|)
+      const isSeparator = (line: string) =>
+        /^\|[\s|:-]+\|$/.test(line.trim());
+      if (!isSeparator(lines[1])) return block;
+
+      const parseRow = (line: string) =>
+        line
+          .trim()
+          .replace(/^\||\|$/g, '')   // strip leading/trailing |
+          .split('|')
+          .map((cell) => cell.trim());
+
+      const headers = parseRow(lines[0]);
+      const rows = lines.slice(2).map(parseRow);
+
+      const thead =
+        '<thead><tr>' +
+        headers.map((h) => `<th>${h}</th>`).join('') +
+        '</tr></thead>';
+
+      const tbody =
+        '<tbody>' +
+        rows
+          .map(
+            (cells) =>
+              '<tr>' +
+              cells.map((c) => `<td>${c}</td>`).join('') +
+              '</tr>'
+          )
+          .join('') +
+        '</tbody>';
+
+      return `<table>${thead}${tbody}</table>\n`;
+    }
+  );
+}
+
 export function renderMarkdown(markdown: string): string {
   let html = markdown;
 
@@ -96,6 +141,9 @@ export function renderMarkdown(markdown: string): string {
   html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
 
   html = html.replace(/^---$/gm, '<hr>');
+
+  // Tables — must run before the paragraph pass
+  html = renderTables(html);
 
   html = html.replace(/^- (.+)$/gm, '<li>$1</li>');
   html = html.replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>');
@@ -157,6 +205,64 @@ export function readContentFile(filePath: string): string | null {
   } catch {
     return null;
   }
+}
+
+/**
+ * Given a base directory and URL slug segments (lowercased), find the matching
+ * .md file doing case-insensitive matching on each path component.
+ * Returns the path relative to CONTENT_DIR (e.g. "Work/WFC/pipeline.md"), or null.
+ */
+export function findFileBySlugPath(baseDir: string, segments: string[]): string | null {
+  let currentPath = path.join(CONTENT_DIR, baseDir);
+
+  try {
+    for (let i = 0; i < segments.length - 1; i++) {
+      const entries = fs.readdirSync(currentPath, { withFileTypes: true });
+      const match = entries.find(
+        (e) => e.isDirectory() && e.name.toLowerCase() === segments[i].toLowerCase()
+      );
+      if (!match) return null;
+      currentPath = path.join(currentPath, match.name);
+    }
+
+    const last = segments[segments.length - 1].toLowerCase();
+    const entries = fs.readdirSync(currentPath, { withFileTypes: true });
+    const match = entries.find(
+      (e) => e.isFile() && e.name.toLowerCase() === `${last}.md`
+    );
+    if (!match) return null;
+
+    return path.relative(CONTENT_DIR, path.join(currentPath, match.name));
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Returns ContentFile entries for a specific filename found inside immediate
+ * subdirectories of baseDir (e.g., all leads/<slug>/dossier.md files).
+ */
+export function getSubdirFiles(baseDir: string, filename: string): ContentFile[] {
+  const fullPath = path.join(CONTENT_DIR, baseDir);
+  const results: ContentFile[] = [];
+
+  try {
+    const entries = fs.readdirSync(fullPath, { withFileTypes: true });
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      const filePath = path.join(fullPath, entry.name, `${filename}.md`);
+      if (!fs.existsSync(filePath)) continue;
+      const content = fs.readFileSync(filePath, 'utf-8');
+      const title = extractTitle(content) || entry.name;
+      results.push({
+        slug: entry.name.toLowerCase(),
+        path: `${baseDir}/${entry.name}/${filename}.md`,
+        title,
+      });
+    }
+  } catch {}
+
+  return results.sort((a, b) => a.title.localeCompare(b.title));
 }
 
 function extractTitle(content: string): string {

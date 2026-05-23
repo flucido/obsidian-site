@@ -14,12 +14,12 @@ export function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
-  // Allow login page
-  if (req.nextUrl.pathname === '/login') {
+  // Allow login page and the auth endpoint itself
+  if (req.nextUrl.pathname === '/login' || req.nextUrl.pathname === '/api/auth') {
     return NextResponse.next();
   }
 
-  // For API routes, return 401
+  // For other API routes, return 401
   if (req.nextUrl.pathname.startsWith('/api/')) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }

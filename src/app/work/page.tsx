@@ -16,7 +16,7 @@ function ContentIndex({ title, sections }: SectionIndexProps) {
           <ul className="content-index">
             {section.files.map((f) => (
               <li key={f.slug}>
-                <Link href={`/${f.slug}`}>{f.title}</Link>
+                <Link href={`/${f.path.replace(/\.md$/, '').toLowerCase()}`}>{f.title}</Link>
               </li>
             ))}
           </ul>
