@@ -5,7 +5,7 @@ sticker: emoji//1f9e0
 
 Active operational state for Lucido Technology Consulting (LTC) and WellFull Collective (WFC).
 
-## Current State (2026-05-22 EOD — FRIDAY, WEEK 21)
+## Current State (2026-05-27 — WEDNESDAY, WEEK 22)
 
 ### Operations — All Layers Live
 - **Pipeline/Marketing:** 5-gate lead verification, dual pipelines, 25 WFC leads + 4 LTC leads, Marin CAMFT scrape complete. All draft production complete across both orgs.
@@ -32,6 +32,8 @@ Active operational state for Lucido Technology Consulting (LTC) and WellFull Col
   - **Beverly Hills USD (LOW — BLOCKED):** Draft at [[leads/ltc-beverly-hills-usd/draft]]. ⚠ Cannot send — no CTO contact. LCAP not reviewed. Lowest priority.
 - Pipeline value: $65–100K one-time
 - LinkedIn content operation: 7 reviewed posts, calendar, profile — ready for scheduling
+- **30-day sovereign-data content calendar (5/27):** [[Work/LTC/marketing/content-calendar]] — full multi-channel calendar synthesized from 4 source drafts in `Work/LTC/marketing/Drafts/`. Structure: 30 blog posts (1,200–1,800 words each) + 30 LinkedIn posts (900–1,300 chars) + 4 weekly LinkedIn Articles (1,800–2,500 words). Four-week arc: W1 Diagnosis → W2 California 7-layer compliance → W3 Sovereign Stack (DuckDB/Polars/LanceDB/Ollama/vLLM/Mac Studio) → W4 Behavior Engineering (PEFT/QLoRA/LoRA/RAG). Three named voice skills codified in calendar (Technical Explainer, Thought Leadership Essayist, Hook Architect with 6 hook patterns). Recurring anchor characters: Mac Studio cluster, Marin auditor, Wednesday-night Excel analyst, $50K SLA. Banned phrases list enforced.
+- **Day 1 production drafted as template (5/27):** [[Work/LTC/marketing/blog-day-01-support-ticket-trap]] (~1,250 words, Define→Anchor→Consequence, Monday Morning Checklist close) + [[Work/LTC/marketing/linkedin-day-01-support-ticket-trap]] (~1,280 chars, Specific Artifact hook, no hashtags/emojis, question close). Both demonstrate voice/structure for Days 2–30. Awaiting human review before publish. Prior `linkedin-content-calendar.md` left untouched but marked superseded in `Work/LTC/marketing/_index.md`.
 - LTC risk register: R1 = Apple Valley timing window (HIGH), R5 = Beverly Hills missing contact (LOW)
 
 ### Risk Registers (Populated 5/22)
@@ -51,8 +53,17 @@ Active operational state for Lucido Technology Consulting (LTC) and WellFull Col
 - Entity formation + partnership agreement — awaiting human action
 - No outreach sent yet — all leads awaiting human review
 - No revenue collected — pre-revenue, pipeline-only
+- **Content engine review queue (5/27):** Day 1 blog + LinkedIn post awaiting human review. Days 2–30 not yet drafted — gated on Day 1 approval to validate voice/structure before scaling.
 
 ## Latest Decisions
+
+### 5/27
+- **LTC content engine spun up.** 30-day sovereign-data calendar generated from 4 source drafts. Production approach: each day = 1 blog + 1 LinkedIn post; each week ends with 1 LinkedIn Article. Total deliverable per 30 days: 30 blogs + 30 LinkedIn posts + 4 articles = 64 pieces.
+- **Voice codified as three reusable skills inside the calendar file itself** — Technical Explainer (Define→Anchor→Consequence), Thought Leadership Essayist (Local→Regional→Structural), Hook Architect (6 rotating patterns: Counter-Consensus, Receipt-First, Confession, Specific Artifact, Misdiagnosis, Unspoken Trade). Future drafts must pull from these patterns, not invent voice ad-hoc.
+- **Day 1 is the template.** Days 2–30 should be drafted by lifting the structure of `blog-day-01-support-ticket-trap.md` + `linkedin-day-01-support-ticket-trap.md`, not by re-deriving format choices. Drafting time per day should fall after Day 1 is approved.
+- **Naming convention locked:** `blog-day-NN-<slug>.md` + `linkedin-day-NN-<slug>.md` in `Work/LTC/marketing/`. Frontmatter must include `day`, `week`, `theme`, `hook_pattern` (LinkedIn only), `source` wikilinks, `companion` wikilink to paired piece, `calendar` wikilink.
+- **Superseded, not deleted:** prior `linkedin-content-calendar.md` (12-post 70/15/15 strategy) left in place but marked superseded in index. Decision on archive vs. merge deferred to human review.
+- **Human review is still the bottleneck.** Adding 64 pieces of content production to a pipeline where 29 outreach items already sit unreviewed will compound, not relieve, the review bottleneck. Recommend Day 1 review/approval before drafting Days 2–7.
 
 ### 5/22 EOD
 - **Bottleneck confirmed as review, not production.** 9/9 drafts exist. Capacity is not the constraint. Escalation is the only lever.

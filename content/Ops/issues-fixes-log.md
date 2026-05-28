@@ -26,4 +26,7 @@ tags: [log, issues, fixes]
 - **Impact:** Pipeline status was misleading — made it look like LTC was further behind than it was. Risk of duplicated work.
 - **Root cause:** Open loops table not updated after draft creation earlier in the same session. Drafts were created, then the daily note's open loops table was written before the status was advanced.
 - **Fix:** Corrected L3 and L4 to DONE with wiki links in daily note. Also corrected LTC pipeline follow-up queue — both had been showing "pending" when drafts existed.
-- **Prevention:** Added step to delivery review: cross-reference filesystem before marking status. Captured in learnings section of evening reflection.
+|- **Prevention:** Added step to delivery review: cross-reference filesystem before marking status. Captured in learnings section of evening reflection.
+
+## 2026-05-28 Info | Clean session — no incidents
+- Content infrastructure session: LTC content writing rules (Phase 2 + Phase 4) saved to long-term memory. Memory pruned and compressed. No errors, no stale data, no prompt corrections. Pipeline unchanged.
