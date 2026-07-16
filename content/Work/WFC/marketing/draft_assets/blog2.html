@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wellfull Collective: Breaking the Grid for the Brain — A Neuroaesthetic Design Brief</title>
+<meta name="description" content="A grid is a software constraint, not a perceptual one. The Neuroaesthetic Pedagogy Framework shows that intentional grid-breaking triggers the parasympathetic nervous system — and creates the autonomic attention your design actually needs." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --card: #ffffff;
+    --line: #e9e3d6;
+    --line-soft: #efeadd;
+    --ink: #14171e;
+    --ink-2: #3a4256;
+    --ink-3: #7c7a72;
+    --primary: #2f6f5e;     /* deep green — neural */
+    --primary-soft: #d8e6e1;
+    --accent: #c97b3f;      /* terracotta — heat / P2 */
+    --accent-soft: #f4dfca;
+    --danger: #b06367;
+    --serif: 'DM Serif Display', ui-serif, Georgia, serif;
+    --sans: 'Outfit', system-ui, -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  }
+
+  html, body { background: var(--bg); color: var(--ink); }
+  body {
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body::before, body::after {
+    content: ""; position: fixed; pointer-events: none; z-index: 0;
+    width: 520px; height: 520px; border-radius: 50%;
+    filter: blur(80px); opacity: 0.06;
+  }
+  body::before { top: -160px; left: -160px; background: var(--primary); }
+  body::after  { bottom: -160px; right: -160px; background: var(--accent); }
+
+  main, header, footer { position: relative; z-index: 1; }
+
+  .font-serif { font-family: var(--serif); font-weight: 400; letter-spacing: -0.005em; }
+  .font-mono  { font-family: var(--mono); }
+
+  .h-display {
+    font-family: var(--serif);
+    font-weight: 400;
+    letter-spacing: -0.012em;
+    line-height: 1.04;
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--primary);
+  }
+
+  .lede {
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--ink-2);
+    font-weight: 400;
+  }
+
+  .body-prose p { margin-bottom: 18px; color: var(--ink-2); }
+  .body-prose p:last-child { margin-bottom: 0; }
+  .body-prose strong { color: var(--ink); font-weight: 600; }
+  .body-prose em { font-family: var(--serif); font-style: italic; color: var(--ink); }
+
+  .prose-h2 {
+    font-family: var(--serif);
+    font-size: 30px;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 14px;
+    letter-spacing: -0.005em;
+  }
+  @media (min-width: 768px) { .prose-h2 { font-size: 36px; } }
+
+  .section-num {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .surface {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.035);
+  }
+
+  .pullquote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 30px;
+    line-height: 1.25;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  @media (min-width: 768px) { .pullquote { font-size: 38px; } }
+
+  .pullquote::before {
+    content: "\201C";
+    color: var(--accent);
+    font-family: var(--serif);
+    font-size: 1.4em;
+    line-height: 0;
+    margin-right: 6px;
+    vertical-align: -0.15em;
+  }
+
+  /* lever cards */
+  .lever-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 26px;
+    position: relative;
+    overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .lever-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px -2px rgba(0,0,0,0.06); }
+  .lever-card .lever-num {
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 8px;
+  }
+  .lever-card .lever-name {
+    font-family: var(--serif); font-size: 22px;
+    line-height: 1.18; color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .lever-card .lever-arrow {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--mono); font-size: 11px;
+    color: var(--accent); letter-spacing: 0.08em;
+    margin-bottom: 14px;
+  }
+  .lever-card .lever-body { font-size: 14px; color: var(--ink-2); }
+
+  /* taxonomy cards */
+  .tax-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .tax-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px -2px rgba(0,0,0,0.06); }
+  .tax-card .tax-tag {
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .tax-card .tax-name {
+    font-family: var(--serif); font-size: 24px;
+    line-height: 1.15; color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .tax-card .tax-body { font-size: 14px; color: var(--ink-2); }
+
+  /* progress */
+  .progress-track {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: 3px; background: transparent; z-index: 50;
+  }
+  .progress-bar {
+    height: 100%; width: 0%;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    transition: width 80ms linear;
+  }
+
+  /* nav */
+  .topnav {
+    border-bottom: 1px solid var(--line);
+    background: rgba(247,245,240,0.85);
+    backdrop-filter: blur(8px);
+  }
+
+  /* divider */
+  .rule {
+    height: 1px; background: var(--line); margin: 0 auto;
+    max-width: 80px;
+  }
+
+  .hover-lift { transition: transform .2s ease, box-shadow .2s ease; }
+  .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 6px 20px -4px rgba(0,0,0,0.08); }
+
+  .end-cta {
+    background: linear-gradient(135deg, #1f3a35 0%, #2f6f5e 100%);
+    color: #f5efe2;
+    border-radius: 22px;
+    padding: 44px 36px;
+    position: relative; overflow: hidden;
+  }
+  .end-cta::after {
+    content: ""; position: absolute;
+    width: 320px; height: 320px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,123,63,0.35), transparent 70%);
+    right: -80px; bottom: -80px;
+  }
+
+  @media (max-width: 640px) {
+    .pullquote { font-size: 24px; }
+    .end-cta { padding: 32px 22px; }
+  }
+
+  .diagram-bg {
+    background-image: radial-gradient(circle, rgba(20,23,30,0.07) 1px, transparent 1px);
+    background-size: 22px 22px;
+    background-position: 0 0;
+  }
+
+  /* "do not break" list */
+  .dont-list {
+    list-style: none; padding: 0; margin: 0;
+  }
+  .dont-list li {
+    display: flex; gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: 15px; color: var(--ink-2);
+  }
+  .dont-list li:last-child { border-bottom: 0; }
+  .dont-list .x {
+    flex-shrink: 0;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: #f4dcdc;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--danger);
+  }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- reading progress -->
+<div class="progress-track"><div id="prog" class="progress-bar"></div></div>
+
+<!-- top nav -->
+<header class="topnav sticky top-0 z-40">
+  <div class="max-w-5xl mx-auto px-6 md:px-8 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2 group">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[var(--primary)]">
+        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+        <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+      </svg>
+      <span class="font-serif text-lg tracking-tight text-[var(--ink)]">Wellfull Collective</span>
+    </a>
+    <div class="flex items-center gap-3 font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--ink-3)]">
+      <a href="blog1.html" class="hover:text-[var(--primary)] transition-colors">Brief 01</a>
+      <span class="opacity-30">|</span>
+      <span class="text-[var(--primary)]">Brief 02 / 10</span>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 md:px-8">
+
+  <!-- HERO -->
+  <section class="pt-16 md:pt-24 pb-12 md:pb-16">
+    <div class="eyebrow mb-5">Blog 2 &middot; Sensory-Motor System &middot; Pillar I</div>
+    <h1 class="h-display text-5xl md:text-7xl text-[var(--ink)] mb-6">
+      Breaking the Grid<br/>for the Brain
+    </h1>
+    <p class="lede max-w-3xl mb-8">
+      A grid is a software constraint, not a perceptual one. The Neuroaesthetic Pedagogy Framework shows that <em>intentional</em> grid-breaking is what triggers the parasympathetic nervous system &mdash; and creates the autonomic attention your design actually needs.
+    </p>
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--ink-3)]">
+      <span>By the Wellfull Collective</span>
+      <span class="w-1 h-1 rounded-full bg-[var(--line)]"></span>
+      <span>6 min read</span>
+      <span class="w-1 h-1 rounded-full bg-[var(--line)]"></span>
+      <span>NPF &middot; Affective Design</span>
+    </div>
+  </section>
+
+  <div class="rule mb-16 md:mb-20"></div>
+
+  <!-- SECTION 1 — Premise -->
+  <section class="grid md:grid-cols-12 gap-10 md:gap-14 mb-20 md:mb-24">
+    <div class="md:col-span-4">
+      <div class="md:sticky md:top-24">
+        <div class="section-num">01 / The Premise</div>
+        <h2 class="prose-h2">Grids optimize for code, not cognition.</h2>
+      </div>
+    </div>
+    <div class="md:col-span-8 body-prose">
+      <p>
+        Every modern design tool ships with a grid. Figma's 12-column layout. Bootstrap's 12-column grid. Material's 8-point system. The grid is the default &mdash; and the default is a <strong>software constraint</strong>, not a perceptual one.
+      </p>
+      <p>
+        The grid optimizes for engineers and component reuse. It does not optimize for the ventral stream, the visual rhythm response, or the parasympathetic nervous system. The Neuroaesthetic Pedagogy Framework (NPF) argues the opposite: neuro-literacy requires moving <em>beyond</em> technical grid perfection.
+      </p>
+      <p>
+        The 12-column grid is the dominant metaphor of the past fifteen years of web design. It shows up in Figma templates, in Bootstrap, in Material, in every portfolio review rubric. It is also the reason most modern websites look like they were stamped out of the same press. When everyone obeys the same grid, the result is not aesthetic harmony &mdash; it is aesthetic noise. The grid becomes wallpaper. The eye tunes it out within a session.
+      </p>
+      <p>
+        In other words: a perfectly aligned grid is not a perceptual achievement. It is a code achievement. The user's brain does not reward you for it.
+      </p>
+    </div>
+  </section>
+
+  <!-- GRID-BREAKING DIAGRAM -->
+  <section class="mb-20 md:mb-24">
+    <div class="surface p-6 md:p-10">
+      <div class="flex items-baseline justify-between mb-6">
+        <div class="font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--primary)]">Fig. 2.1 &middot; Affective Grid-Breaking</div>
+        <div class="font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--ink-3)]">12-col w/ three intentional breaks</div>
+      </div>
+
+      <!-- the SVG: 12-col grid with three intentional breaks marked -->
+      <svg viewBox="0 0 900 460" class="w-full h-auto" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="shard" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#2f6f5e" stop-opacity="0.18"/>
+            <stop offset="50%" stop-color="#2f6f5e" stop-opacity="0.06"/>
+            <stop offset="100%" stop-color="#c97b3f" stop-opacity="0.22"/>
+          </linearGradient>
+          <linearGradient id="shard2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#c97b3f" stop-opacity="0.22"/>
+            <stop offset="100%" stop-color="#c97b3f" stop-opacity="0.05"/>
+          </linearGradient>
+          <linearGradient id="shard3" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#2f6f5e" stop-opacity="0.05"/>
+            <stop offset="100%" stop-color="#2f6f5e" stop-opacity="0.20"/>
+          </linearGradient>
+        </defs>
+
+        <!-- subtle dotted background -->
+        <rect width="900" height="460" fill="#fafaf7"/>
+        <g opacity="0.18">
+          <pattern id="dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="1" fill="#14171e"/>
+          </pattern>
+          <rect width="900" height="460" fill="url(#dots)"/>
+        </g>
+
+        <!-- 12 column grid -->
+        <g stroke="#14171e" stroke-opacity="0.12" stroke-width="1">
+          <line x1="60"  y1="40" x2="60"  y2="420"/>
+          <line x1="128" y1="40" x2="128" y2="420"/>
+          <line x1="196" y1="40" x2="196" y2="420"/>
+          <line x1="264" y1="40" x2="264" y2="420"/>
+          <line x1="332" y1="40" x2="332" y2="420"/>
+          <line x1="400" y1="40" x2="400" y2="420"/>
+          <line x1="468" y1="40" x2="468" y2="420"/>
+          <line x1="536" y1="40" x2="536" y2="420"/>
+          <line x1="604" y1="40" x2="604" y2="420"/>
+          <line x1="672" y1="40" x2="672" y2="420"/>
+          <line x1="740" y1="40" x2="740" y2="420"/>
+          <line x1="808" y1="40" x2="808" y2="420"/>
+          <line x1="840" y1="40" x2="840" y2="420"/>
+        </g>
+
+        <!-- column numbers -->
+        <g font-family="JetBrains Mono" font-size="11" fill="#7c7a72" text-anchor="middle">
+          <text x="94"  y="28">1</text>
+          <text x="162" y="28">2</text>
+          <text x="230" y="28">3</text>
+          <text x="298" y="28">4</text>
+          <text x="366" y="28">5</text>
+          <text x="434" y="28">6</text>
+          <text x="502" y="28">7</text>
+          <text x="570" y="28">8</text>
+          <text x="638" y="28">9</text>
+          <text x="706" y="28">10</text>
+          <text x="774" y="28">11</text>
+          <text x="824" y="28">12</text>
+        </g>
+
+        <!-- baseline row -->
+        <line x1="60" y1="380" x2="840" y2="380" stroke="#14171e" stroke-opacity="0.12" stroke-width="1"/>
+
+        <!-- grid-honoring block (the "rest of the layout holds") -->
+        <rect x="128" y="120" width="272" height="180" fill="#2f6f5e" fill-opacity="0.08" stroke="#2f6f5e" stroke-opacity="0.25" stroke-width="1"/>
+        <text x="264" y="215" text-anchor="middle" font-family="DM Serif Display" font-size="18" fill="#14171e">Grid holds.</text>
+        <text x="264" y="240" text-anchor="middle" font-family="Outfit" font-size="12" fill="#7c7a72">predictable, calm, scannable</text>
+
+        <!-- BREAK 1 — Anchor break: one big element off-grid, mid-right -->
+        <g>
+          <rect x="640" y="80" width="180" height="220" fill="url(#shard)" stroke="#2f6f5e" stroke-width="2"/>
+          <rect x="640" y="80" width="180" height="220" fill="none" stroke="#2f6f5e" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.4"/>
+          <!-- off-grid overlay -->
+          <rect x="612" y="60" width="200" height="240" fill="none" stroke="#c97b3f" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <text x="715" y="180" text-anchor="middle" font-family="DM Serif Display" font-size="20" fill="#14171e">Anchor.</text>
+          <text x="715" y="204" text-anchor="middle" font-family="Outfit" font-size="12" fill="#3a4256">one element</text>
+          <text x="715" y="222" text-anchor="middle" font-family="Outfit" font-size="12" fill="#3a4256">off-grid &mdash;</text>
+          <text x="715" y="240" text-anchor="middle" font-family="Outfit" font-size="12" fill="#3a4256">pulls attention</text>
+        </g>
+
+        <!-- BREAK 2 — Rhythm break: spacing irregularity at the bottom -->
+        <g>
+          <rect x="60"  y="320" width="64"  height="40" fill="#2f6f5e" fill-opacity="0.18"/>
+          <text x="92"  y="346" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#14171e">A</text>
+          <rect x="148" y="320" width="64"  height="40" fill="#2f6f5e" fill-opacity="0.18"/>
+          <text x="180" y="346" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#14171e">B</text>
+          <!-- wide gap (rhythm break) -->
+          <rect x="240" y="320" width="120" height="40" fill="none" stroke="#c97b3f" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <text x="300" y="345" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#c97b3f">LONG PAUSE</text>
+          <rect x="384" y="320" width="64"  height="40" fill="#2f6f5e" fill-opacity="0.18"/>
+          <text x="416" y="346" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#14171e">C</text>
+          <rect x="472" y="320" width="64"  height="40" fill="#2f6f5e" fill-opacity="0.18"/>
+          <text x="504" y="346" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#14171e">D</text>
+          <rect x="560" y="320" width="64"  height="40" fill="#2f6f5e" fill-opacity="0.18"/>
+          <text x="592" y="346" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#14171e">E</text>
+          <text x="300" y="312" text-anchor="middle" font-family="Outfit" font-size="11" font-style="italic" fill="#c97b3f">Rhythm break</text>
+        </g>
+
+        <!-- BREAK 3 — Axis break: a tilted diagonal element -->
+        <g transform="translate(440, 60)">
+          <rect x="0" y="0" width="120" height="40" fill="url(#shard3)" stroke="#2f6f5e" stroke-opacity="0.4"/>
+          <g transform="rotate(-7 60 20)">
+            <rect x="0" y="0" width="120" height="40" fill="#2f6f5e" fill-opacity="0.25" stroke="#2f6f5e" stroke-width="1.5"/>
+          </g>
+          <text x="60" y="25" text-anchor="middle" font-family="DM Serif Display" font-size="14" fill="#14171e">Tilted 7&deg;</text>
+          <text x="60" y="-6" text-anchor="middle" font-family="Outfit" font-size="11" font-style="italic" fill="#2f6f5e">Axis break</text>
+        </g>
+
+        <!-- callout labels with leader lines -->
+        <g font-family="JetBrains Mono" font-size="10" fill="#3a4256">
+          <!-- anchor callout -->
+          <circle cx="720" cy="80" r="4" fill="#c97b3f"/>
+          <line x1="720" y1="80" x2="800" y2="430" stroke="#c97b3f" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="3 3"/>
+          <text x="860" y="445" text-anchor="end">01 &middot; Anchor break &mdash; mOFC ventral pull</text>
+
+          <!-- rhythm callout -->
+          <circle cx="300" cy="320" r="4" fill="#c97b3f"/>
+          <line x1="300" y1="320" x2="120" y2="430" stroke="#c97b3f" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="3 3"/>
+          <text x="120" y="445" text-anchor="start">02 &middot; Rhythm break &mdash; parasympathetic activation</text>
+
+          <!-- axis callout -->
+          <circle cx="500" cy="80" r="4" fill="#c97b3f"/>
+          <line x1="500" y1="80" x2="500" y2="430" stroke="#c97b3f" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="3 3"/>
+          <text x="500" y="445" text-anchor="middle">03 &middot; Axis break &mdash; eye re-routing</text>
+        </g>
+      </svg>
+
+      <p class="font-mono text-[11px] tracking-[0.12em] uppercase text-[var(--ink-3)] mt-5">
+        Schematic &mdash; the grid holds where predictability serves. It breaks where biology needs it to.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — What affective grid-breaking actually is -->
+  <section class="grid md:grid-cols-12 gap-10 md:gap-14 mb-20 md:mb-24">
+    <div class="md:col-span-4">
+      <div class="md:sticky md:top-24">
+        <div class="section-num">02 / The Definition</div>
+        <h2 class="prose-h2">What affective grid&#8209;breaking actually is.</h2>
+      </div>
+    </div>
+    <div class="md:col-span-8 body-prose">
+      <p>
+        Define it: <strong>a deliberate, measurable deviation from the grid that triggers a specific biological response</strong>. Distinguish it from sloppiness or random asymmetry &mdash; affective grid-breaking is intentional and rhythmic. It is a controlled release, not an accident.
+      </p>
+      <p>Three properties separate it from chaos:</p>
+      <ul class="space-y-3 my-6 pl-1">
+        <li class="flex gap-3"><span class="font-mono text-xs text-[var(--accent)] mt-1.5 w-12 shrink-0">01</span><span><strong>Intentionality</strong> &mdash; every break has a purpose, written down or implied.</span></li>
+        <li class="flex gap-3"><span class="font-mono text-xs text-[var(--accent)] mt-1.5 w-12 shrink-0">02</span><span><strong>Measurability</strong> &mdash; you can predict the biological response in advance.</span></li>
+        <li class="flex gap-3"><span class="font-mono text-xs text-[var(--accent)] mt-1.5 w-12 shrink-0">03</span><span><strong>Rhythmic compensation</strong> &mdash; breaks are balanced by tighter alignment elsewhere.</span></li>
+      </ul>
+      <p>
+        Affective grid-breaking is not "break the grid because rules are for suckers." It is "break the grid because the grid, in this place, at this moment, fails the biology."
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — Three NPF Levers -->
+  <section class="grid md:grid-cols-12 gap-10 md:gap-14 mb-10 md:mb-12">
+    <div class="md:col-span-4">
+      <div class="md:sticky md:top-24">
+        <div class="section-num">03 / The Mechanism</div>
+        <h2 class="prose-h2">Three NPF levers.</h2>
+        <p class="text-[14px] text-[var(--ink-2)] mt-3">The Neuroaesthetic Pedagogy Framework identifies three primary levers for moving beyond technical grid perfection.</p>
+      </div>
+    </div>
+    <div class="md:col-span-8">
+      <div class="grid gap-4">
+
+        <!-- Lever 1 -->
+        <div class="lever-card">
+          <div class="lever-num">Lever 01 &middot; Typographic Weight</div>
+          <h3 class="lever-name">Bold weight triggers the ventral stream.</h3>
+          <div class="lever-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <span>mOFC &middot; ventral stream &middot; urgency</span>
+          </div>
+          <p class="lever-body">High-contrast typographic mass reads as salient. The mOFC treats it as important. The right amount of weight variation pulls the eye; too much creates noise. The break is in the <em>contrast</em>, not the size.</p>
+        </div>
+
+        <!-- Lever 2 -->
+        <div class="lever-card">
+          <div class="lever-num">Lever 02 &middot; Visual Rhythm</div>
+          <h3 class="lever-name">Low-frequency rhythm calms the body.</h3>
+          <div class="lever-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <span>parasympathetic &middot; dwell &middot; trust</span>
+          </div>
+          <p class="lever-body">Repeated shapes at predictable intervals &mdash; large space, content, large space, content &mdash; activate the parasympathetic nervous system. The eye knows what comes next. Vigilance drops. Dwell increases. The break is the <em>interval</em>, not the content.</p>
+        </div>
+
+        <!-- Lever 3 -->
+        <div class="lever-card">
+          <div class="lever-num">Lever 03 &middot; Scale Anomaly</div>
+          <h3 class="lever-name">One large outlier re-routes the eye.</h3>
+          <div class="lever-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <span>salience network &middot; forced attention</span>
+          </div>
+          <p class="lever-body">One element dramatically larger or smaller than its neighbors forces the eye to break its assumed scan path. The salience network treats it as a threat or a prize &mdash; either way, it is looked at first. Use sparingly. One per viewport, maximum.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — Taxonomy -->
+  <section class="grid md:grid-cols-12 gap-10 md:gap-14 mb-10 md:mb-12">
+    <div class="md:col-span-4">
+      <div class="md:sticky md:top-24">
+        <div class="section-num">04 / The Taxonomy</div>
+        <h2 class="prose-h2">Three named patterns.</h2>
+      </div>
+    </div>
+    <div class="md:col-span-8">
+      <div class="grid sm:grid-cols-3 gap-4">
+        <div class="tax-card">
+          <div class="tax-tag">Pattern A</div>
+          <h4 class="tax-name">The Anchor Break</h4>
+          <p class="tax-body">One element anchors off-grid and pulls attention. A single, large, intentional outlier. The rest of the grid holds; the anchor moves.</p>
+        </div>
+        <div class="tax-card">
+          <div class="tax-tag">Pattern B</div>
+          <h4 class="tax-name">The Rhythm Break</h4>
+          <p class="tax-body">Intentional spacing irregularity that creates cadence. A long pause where you would expect a short one. The eye reads it as musical.</p>
+        </div>
+        <div class="tax-card">
+          <div class="tax-tag">Pattern C</div>
+          <h4 class="tax-name">The Axis Break</h4>
+          <p class="tax-body">Rotation or diagonal that changes the implied reading direction. A 7-degree tilt. A diagonal divider. Used when you want to break the implicit Z-pattern of the Western eye.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — When NOT to break -->
+  <section class="grid md:grid-cols-12 gap-10 md:gap-14 mb-20 md:mb-24">
+    <div class="md:col-span-4">
+      <div class="md:sticky md:top-24">
+        <div class="section-num">05 / The Counterweight</div>
+        <h2 class="prose-h2">When <em>not</em> to break the grid.</h2>
+      </div>
+    </div>
+    <div class="md:col-span-8 body-prose">
+      <p>
+        Important counterweight &mdash; affective grid-breaking is not universally applicable. The point is not that grids are bad. The point is that they are <strong>over-applied</strong>. The grid is the rule. Affective grid-breaking is the exception that earns its keep.
+      </p>
+      <p>Refuse it in:</p>
+    </div>
+  </section>
+
+  <section class="mb-20 md:mb-24">
+    <div class="surface p-6 md:p-10">
+      <ul class="dont-list">
+        <li>
+          <span class="x"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+          <span><strong>Complex transactional UIs.</strong> Checkout, banking, data entry &mdash; predictability reduces error. The biology wants calm here, not interest.</span>
+        </li>
+        <li>
+          <span class="x"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+          <span><strong>Accessibility-first contexts.</strong> Stable layouts support screen readers and cognitive accessibility. Predictability is a feature, not a flaw.</span>
+        </li>
+        <li>
+          <span class="x"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+          <span><strong>Data-dense enterprise tools.</strong> Dashboards, admin panels, spreadsheets. Scan-path consistency <em>is</em> the product.</span>
+        </li>
+        <li>
+          <span class="x"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+          <span><strong>Localization-heavy pages.</strong> Where content length varies by language, grid consistency holds the line across markets.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — Worked example -->
+  <section class="grid md:grid-cols-12 gap-10 md:gap-14 mb-20 md:mb-24">
+    <div class="md:col-span-4">
+      <div class="md:sticky md:top-24">
+        <div class="section-num">06 / Worked Example</div>
+        <h2 class="prose-h2">A SaaS pricing page.</h2>
+      </div>
+    </div>
+    <div class="md:col-span-8 body-prose">
+      <p>
+        The starting point is rigid &mdash; three columns, three tiers, three buttons. The grid is honest about what it is.
+      </p>
+      <p><strong>The biological intent:</strong></p>
+      <ul class="space-y-2 my-4 pl-1">
+        <li class="flex gap-3"><span class="font-mono text-xs text-[var(--accent)] mt-1.5 w-12 shrink-0">A</span><span>The middle tier should feel like the natural choice &mdash; <em>anchor break</em>.</span></li>
+        <li class="flex gap-3"><span class="font-mono text-xs text-[var(--accent)] mt-1.5 w-12 shrink-0">B</span><span>The page should reward dwell, not scan &mdash; <em>rhythm break</em>.</span></li>
+        <li class="flex gap-3"><span class="font-mono text-xs text-[var(--accent)] mt-1.5 w-12 shrink-0">C</span><span>The eye should land on the recommended CTA before the alternatives &mdash; <em>scale anomaly</em>.</span></li>
+      </ul>
+      <p><strong>Specific moves:</strong></p>
+      <ul class="space-y-2 my-4 pl-1">
+        <li class="flex gap-3"><span class="font-mono text-xs text-[var(--primary)] mt-1.5 w-12 shrink-0">01</span><span>Lift the recommended tier 24px above its neighbors &mdash; the eye reads "important" in 200&nbsp;ms.</span></li>
+        <li class="flex gap-3"><span class="font-mono text-xs text-[var(--primary)] mt-1.5 w-12 shrink-0">02</span><span>Double the vertical padding above and below the comparison table &mdash; parasympathetic activation.</span></li>
+        <li class="flex gap-3"><span class="font-mono text-xs text-[var(--primary)] mt-1.5 w-12 shrink-0">03</span><span>Make the recommended CTA 1.4&times; the size of the alternatives &mdash; scale anomaly anchored to the mOFC.</span></li>
+      </ul>
+      <p>
+        What you <strong>do not</strong> do: break the grid on the footer, the nav, the tier names. The grid holds where predictability serves. It breaks where biology needs it to.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 7 — The Reframe -->
+  <section class="grid md:grid-cols-12 gap-10 md:gap-14 mb-20 md:mb-24">
+    <div class="md:col-span-4">
+      <div class="md:sticky md:top-24">
+        <div class="section-num">07 / The Reframe</div>
+        <h2 class="prose-h2">The grid is a tool, not a theology.</h2>
+      </div>
+    </div>
+    <div class="md:col-span-8 body-prose">
+      <p>
+        For a decade the design industry has celebrated the grid as an end in itself. Bootcamps teach it. Design systems enforce it. Portfolio reviews reward it. The result: a generation of websites that look like they were drawn by the same person &mdash; because, in a sense, they were. The grid became an aesthetic in its own right, and aesthetics, once calcified into default, stop being aesthetic. They become invisible.
+      </p>
+      <p>
+        The grid is not wrong. It is <em>necessary infrastructure</em>. But infrastructure is not a destination. The page that breaks the grid with intent outperforms the page that obeys it by reflex. The biology does not reward compliance. It rewards calibration &mdash; the deliberate tuning of the rule to the moment that demands it.
+      </p>
+    </div>
+  </section>
+
+  <!-- pull quote -->
+  <section class="mb-20 md:mb-24">
+    <div class="surface p-8 md:p-14">
+      <p class="pullquote">
+        Rules are for software. Autonomic regulation is for behavioral architects.
+      </p>
+      <div class="mt-6 flex items-center gap-3 font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--ink-3)]">
+        <span class="w-6 h-px bg-[var(--ink-3)] opacity-40"></span>
+        <span>The Key Takeaway</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8 — CTA -->
+  <section class="grid md:grid-cols-12 gap-10 md:gap-14 mb-12">
+    <div class="md:col-span-4">
+      <div class="md:sticky md:top-24">
+        <div class="section-num">08 / Try it tonight</div>
+        <h2 class="prose-h2">Audit your own grid.</h2>
+      </div>
+    </div>
+    <div class="md:col-span-8 body-prose">
+      <p>
+        Open the most important page on your site. Find one grid-break opportunity that meets all three criteria &mdash; intentional, measurable, rhythmically compensated.
+      </p>
+      <p>
+        A practical shortcut: look for the place where your eye already lingers. That is biology telling you where the grid is failing. Your job is to make the break <em>intentional</em> rather than accidental.
+      </p>
+      <p>
+        If you want a full audit against the three NPF levers, we built a checklist for exactly this. Link in the comments.
+      </p>
+    </div>
+  </section>
+
+  <!-- end CTA card -->
+  <section class="mb-24 md:mb-32">
+    <div class="end-cta">
+      <div class="font-mono text-[11px] tracking-[0.18em] uppercase text-[#f4dfca] mb-3 relative z-10">Next in the series</div>
+      <h3 class="font-serif text-3xl md:text-4xl mb-4 relative z-10 leading-tight">
+        Blog 3 &mdash; <span class="italic">The End of &ldquo;Gut Feeling&rdquo; Design.</span>
+      </h3>
+      <p class="text-[15px] md:text-base text-[#dbe6e1] max-w-xl mb-6 relative z-10">
+        Introducing the Visual Empathy Map &mdash; a proprietary tool for calculating cognitive load <em>before</em> a single line of code is written. We do not guess what looks good; we measure what the brain demands.
+      </p>
+      <a href="blog3.html" class="inline-flex items-center gap-2 font-semibold text-sm relative z-10 hover:gap-3 transition-all">
+        Read Brief 03
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-[var(--line)] py-10">
+  <div class="max-w-5xl mx-auto px-6 md:px-8 flex flex-wrap items-center justify-between gap-4 font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--ink-3)]">
+    <span>&copy; Wellfull Collective</span>
+    <span>Brief 02 of 10 &middot; Sensory-Motor System &middot; Pillar I</span>
+  </div>
+</footer>
+
+<script>
+  // reading progress
+  (function(){
+    const bar = document.getElementById('prog');
+    function tick(){
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+      bar.style.width = pct + '%';
+    }
+    document.addEventListener('scroll', tick, { passive: true });
+    window.addEventListener('resize', tick);
+    tick();
+  })();
+</script>
+
+</body>
+</html>

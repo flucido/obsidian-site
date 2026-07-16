@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CCPA & AB 2273 — Layers 6 & 7</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.slide-content {
+  width: 960px;
+  height: 540px;
+  position: relative;
+  transform-origin: center center;
+}
+</style>
+<script>
+function scaleSlide() {
+  const slide = document.querySelector('.slide-content');
+  if (!slide) return;
+  const slideWidth = 960;
+  const slideHeight = 540;
+  const scaleX = window.innerWidth / slideWidth;
+  const scaleY = window.innerHeight / slideHeight;
+  const scale = Math.min(scaleX, scaleY);
+  slide.style.width = slideWidth + 'px';
+  slide.style.height = slideHeight + 'px';
+  slide.style.transform = `scale(${scale})`;
+  slide.style.transformOrigin = 'center center';
+  slide.style.flexShrink = '0';
+}
+window.addEventListener('load', scaleSlide);
+window.addEventListener('resize', scaleSlide);
+</script>
+</head>
+<body>
+<div class="slide-content" style="background:#f4ecd8; font-family:'Times New Roman', serif; overflow:hidden;">
+
+  <!-- Layer badge -->
+  <svg width="120" height="26" viewBox="0 0 120 26" style="position:absolute; left:60px; top:46px;">
+    <rect width="120" height="26" rx="13" fill="#c5694e"/>
+    <text x="60" y="13" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="11" font-weight="700" fill="#fdfaf3" letter-spacing="2">LAYERS 6 &amp; 7 &middot; CA</text>
+  </svg>
+
+  <!-- Eyebrow -->
+  <p style="position:absolute; left:60px; top:84px; margin:0; font-size:11px; color:#a04a30; letter-spacing:4px; font-weight:700;">CONSUMER RIGHTS &amp; PRIVACY BY DEFAULT</p>
+
+  <!-- Title -->
+  <h1 style="position:absolute; left:60px; top:108px; margin:0; font-size:42px; font-weight:700; color:#3d4a3a; line-height:1.05; letter-spacing:-0.5px;">CCPA &amp; AB 2273</h1>
+
+  <!-- Subtitle -->
+  <p style="position:absolute; left:60px; top:172px; margin:0; width:840px; font-size:14px; color:#7a5a40; line-height:1.5; font-style:italic;">Expanding protections to the digital age &mdash; the two newest California layers.</p>
+
+  <!-- Accent -->
+  <svg width="64" height="4" style="position:absolute; left:60px; top:216px;" aria-hidden="true">
+    <rect width="64" height="4" rx="2" fill="#c5694e"/>
+  </svg>
+
+  <!-- Left card: CCPA -->
+  <div style="position:absolute; left:60px; top:240px; width:420px; height:240px; background:#e8dcc4; border-radius:14px; padding:24px; box-shadow: 0 6px 20px rgba(120, 90, 50, 0.10);">
+    <div style="display:flex; align-items:center; margin-bottom:12px;">
+      <svg width="44" height="44" viewBox="0 0 44 44" style="margin-right:14px;" aria-hidden="true">
+        <rect width="44" height="44" rx="10" fill="#c5694e"/>
+        <text x="22" y="22" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="18" font-weight="700" fill="#fdfaf3">6</text>
+      </svg>
+      <div>
+        <p style="margin:0; font-size:10px; color:#a04a30; letter-spacing:3px; font-weight:700;">LAYER 6 &middot; 2018</p>
+        <p style="margin:2px 0 0 0; font-size:22px; font-weight:700; color:#3d4a3a;">CCPA</p>
+      </div>
+    </div>
+
+    <p style="margin:0 0 10px 0; font-size:11px; color:#a04a30; letter-spacing:2px; font-weight:700;">GRANTS PARENTS &amp; STUDENTS:</p>
+
+    <ul style="margin:0; padding-left:0; list-style:none;">
+      <li style="margin:0 0 8px 0; display:flex; align-items:flex-start;">
+        <svg width="14" height="14" viewBox="0 0 14 14" style="flex-shrink:0; margin:3px 10px 0 0;" aria-hidden="true">
+          <polyline points="2 7 6 11 12 3" stroke="#c5694e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p style="margin:0; font-size:13px; color:#3d4a3a; line-height:1.45;"><span style="font-weight:700;">Right to know</span> what data is held.</p>
+      </li>
+      <li style="margin:0; display:flex; align-items:flex-start;">
+        <svg width="14" height="14" viewBox="0 0 14 14" style="flex-shrink:0; margin:3px 10px 0 0;" aria-hidden="true">
+          <polyline points="2 7 6 11 12 3" stroke="#c5694e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p style="margin:0; font-size:13px; color:#3d4a3a; line-height:1.45;"><span style="font-weight:700;">Right to delete</span> &mdash; applied within an educational context.</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Right card: AB 2273 -->
+  <div style="position:absolute; right:40px; top:240px; width:420px; height:240px; background:#e8dcc4; border-radius:14px; padding:24px; box-shadow: 0 6px 20px rgba(120, 90, 50, 0.10);">
+    <div style="display:flex; align-items:center; margin-bottom:12px;">
+      <svg width="44" height="44" viewBox="0 0 44 44" style="margin-right:14px;" aria-hidden="true">
+        <rect width="44" height="44" rx="10" fill="#c5694e"/>
+        <text x="22" y="22" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="18" font-weight="700" fill="#fdfaf3">7</text>
+      </svg>
+      <div>
+        <p style="margin:0; font-size:10px; color:#a04a30; letter-spacing:3px; font-weight:700;">LAYER 7 &middot; 2022</p>
+        <p style="margin:2px 0 0 0; font-size:22px; font-weight:700; color:#3d4a3a;">AB 2273</p>
+      </div>
+    </div>
+
+    <p style="margin:0 0 10px 0; font-size:11px; color:#a04a30; letter-spacing:2px; font-weight:700;">REQUIRES SCHOOLS TO:</p>
+
+    <ul style="margin:0; padding-left:0; list-style:none;">
+      <li style="margin:0 0 8px 0; display:flex; align-items:flex-start;">
+        <svg width="14" height="14" viewBox="0 0 14 14" style="flex-shrink:0; margin:3px 10px 0 0;" aria-hidden="true">
+          <polyline points="2 7 6 11 12 3" stroke="#c5694e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p style="margin:0; font-size:13px; color:#3d4a3a; line-height:1.45;">Apply <span style="font-weight:700;">"privacy by default"</span> for users under 18.</p>
+      </li>
+      <li style="margin:0; display:flex; align-items:flex-start;">
+        <svg width="14" height="14" viewBox="0 0 14 14" style="flex-shrink:0; margin:3px 10px 0 0;" aria-hidden="true">
+          <polyline points="2 7 6 11 12 3" stroke="#c5694e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p style="margin:0; font-size:13px; color:#3d4a3a; line-height:1.45;">Run <span style="font-weight:700;">Data Protection Impact Assessments</span> (DPIAs).</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Source -->
+  <p style="position:absolute; left:60px; bottom:32px; margin:0; font-size:10px; color:#a38060; letter-spacing:1px;">CAL. CIV. CODE &sect;&sect; 1798.100 ET SEQ. (CCPA) &middot; CAL. CIV. CODE &sect;&sect; 1798.99.28 ET SEQ. (AB 2273)</p>
+
+  <!-- Page number badge -->
+  <svg style="position:absolute; right:32px; bottom:24px;" width="36" height="36" viewBox="0 0 36 36">
+    <circle cx="18" cy="18" r="18" fill="#8a9e7e"/>
+    <text x="18" y="18" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="14" font-weight="600" fill="#fdfaf3">08</text>
+  </svg>
+
+</div>
+</body>
+</html>

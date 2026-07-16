@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wellfull Collective: The 200-Millisecond Judgment — A Neuroaesthetic Design Brief</title>
+<meta name="description" content="Aesthetic judgment is not a slow verdict. It's an Event-Related Potential that fires before conscious thought. Here's what the P2 and LPP components mean for the first pixel of your homepage." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --card: #ffffff;
+    --line: #e9e3d6;
+    --line-soft: #efeadd;
+    --ink: #14171e;
+    --ink-2: #3a4256;
+    --ink-3: #7c7a72;
+    --primary: #2f6f5e;     /* deep green — neural */
+    --primary-soft: #d8e6e1;
+    --accent: #c97b3f;      /* terracotta — heat / P2 */
+    --accent-soft: #f4dfca;
+    --danger: #b06367;
+    --serif: 'DM Serif Display', ui-serif, Georgia, serif;
+    --sans: 'Outfit', system-ui, -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  }
+
+  html, body { background: var(--bg); color: var(--ink); }
+  body {
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* subtle corner warmth */
+  body::before, body::after {
+    content: ""; position: fixed; pointer-events: none; z-index: 0;
+    width: 520px; height: 520px; border-radius: 50%;
+    filter: blur(80px); opacity: 0.06;
+  }
+  body::before { top: -160px; left: -160px; background: var(--primary); }
+  body::after  { bottom: -160px; right: -160px; background: var(--accent); }
+
+  main, header, footer { position: relative; z-index: 1; }
+
+  .font-serif { font-family: var(--serif); font-weight: 400; letter-spacing: -0.005em; }
+  .font-mono  { font-family: var(--mono); }
+
+  .h-display {
+    font-family: var(--serif);
+    font-weight: 400;
+    letter-spacing: -0.012em;
+    line-height: 1.04;
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--primary);
+  }
+
+  /* hero drop */
+  .lede {
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--ink-2);
+    font-weight: 400;
+  }
+
+  .body-prose p { margin-bottom: 18px; color: var(--ink-2); }
+  .body-prose p:last-child { margin-bottom: 0; }
+  .body-prose strong { color: var(--ink); font-weight: 600; }
+  .body-prose em { font-family: var(--serif); font-style: italic; color: var(--ink); }
+
+  .prose-h2 {
+    font-family: var(--serif);
+    font-size: 30px;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 14px;
+    letter-spacing: -0.005em;
+  }
+  @media (min-width: 768px) { .prose-h2 { font-size: 36px; } }
+
+  .section-num {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  /* card surface */
+  .surface {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.035);
+  }
+
+  /* pull-quote */
+  .pullquote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 30px;
+    line-height: 1.25;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  @media (min-width: 768px) { .pullquote { font-size: 38px; } }
+
+  .pullquote::before {
+    content: "\201C";
+    color: var(--accent);
+    font-family: var(--serif);
+    font-size: 1.4em;
+    line-height: 0;
+    margin-right: 6px;
+    vertical-align: -0.15em;
+  }
+
+  /* checklist */
+  .check-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px 22px 22px 24px;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .check-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px -2px rgba(0,0,0,0.06); }
+  .check-card .check-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--primary);
+  }
+  .check-card .check-q { font-family: var(--serif); font-size: 20px; line-height: 1.25; color: var(--ink); margin: 8px 0 8px; }
+
+  /* hero mock (200ms test) */
+  .mock-wrap {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .mock-chrome {
+    display: flex; align-items: center; gap: 6px;
+    padding: 9px 12px;
+    background: #f1ece1;
+    border-bottom: 1px solid var(--line);
+  }
+  .mock-dot { width: 9px; height: 9px; border-radius: 50%; }
+  .mock-url {
+    margin-left: 10px;
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-3);
+    background: #fff; border: 1px solid var(--line);
+    border-radius: 6px; padding: 3px 10px;
+    flex: 1;
+  }
+
+  /* PASSING hero */
+  .hero-pass {
+    padding: 56px 40px 60px;
+    background: #fff;
+    text-align: left;
+  }
+  .hero-pass .h-eyebrow {
+    font-family: var(--mono); font-size: 11px;
+    color: var(--primary); letter-spacing: 0.18em;
+    text-transform: uppercase; margin-bottom: 14px;
+  }
+  .hero-pass .h-head {
+    font-family: var(--serif); font-size: 36px;
+    line-height: 1.08; color: var(--ink);
+    margin-bottom: 14px; letter-spacing: -0.012em;
+  }
+  .hero-pass .h-sub {
+    font-size: 14px; color: var(--ink-2);
+    max-width: 360px; margin-bottom: 24px;
+  }
+  .hero-pass .h-cta {
+    display: inline-block;
+    font-family: var(--sans); font-weight: 600;
+    font-size: 13px; color: #fff;
+    background: var(--ink);
+    padding: 11px 18px; border-radius: 8px;
+    letter-spacing: 0.01em;
+  }
+
+  /* FAILING hero */
+  .hero-fail {
+    padding: 36px 28px 40px;
+    background: #fff;
+  }
+  .hero-fail .noise-row {
+    display: flex; gap: 6px; margin-bottom: 16px;
+  }
+  .hero-fail .noise-pill {
+    height: 22px; flex: 1; background: #d6d6d6;
+    border-radius: 4px;
+  }
+  .hero-fail .noise-pill.dark { background: #2a2a2a; }
+  .hero-fail .noise-pill.accent { background: #d8462c; }
+  .hero-fail .noise-pill.soft { background: #e8e8e8; }
+  .hero-fail .noise-head {
+    font-family: var(--sans); font-weight: 800;
+    font-size: 22px; line-height: 1.05;
+    color: var(--ink);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .hero-fail .noise-head span.hl { color: #d8462c; }
+  .hero-fail .noise-sub {
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-3); margin-bottom: 14px;
+    text-transform: uppercase; letter-spacing: 0.1em;
+  }
+  .hero-fail .noise-cta {
+    display: inline-block;
+    font-family: var(--sans); font-weight: 700;
+    font-size: 12px; color: #fff;
+    background: #d8462c;
+    padding: 10px 14px; border-radius: 4px;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-right: 6px; margin-bottom: 6px;
+  }
+  .hero-fail .noise-cta.outline {
+    background: #fff; color: var(--ink);
+    border: 1px solid var(--ink);
+  }
+  .hero-fail .noise-cta.third {
+    background: #2a2a2a;
+  }
+
+  .verdict {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    padding: 7px 12px; border-radius: 999px;
+    margin-top: 18px;
+  }
+  .verdict.pass { background: var(--primary-soft); color: var(--primary); }
+  .verdict.fail { background: #f4dcdc; color: var(--danger); }
+
+  /* timeline window */
+  .tl-window {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px 26px;
+  }
+  .tl-window .tl-label {
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 6px;
+  }
+  .tl-window .tl-name {
+    font-family: var(--serif); font-size: 22px;
+    line-height: 1.15; color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .tl-window .tl-body { font-size: 14px; color: var(--ink-2); }
+
+  /* reading progress */
+  .progress-track {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: 3px; background: transparent; z-index: 50;
+  }
+  .progress-bar {
+    height: 100%; width: 0%;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    transition: width 80ms linear;
+  }
+
+  /* nav */
+  .topnav {
+    border-bottom: 1px solid var(--line);
+    background: rgba(247,245,240,0.85);
+    backdrop-filter: blur(8px);
+  }
+
+  /* divider */
+  .rule {
+    height: 1px; background: var(--line); margin: 0 auto;
+    max-width: 80px;
+  }
+
+  /* hover lift utility */
+  .hover-lift { transition: transform .2s ease, box-shadow .2s ease; }
+  .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 6px 20px -4px rgba(0,0,0,0.08); }
+
+  /* end card */
+  .end-cta {
+    background: linear-gradient(135deg, #1f3a35 0%, #2f6f5e 100%);
+    color: #f5efe2;
+    border-radius: 22px;
+    padding: 44px 36px;
+    position: relative; overflow: hidden;
+  }
+  .end-cta::after {
+    content: ""; position: absolute;
+    width: 320px; height: 320px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,123,63,0.35), transparent 70%);
+    right: -80px; bottom: -80px;
+  }
+
+  /* responsive */
+  @media (max-width: 640px) {
+    .pullquote { font-size: 24px; }
+    .hero-pass { padding: 40px 24px 44px; }
+    .hero-pass .h-head { font-size: 28px; }
+    .hero-fail { padding: 26px 18px 30px; }
+    .hero-fail .noise-head { font-size: 18px; }
+    .end-cta { padding: 32px 22px; }
+  }
+
+  /* subtle dotted grid backdrop for diagrams */
+  .diagram-bg {
+    background-image: radial-gradient(circle, rgba(20,23,30,0.07) 1px, transparent 1px);
+    background-size: 22px 22px;
+    background-position: 0 0;
+  }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- reading progress -->
+<div class="progress-track"><div id="prog" class="progress-bar"></div></div>
+
+<!-- top nav -->
+<header class="topnav sticky top-0 z-40">
+  <div class="max-w-5xl mx-auto px-6 md:px-8 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 group">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[var(--primary)]">
+        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+        <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+      </svg>
+      <span class="font-serif text-lg tracking-tight text-[var(--ink)]">Wellfull Collective</span>
+    </a>
+    <div class="font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--ink-3)]">
+      Brief 01 / 10
+    </div>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 md:px-8">
+
+  <!-- HERO -->
+  <section class="pt-16 md:pt-24 pb-12 md:pb-16">
+    <div class="eyebrow mb-5">Blog 1 &middot; Sensory-Motor System &middot; Pillar I</div>
+    <h1 class="h-display text-5xl md:text-7xl text-[var(--ink)] mb-6">
+      The 200&#8209;Millisecond<br/>Judgment
+    </h1>
+    <p class="lede max-w-3xl mb-8">
+      Aesthetic judgment is not a slow verdict. It's an Event-Related Potential that fires before conscious thought &mdash; and your hero section has already lost before your headline is read.
+    </p>
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--ink-3)]">
+      <span>By the Wellfull Collective</span>
+      <span class="w-1 h-1 rounded-full bg-[var(--line)]"></span>
+      <span>6 min read</span>
+      <span class="w-1 h-1 rounded-full bg-[var(--line)]"></span>
+      <span>P2 &middot; LPP &middot; ERP</span>
+    </div>
+  </section>
+
+  <div class="rule mb-16 md:mb-20"></div>
+
+  <!-- SECTION 1 — Counterintuitive -->
+  <section class="grid md:grid-cols-12 gap-10 md:gap-14 mb-20 md:mb-24">
+    <div class="md:col-span-4">
+      <div class="md:sticky md:top-24">
+        <div class="section-num">01 / The Counterintuitive Fact</div>
+        <h2 class="prose-h2">Your visitor has already decided.</h2>
+      </div>
+    </div>
+    <div class="md:col-span-8 body-prose">
+      <p>
+        In the time it takes to blink, your visitor has decided whether your site is beautiful or ugly &mdash; and they will not change their mind. That verdict is not a metaphor. It is a measurable electrical signal in the visual cortex, firing between <strong>200 and 600 milliseconds</strong> after the page loads, before a single word has been consciously processed.
+      </p>
+      <p>
+        Most designers assume aesthetic judgment is a deliberative process: the user lands, scans, weighs, decides. The neuroscience says otherwise. <strong>Event-Related Potentials (ERPs)</strong> &mdash; the electrical fingerprints the brain leaves on the scalp when it processes a stimulus &mdash; prove that aesthetic judgment is <em>rapid and implicit</em>, not rational and delayed.
+      </p>
+      <p>Two components matter most:</p>
+      <ul class="space-y-3 my-6 pl-1">
+        <li class="flex gap-3"><span class="font-mono text-xs text-[var(--accent)] mt-1.5 w-12 shrink-0">P2</span><span><strong>200&ndash;300 ms</strong> &mdash; early visuospatial discrimination. The brain separates distinct layouts and forms a first preference.</span></li>
+        <li class="flex gap-3"><span class="font-mono text-xs text-[var(--accent)] mt-1.5 w-12 shrink-0">LPP</span><span><strong>400&ndash;600 ms</strong> &mdash; deep aesthetic preference. Locks in the emotional charge that drives attention allocation.</span></li>
+      </ul>
+      <p>
+        Both fire before the rational brain has had its first cup of coffee. By the time a user <em>thinks</em> about your homepage, they have already made up their mind biologically.
+      </p>
+    </div>
+  </section>
+
+  <!-- ERP CURVE DIAGRAM -->
+  <section class="mb-20 md:mb-24">
+    <div class="surface p-6 md:p-10">
+      <div class="flex items-baseline justify-between mb-6">
+        <div class="font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--primary)]">Fig. 1.1 &middot; Aesthetic ERP</div>
+        <div class="font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--ink-3)]">Amplitude &micro;V &middot; Time ms</div>
+      </div>
+
+      <!-- ERP SVG -->
+      <svg viewBox="0 0 900 380" class="w-full h-auto diagram-bg rounded-lg" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="erpStroke" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#2f6f5e"/>
+            <stop offset="55%" stop-color="#2f6f5e"/>
+            <stop offset="70%" stop-color="#c97b3f"/>
+            <stop offset="100%" stop-color="#c97b3f"/>
+          </linearGradient>
+          <linearGradient id="erpFill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2f6f5e" stop-opacity="0.12"/>
+            <stop offset="100%" stop-color="#2f6f5e" stop-opacity="0"/>
+          </linearGradient>
+          <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5">
+            <circle cx="5" cy="5" r="3" fill="#14171e"/>
+          </marker>
+        </defs>
+
+        <!-- axes -->
+        <line x1="60" y1="190" x2="870" y2="190" stroke="#14171e" stroke-opacity="0.18" stroke-width="1"/>
+        <line x1="60" y1="40" x2="60" y2="340" stroke="#14171e" stroke-opacity="0.18" stroke-width="1"/>
+
+        <!-- y axis ticks -->
+        <text x="48" y="195" text-anchor="end" font-family="JetBrains Mono" font-size="11" fill="#7c7a72">0</text>
+        <text x="48" y="135" text-anchor="end" font-family="JetBrains Mono" font-size="11" fill="#7c7a72">+</text>
+        <text x="48" y="255" text-anchor="end" font-family="JetBrains Mono" font-size="11" fill="#7c7a72">&minus;</text>
+
+        <!-- x axis ticks -->
+        <g font-family="JetBrains Mono" font-size="11" fill="#7c7a72">
+          <text x="60"  y="362" text-anchor="middle">0</text>
+          <text x="190" y="362" text-anchor="middle">100</text>
+          <text x="320" y="362" text-anchor="middle">200</text>
+          <text x="450" y="362" text-anchor="middle">300</text>
+          <text x="580" y="362" text-anchor="middle">400</text>
+          <text x="710" y="362" text-anchor="middle">500</text>
+          <text x="840" y="362" text-anchor="middle">600</text>
+        </g>
+        <text x="465" y="378" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#7c7a72">milliseconds post-stimulus</text>
+
+        <!-- P2 window shading -->
+        <rect x="290" y="40" width="190" height="300" fill="#2f6f5e" fill-opacity="0.06"/>
+        <rect x="540" y="40" width="270" height="300" fill="#c97b3f" fill-opacity="0.06"/>
+
+        <text x="385" y="62" text-anchor="middle" font-family="DM Serif Display" font-size="16" fill="#2f6f5e">P2 Window</text>
+        <text x="675" y="62" text-anchor="middle" font-family="DM Serif Display" font-size="16" fill="#c97b3f">LPP Window</text>
+
+        <!-- ERP curve (decorative; modeled on typical early-posterior ERPs to aesthetic stimuli) -->
+        <path d="
+          M 60 190
+          C 90 190, 110 178, 130 170
+          C 150 160, 165 150, 175 138
+          C 185 122, 200 118, 210 142
+          C 220 168, 232 200, 244 235
+          C 254 268, 264 248, 278 218
+          C 296 178, 320 130, 350 110
+          C 380 92, 410 100, 432 138
+          C 452 172, 470 220, 488 232
+          C 510 246, 530 224, 552 200
+          C 580 170, 612 156, 644 152
+          C 678 148, 710 158, 738 174
+          C 768 192, 800 208, 840 220
+        "
+        fill="none" stroke="url(#erpStroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <!-- P1, N1, P2, N2, LPP markers -->
+        <g font-family="JetBrains Mono" font-size="12" fill="#14171e">
+          <circle cx="175" cy="138" r="4.5" fill="#2f6f5e"/>
+          <text x="175" y="118" text-anchor="middle" fill="#2f6f5e" font-weight="600">P1</text>
+
+          <circle cx="244" cy="240" r="4.5" fill="#2f6f5e"/>
+          <text x="244" y="262" text-anchor="middle" fill="#2f6f5e" font-weight="600">N1</text>
+
+          <circle cx="350" cy="110" r="5.5" fill="#2f6f5e"/>
+          <text x="350" y="92" text-anchor="middle" fill="#2f6f5e" font-weight="700">P2</text>
+
+          <circle cx="488" cy="232" r="4.5" fill="#14171e"/>
+          <text x="488" y="254" text-anchor="middle" font-weight="600">N2</text>
+
+          <circle cx="675" cy="160" r="5.5" fill="#c97b3f"/>
+          <text x="675" y="142" text-anchor="middle" fill="#c97b3f" font-weight="700">LPP</text>
+        </g>
+
+        <!-- legend -->
+        <g transform="translate(72,310)" font-family="JetBrains Mono" font-size="11" fill="#3a4256">
+          <rect x="0" y="0" width="14" height="14" fill="#2f6f5e" fill-opacity="0.06" stroke="#2f6f5e" stroke-opacity="0.3"/>
+          <text x="22" y="11">P2 = early visual discrimination (200&ndash;300 ms)</text>
+        </g>
+        <g transform="translate(440,310)" font-family="JetBrains Mono" font-size="11" fill="#3a4256">
+          <rect x="0" y="0" width="14" height="14" fill="#c97b3f" fill-opacity="0.06" stroke="#c97b3f" stroke-opacity="0.3"/>
+          <text x="22" y="11">LPP = deep aesthetic preference (400&ndash;600 ms)</text>
+        </g>
+      </svg>
+
+      <p class="font-mono text-[11px] tracking-[0.12em] uppercase text-[var(--ink-3)] mt-5">
+        Schematic &mdash; illustrative only. Component timing follows Cela-Conde et al. and Chatterjee aesthetic-ERP literature.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — Biological Timeline -->
+  <section class="grid md:grid-cols-12 gap-10 md:gap-14 mb-20 md:mb-24">
+    <div class="md:col-span-4">
+      <div class="md:sticky md:top-24">
+        <div class="section-num">02 / The Biological Timeline</div>
+        <h2 class="prose-h2">Six hundred milliseconds, three windows.</h2>
+      </div>
+    </div>
+    <div class="md:col-span-8 body-prose">
+      <p>
+        Free-browsing is the dominant mode. The user is not reading your page &mdash; they are <em>biologically filtering</em> it. Here is how the first six hundred milliseconds actually unfold.
+      </p>
+    </div>
+  </section>
+
+  <!-- Timeline SVG -->
+  <section class="mb-20 md:mb-24">
+    <div class="surface p-6 md:p-10">
+      <div class="flex items-baseline justify-between mb-8">
+        <div class="font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--primary)]">Fig. 1.2 &middot; First-Impression Timeline</div>
+        <div class="font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--ink-3)]">Schematic</div>
+      </div>
+
+      <svg viewBox="0 0 900 280" class="w-full h-auto" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="tlBar" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#2f6f5e"/>
+            <stop offset="60%" stop-color="#2f6f5e"/>
+            <stop offset="65%" stop-color="#c97b3f"/>
+            <stop offset="100%" stop-color="#c97b3f"/>
+          </linearGradient>
+        </defs>
+
+        <!-- the bar -->
+        <rect x="60" y="120" width="780" height="22" rx="11" fill="url(#tlBar)" fill-opacity="0.18"/>
+        <rect x="60" y="120" width="780" height="22" rx="11" fill="none" stroke="url(#tlBar)" stroke-width="2"/>
+
+        <!-- tick marks + labels -->
+        <g font-family="JetBrains Mono" font-size="11" fill="#7c7a72">
+          <g stroke="#14171e" stroke-opacity="0.3" stroke-width="1">
+            <line x1="60"  y1="148" x2="60"  y2="158"/>
+            <line x1="190" y1="148" x2="190" y2="158"/>
+            <line x1="320" y1="148" x2="320" y2="158"/>
+            <line x1="450" y1="148" x2="450" y2="158"/>
+            <line x1="580" y1="148" x2="580" y2="158"/>
+            <line x1="710" y1="148" x2="710" y2="158"/>
+            <line x1="840" y1="148" x2="840" y2="158"/>
+          </g>
+          <text x="60"  y="178" text-anchor="middle">0ms</text>
+          <text x="190" y="178" text-anchor="middle">100ms</text>
+          <text x="320" y="178" text-anchor="middle">200ms</text>
+          <text x="450" y="178" text-anchor="middle">300ms</text>
+          <text x="580" y="178" text-anchor="middle">400ms</text>
+          <text x="710" y="178" text-anchor="middle">500ms</text>
+          <text x="840" y="178" text-anchor="middle">600ms</text>
+        </g>
+
+        <!-- brain dots above the bar -->
+        <g>
+          <circle cx="125" cy="131" r="14" fill="#fff" stroke="#2f6f5e" stroke-width="1.5" stroke-opacity="0.55"/>
+          <circle cx="385" cy="131" r="14" fill="#fff" stroke="#2f6f5e" stroke-width="2"/>
+          <circle cx="675" cy="131" r="14" fill="#fff" stroke="#c97b3f" stroke-width="2"/>
+        </g>
+
+        <!-- window 1 label (above) -->
+        <g transform="translate(60,40)">
+          <text font-family="DM Serif Display" font-size="16" fill="#2f6f5e">0&ndash;100 ms</text>
+          <text y="20" font-family="Outfit" font-size="13" fill="#3a4256">Visual perception.</text>
+          <text y="36" font-family="Outfit" font-size="13" fill="#3a4256">No explicit aesthetic appraisal yet.</text>
+        </g>
+
+        <!-- window 2 label (above) -->
+        <g transform="translate(290,40)">
+          <text font-family="DM Serif Display" font-size="18" fill="#2f6f5e">The P2 Window</text>
+          <text y="20" font-family="Outfit" font-size="13" fill="#3a4256" font-weight="500">200&ndash;300 ms. Visual discrimination.</text>
+          <text y="36" font-family="Outfit" font-size="13" fill="#3a4256">The brain separates layouts.</text>
+        </g>
+
+        <!-- window 3 label (above) -->
+        <g transform="translate(540,40)">
+          <text font-family="DM Serif Display" font-size="18" fill="#c97b3f">The LPP Window</text>
+          <text y="20" font-family="Outfit" font-size="13" fill="#3a4256" font-weight="500">400&ndash;600 ms. Deep aesthetic preference.</text>
+          <text y="36" font-family="Outfit" font-size="13" fill="#3a4256">Emotional arousal dictates attention allocation.</text>
+        </g>
+
+        <!-- tick callouts below -->
+        <g font-family="JetBrains Mono" font-size="10" fill="#2f6f5e" text-anchor="middle">
+          <text x="125" y="208">perception</text>
+          <text x="385" y="208">discrimination</text>
+          <text x="675" y="208">preference lock-in</text>
+        </g>
+
+        <!-- arrow showing "the window" -->
+        <g transform="translate(60,236)">
+          <line x1="0" y1="0" x2="780" y2="0" stroke="#14171e" stroke-opacity="0.2" stroke-width="1"/>
+          <line x1="0" y1="-4" x2="0" y2="4" stroke="#14171e" stroke-opacity="0.3"/>
+          <line x1="780" y1="-4" x2="780" y2="4" stroke="#14171e" stroke-opacity="0.3"/>
+          <text x="390" y="20" text-anchor="middle" font-family="Outfit" font-size="13" fill="#7c7a72" font-style="italic">
+            the entire window for capturing a user's biological preference
+          </text>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — Practical Consequence -->
+  <section class="grid md:grid-cols-12 gap-10 md:gap-14 mb-20 md:mb-24">
+    <div class="md:col-span-4">
+      <div class="md:sticky md:top-24">
+        <div class="section-num">03 / Practical Consequence</div>
+        <h2 class="prose-h2">The user isn't reading. They're filtering.</h2>
+      </div>
+    </div>
+    <div class="md:col-span-8 body-prose">
+      <p>
+        Three failure modes I see every week, on sites with great copy and bad biology.
+      </p>
+
+      <!-- inline failure grid -->
+      <div class="grid sm:grid-cols-3 gap-4 my-8">
+        <div class="surface p-5">
+          <div class="flex items-start justify-between mb-2">
+            <div class="font-mono text-[10px] tracking-[0.18em] uppercase text-[var(--accent)]">Failure 01</div>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c97b3f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.7">
+              <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+            </svg>
+          </div>
+          <h4 class="font-serif text-lg text-[var(--ink)] mb-2 leading-tight">The cluttered hero</h4>
+          <p class="text-[14px] text-[var(--ink-2)]">Five headlines, three CTAs, two logos, a carousel, a stock photo. The visual cortex cannot separate distinct shape categories fast enough.</p>
+        </div>
+        <div class="surface p-5">
+          <div class="flex items-start justify-between mb-2">
+            <div class="font-mono text-[10px] tracking-[0.18em] uppercase text-[var(--accent)]">Failure 02</div>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c97b3f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.7">
+              <path d="M14 4h6v6"/><path d="M10 20H4v-6"/><path d="m20 4-7 7"/><path d="m4 20 7-7"/>
+            </svg>
+          </div>
+          <h4 class="font-serif text-lg text-[var(--ink)] mb-2 leading-tight">The CTA that fights the type</h4>
+          <p class="text-[14px] text-[var(--ink-2)]">A red button slammed against black-on-white copy. The brain sees motion blur. Discrimination fails.</p>
+        </div>
+        <div class="surface p-5">
+          <div class="flex items-start justify-between mb-2">
+            <div class="font-mono text-[10px] tracking-[0.18em] uppercase text-[var(--accent)]">Failure 03</div>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c97b3f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.7">
+              <path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/>
+            </svg>
+          </div>
+          <h4 class="font-serif text-lg text-[var(--ink)] mb-2 leading-tight">The type-stack mismatch</h4>
+          <p class="text-[14px] text-[var(--ink-2)]">Serif headline, sans body, monospace stats &mdash; three shape grammars. The ventral stream stalls.</p>
+        </div>
+      </div>
+
+      <p>Each of these fails the P2. None of them can be rescued by copy.</p>
+      <p>
+        The pattern is consistent: in every case, the designer's attention was on what the page <em>says</em>, not what the page <em>is</em>. In every case, the user has no idea what the page says &mdash; they have only registered what it <em>looks</em> like in the time it takes for the ERP to commit a preference. The copy may be brilliant. The brand may be trusted. The offer may be unmatched. None of it registers until the visual cortex releases the page from its first filter.
+      </p>
+      <p>
+        This is why "just make it pretty" is a serious brief, not a throwaway line. It is the only line in the room that addresses the only decision the user has actually made.
+      </p>
+    </div>
+  </section>
+
+  <!-- THE 200MS TEST — side by side -->
+  <section class="mb-20 md:mb-24">
+    <div class="flex items-baseline justify-between mb-6">
+      <div class="font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--primary)]">Fig. 1.3 &middot; The 200&#8209;ms Test</div>
+      <div class="font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--ink-3)]">Before any copy is read</div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- PASS -->
+      <div class="mock-wrap hover-lift">
+        <div class="mock-chrome">
+          <span class="mock-dot" style="background:#e37868"></span>
+          <span class="mock-dot" style="background:#e8c46b"></span>
+          <span class="mock-dot" style="background:#7ec48c"></span>
+          <span class="mock-url">yourbrand.com</span>
+        </div>
+        <div class="hero-pass">
+          <div class="h-eyebrow">A studio for serious teams</div>
+          <div class="h-head">Design that the brain already trusts.</div>
+          <div class="h-sub">We engineer the first 600 milliseconds &mdash; before the rational mind has time to object.</div>
+          <span class="h-cta">See the work &rarr;</span>
+          <div><span class="verdict pass">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Passes P2 &amp; LPP
+          </span></div>
+        </div>
+      </div>
+
+      <!-- FAIL -->
+      <div class="mock-wrap hover-lift">
+        <div class="mock-chrome">
+          <span class="mock-dot" style="background:#e37868"></span>
+          <span class="mock-dot" style="background:#e8c46b"></span>
+          <span class="mock-dot" style="background:#7ec48c"></span>
+          <span class="mock-url">yourbrand.com</span>
+        </div>
+        <div class="hero-fail">
+          <div class="noise-row">
+            <span class="noise-pill dark"></span>
+            <span class="noise-pill"></span>
+            <span class="noise-pill soft"></span>
+            <span class="noise-pill"></span>
+            <span class="noise-pill accent"></span>
+          </div>
+          <div class="noise-head">WELCOME TO <span class="hl">YOURBRAND</span>!! THE BEST <span class="hl">SOLUTION</span> FOR EVERYONE</div>
+          <div class="noise-sub">#1 rated &middot; trusted by 10,000+ &middot; award winning &middot; est. 2014</div>
+          <a class="noise-cta">Get Started</a>
+          <a class="noise-cta outline">Learn More</a>
+          <a class="noise-cta third">Watch Demo</a>
+          <div><span class="verdict fail">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Fails P2 &middot; LPP never fires
+          </span></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="font-mono text-[11px] tracking-[0.12em] uppercase text-[var(--ink-3)] mt-5 text-center md:text-left">
+      Same information density. Same call-to-action. Same screenshot is taken before the eye reads a single word.
+    </p>
+  </section>
+
+  <!-- SECTION 4 — Three pre-conscious checks -->
+  <section class="grid md:grid-cols-12 gap-10 md:gap-14 mb-20 md:mb-24">
+    <div class="md:col-span-4">
+      <div class="md:sticky md:top-24">
+        <div class="section-num">04 / The Audit</div>
+        <h2 class="prose-h2">Three pre-conscious checks.</h2>
+        <p class="text-[14px] text-[var(--ink-2)] mt-3">Run them on your hero before you write another word of copy.</p>
+      </div>
+    </div>
+    <div class="md:col-span-8 space-y-4">
+      <div class="check-card">
+        <div class="check-tag">Check A &middot; 0&ndash;200 ms</div>
+        <h3 class="check-q">Is there a single dominant focal point?</h3>
+        <p class="text-[15px] text-[var(--ink-2)]">Squint your eyes. Can you still tell what the page is about? If not, the P2 won't either. The P2 needs <em>one</em> shape to lock onto. Give it.</p>
+      </div>
+      <div class="check-card">
+        <div class="check-tag">Check B &middot; 200&ndash;300 ms</div>
+        <h3 class="check-q">Does the layout separate distinct shape categories?</h3>
+        <p class="text-[15px] text-[var(--ink-2)]">The brain separates a hero from a sidebar by <em>shape grammar</em>, not by reading order. If your hero and body content use the same type at the same weight, the P2 has nothing to discriminate &mdash; it returns noise.</p>
+      </div>
+      <div class="check-card">
+        <div class="check-tag">Check C &middot; 400&ndash;600 ms</div>
+        <h3 class="check-q">Does the second beat reward the eye?</h3>
+        <p class="text-[15px] text-[var(--ink-2)]">The LPP wants <em>depth</em>. After the P2 picks a layout, the LPP looks for a richer aesthetic pull &mdash; rhythm, a tonal shift, a payoff. If your hero is one note, you pass the first check and fail the second.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — Stop designing for the rational brain -->
+  <section class="grid md:grid-cols-12 gap-10 md:gap-14 mb-20 md:mb-24">
+    <div class="md:col-span-4">
+      <div class="md:sticky md:top-24">
+        <div class="section-num">05 / The Reframe</div>
+        <h2 class="prose-h2">Stop designing for the rational brain.</h2>
+      </div>
+    </div>
+    <div class="md:col-span-8 body-prose">
+      <p>
+        For two decades, the web industry has optimized for the conscious mind. A/B tests on headlines. Heatmaps on CTAs. Copywriting frameworks that treat the user as a reasoning agent. All of this is <em>downstream</em> work.
+      </p>
+      <p>
+        The rational brain is expensive to recruit &mdash; it requires sustained attention, working memory, executive function. The implicit reflex is free, automatic, and decisive. By the time your beautifully-crafted copy reaches the prefrontal cortex, the visual cortex has already cast the vote.
+      </p>
+      <p>
+        This is not an argument against strong copy. It is an argument about <em>order of operations</em>. A landing page that nails the first 600 milliseconds and fumbles the headline can be fixed in a sprint. A landing page that fumbles the first 600 milliseconds and nails the headline cannot be fixed by any amount of rewrites &mdash; the user is already gone.
+      </p>
+      <p>
+        The implicit reflex is not a junior member of the design team. It is the chair of the hiring committee. Treat it that way.
+      </p>
+    </div>
+  </section>
+
+  <!-- pull quote -->
+  <section class="mb-20 md:mb-24">
+    <div class="surface p-8 md:p-14">
+      <p class="pullquote">
+        Stop designing for the rational brain. Design for the implicit reflex.
+      </p>
+      <div class="mt-6 flex items-center gap-3 font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--ink-3)]">
+        <span class="w-6 h-px bg-[var(--ink-3)] opacity-40"></span>
+        <span>The Key Takeaway</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — CTA -->
+  <section class="grid md:grid-cols-12 gap-10 md:gap-14 mb-12">
+    <div class="md:col-span-4">
+      <div class="md:sticky md:top-24">
+        <div class="section-num">06 / Try it tonight</div>
+        <h2 class="prose-h2">Audit your hero in 60 seconds.</h2>
+      </div>
+    </div>
+    <div class="md:col-span-8 body-prose">
+      <p>
+        Open your top-revenue page. Time how long it takes for your eye to land on a single dominant element. If the answer is more than 200 milliseconds, your P2 is failing. The biology does not negotiate.
+      </p>
+      <p>
+        Three quick tests, in order:
+      </p>
+      <ol class="space-y-2 my-4 pl-6 list-decimal text-[15px] text-[var(--ink-2)]">
+        <li><strong>Scroll past it.</strong> Open the page on a second monitor and let your peripheral vision see it before your fovea lands. What does your visual cortex commit to before you can name a single element?</li>
+        <li><strong>Greyscale and squint.</strong> Strip color and narrow your field of view. If the dominant shape is not obvious, the P2 has nothing to lock onto.</li>
+        <li><strong>Show it for 500 ms.</strong> Screenshot the hero, set it as a wallpaper, glance at it while doing something else. If your eye doesn't come back to it voluntarily, the LPP didn't fire.</li>
+      </ol>
+      <p>
+        The user's visual cortex is making your business decisions before they read a single word you wrote. The question is whether you are designing <em>for</em> it &mdash; or <em>against</em> it.
+      </p>
+    </div>
+  </section>
+
+  <!-- end CTA card -->
+  <section class="mb-24 md:mb-32">
+    <div class="end-cta">
+      <div class="font-mono text-[11px] tracking-[0.18em] uppercase text-[#f4dfca] mb-3 relative z-10">Next in the series</div>
+      <h3 class="font-serif text-3xl md:text-4xl mb-4 relative z-10 leading-tight">
+        Blog 2 &mdash; <span class="italic">Breaking the Grid for the Brain.</span>
+      </h3>
+      <p class="text-[15px] md:text-base text-[#dbe6e1] max-w-xl mb-6 relative z-10">
+        Why rigid 12-column systems fail human biology, and how affective grid-breaking creates immediate autonomic responses. The Neuroaesthetic Pedagogy Framework in practice.
+      </p>
+      <a href="blog2.html" class="inline-flex items-center gap-2 font-semibold text-sm relative z-10 hover:gap-3 transition-all">
+        Read Brief 02
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-[var(--line)] py-10">
+  <div class="max-w-5xl mx-auto px-6 md:px-8 flex flex-wrap items-center justify-between gap-4 font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--ink-3)]">
+    <span>&copy; Wellfull Collective</span>
+    <span>Brief 01 of 10 &middot; Sensory-Motor System &middot; Pillar I</span>
+  </div>
+</footer>
+
+<script>
+  // reading progress
+  (function(){
+    const bar = document.getElementById('prog');
+    function tick(){
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+      bar.style.width = pct + '%';
+    }
+    document.addEventListener('scroll', tick, { passive: true });
+    window.addEventListener('resize', tick);
+    tick();
+  })();
+</script>
+
+</body>
+</html>

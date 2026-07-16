@@ -11,13 +11,13 @@ status: in-progress
 
 ## 1. Business Email
 
-- [ ] Register domain email (frank@wellfullcollective.com or hello@wellfullcollective.com)
-- [ ] Verify sending domain for transactional email (Resend or equivalent)
-- [ ] Set up email signature with name, title, wellfullcollective.com, and brand colors
+- [x] Register domain email (frank@wellfullcollective.com or hello@wellfullcollective.com)
+- [x] Verify sending domain for transactional email (Resend or equivalent)
+- [x] Set up email signature with name, title, wellfullcollective.com, and brand colors
 
 ## 2. LinkedIn Business Profile
 
-- [ ] Create LinkedIn Company Page for WellFull Collective
+- [x] Create LinkedIn Company Page for WellFull Collective — **https://www.linkedin.com/company/wellfullcollective**
 - [ ] Fill in profile fields from [[linkedin-profile-wellfull-collective]] (industry: Design Services, size: 2-10, location: SF Bay Area)
 - [ ] Paste headline/tagline: "Therapist websites designed to regulate before they convert."
 - [ ] Paste About section (~1,375 chars — already written in the profile doc)
@@ -36,8 +36,9 @@ status: in-progress
 
 ## 4. Social Media Campaign Setup (IG + TikTok)
 
-- [ ] Create Instagram Business account (@wellfullcollective or @wfc.studio)
-- [ ] Create TikTok Business account (same handle for consistency)
+- [x] Create Instagram Business account — **@wellfull_collective**
+- [x] Create TikTok Business account — **@wellfullcollective**
+- [x] LinkedIn Company Page — **https://www.linkedin.com/company/wellfullcollective**
 - [ ] Set up Instagram profile bio from [[social-media-campaign#Bio Template]]
 - [ ] Set up link-in-bio tool (Linktree, Beacons, or custom — must use brand colors)
 - [ ] Add social links (IG, TT, LinkedIn) to wellfullcollective.com footer + header

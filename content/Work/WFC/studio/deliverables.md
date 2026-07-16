@@ -1,9 +1,9 @@
-# NeroDesign Client Deliverables
+# WellFull Collective — Client Deliverables
 
 ## What Clients Receive
 
 ### 1. Live Website
-A fully functional, responsive website built to the NeroDesign system standards.
+A fully functional, responsive website built to the WellFull Collective system standards.
 - All pages pass the six-gate Critique Heuristics framework
 - WCAG AA accessibility compliance minimum
 - prefers-reduced-motion support
@@ -11,7 +11,7 @@ A fully functional, responsive website built to the NeroDesign system standards.
 - Performance budget: LCP under 2.5s, CLS under 0.1
 
 ### 2. Design System Token File
-A documented set of design tokens specific to the client's brand, derived from the NeroDesign system.
+A documented set of design tokens specific to the client's brand, derived from the WellFull Collective system.
 - Color palette (calm, engagement, and trust variants)
 - Spacing scale
 - Typography scale

@@ -1,7 +1,7 @@
 # Evidence Tier Classification Guide
 
 ## Purpose
-Every piece of research entering the NeroDesign system must be classified into one of three evidence tiers. This prevents treating single observations as laws, and keeps our methodology honest about the origin of each design rule.
+Every piece of research entering the WellFull Collective system must be classified into one of three evidence tiers. This prevents treating single observations as laws, and keeps our methodology honest about the origin of each design rule.
 
 ## Tier 1 — Strong Evidence
 **Definition:** Replicated findings, quantitative results, peer-reviewed consensus.
@@ -50,7 +50,7 @@ Every piece of research entering the NeroDesign system must be classified into o
 
 **Examples (to be developed):**
 - "Revisability reduces impulse-anxiety in high-sensitivity contexts"
-- "Design should regulate before it converts"
+- "Design should work for the most vulnerable — because what works for them works for everyone"
 - "Every form, CTA, and navigation action must support undo, draft, or return paths"
 
 **Design rule weight:** VARIABLE — depends on the strength of the source evidence chain.

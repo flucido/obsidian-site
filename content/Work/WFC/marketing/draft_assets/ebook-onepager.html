@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WellFull Collective — Design Philosophy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --peach: #ead5c8;
+        --peach-light: #f2e4db;
+        --oat: #e8dad5;
+        --sage: #dae8df;
+        --rose: #c49088;
+        --espresso: #5a3e2e;
+        --espresso-deep: #483224;
+        --slate: #2e3d4a;
+        --slate-muted: #5e7282;
+        --taupe: #c8b8aa;
+
+        --font-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+        --font-body: "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, sans-serif;
+      }
+
+      @page {
+        size: letter portrait;
+        margin: 0.5in;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #f6efe9;
+        font-family: var(--font-body);
+        color: var(--slate);
+        -webkit-font-smoothing: antialiased;
+        font-size: 11pt;
+        line-height: 1.55;
+      }
+
+      .toolbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 28px;
+        background: rgba(246, 239, 233, 0.95);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--taupe);
+        font-size: 10pt;
+      }
+      .toolbar .crumb {
+        color: var(--slate-muted);
+      }
+      .toolbar a {
+        background: var(--espresso);
+        color: var(--peach-light);
+        padding: 8px 16px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 9pt;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      .toolbar a:hover {
+        background: var(--espresso-deep);
+      }
+      .toolbar-right {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .toolbar .research-link {
+        background: transparent;
+        font-family: var(--font-body);
+        font-size: 9pt;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--espresso);
+        text-decoration: none;
+        padding: 7px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--espresso);
+        transition: all 0.2s ease;
+      }
+      .toolbar .research-link:hover {
+        background: var(--espresso);
+        color: var(--peach);
+      }
+
+      .page {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 56px 48px 80px;
+        background: var(--peach-light);
+      }
+
+      .nav-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 9pt;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--espresso);
+        margin-bottom: 64px;
+      }
+      .nav-row .left {
+        color: var(--slate-muted);
+      }
+
+      .brand-mark {
+        font-family: var(--font-display);
+        font-size: 22pt;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--espresso);
+        margin-bottom: 56px;
+        line-height: 1;
+      }
+      .brand-mark .sub {
+        font-style: normal;
+        font-family: var(--font-body);
+        font-size: 9pt;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--espresso);
+        margin-left: 6px;
+        vertical-align: middle;
+        font-weight: 400;
+      }
+
+      h1.headline {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: 38pt;
+        line-height: 1.1;
+        color: var(--slate);
+        margin: 0 0 28px 0;
+        letter-spacing: -0.01em;
+      }
+      h1.headline em {
+        font-style: italic;
+        font-weight: 500;
+        color: var(--espresso);
+      }
+
+      .lede-italic {
+        font-family: var(--font-display);
+        font-style: italic;
+        font-weight: 500;
+        font-size: 15pt;
+        line-height: 1.45;
+        color: var(--slate);
+        margin: 0 0 32px 0;
+      }
+
+      p {
+        margin: 0 0 18px 0;
+        font-size: 11pt;
+        line-height: 1.6;
+      }
+      p strong {
+        color: var(--espresso);
+        font-weight: 700;
+      }
+
+      .eyebrow {
+        font-size: 9pt;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--rose);
+        margin: 0 0 14px 0;
+      }
+
+      h2 {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: 24pt;
+        line-height: 1.18;
+        color: var(--slate);
+        margin: 0 0 22px 0;
+        letter-spacing: -0.005em;
+      }
+      h2 em {
+        font-style: italic;
+        color: var(--espresso);
+        font-weight: 500;
+      }
+
+      .section {
+        margin-top: 56px;
+      }
+
+      .triad {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 14px;
+        margin: 28px 0 8px;
+      }
+      .triad .card {
+        border-radius: 6px;
+        padding: 22px 20px 24px;
+        font-size: 10pt;
+        line-height: 1.5;
+      }
+      .triad .card.sensory {
+        background: var(--peach);
+      }
+      .triad .card.emotional {
+        background: var(--sage);
+      }
+      .triad .card.meaning {
+        background: var(--slate);
+        color: var(--peach-light);
+      }
+      .triad .card .sys {
+        font-style: italic;
+        font-family: var(--font-display);
+        font-size: 11pt;
+        opacity: 0.75;
+        margin-bottom: 4px;
+      }
+      .triad .card h3 {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: 19pt;
+        margin: 0 0 6px 0;
+        line-height: 1.1;
+      }
+      .triad .card .sub-tag {
+        font-size: 8pt;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 700;
+        opacity: 0.7;
+        margin-bottom: 14px;
+      }
+      .triad .card .body {
+        font-size: 9.5pt;
+        line-height: 1.55;
+      }
+      .triad .card .cite {
+        font-style: italic;
+        font-family: var(--font-display);
+        font-size: 9pt;
+        margin-top: 12px;
+        opacity: 0.85;
+        line-height: 1.4;
+      }
+
+      .pullquote {
+        border-left: 3px solid var(--rose);
+        padding: 8px 0 8px 24px;
+        margin: 40px 0 8px;
+        font-family: var(--font-display);
+        font-style: italic;
+        font-size: 16pt;
+        line-height: 1.4;
+        color: var(--slate);
+      }
+      .pullquote .cite {
+        display: block;
+        margin-top: 12px;
+        font-style: normal;
+        font-family: var(--font-body);
+        font-size: 8.5pt;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--rose);
+      }
+
+      .system-box {
+        background: var(--sage);
+        border-radius: 8px;
+        padding: 30px 32px;
+        margin: 32px 0 8px;
+      }
+      .system-box h3 {
+        font-family: var(--font-display);
+        font-weight: 500;
+        font-style: italic;
+        font-size: 22pt;
+        line-height: 1.25;
+        margin: 0 0 18px 0;
+        color: var(--slate);
+      }
+
+      hr.rule {
+        border: none;
+        border-top: 1px solid var(--taupe);
+        margin: 56px 0 32px;
+      }
+
+      .cta-row {
+        margin-top: 24px;
+      }
+      .footer {
+        margin-top: 24px;
+        padding-top: 28px;
+        border-top: 1px solid var(--taupe);
+        text-align: center;
+        font-size: 12.5px;
+        color: var(--slate-muted);
+        letter-spacing: 0.04em;
+      }
+      .footer a {
+        color: var(--espresso);
+        text-decoration: none;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+        margin-bottom: 18px;
+      }
+      .footer-links a {
+        font-family: var(--font-body);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--espresso);
+        text-decoration: none;
+        padding: 7px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--taupe);
+        transition: all 0.2s ease;
+      }
+      .footer-links a:hover {
+        background: var(--espresso);
+        color: var(--peach);
+        border-color: var(--espresso);
+      }
+      .btn {
+        display: inline-block;
+        background: var(--espresso);
+        color: var(--peach-light);
+        padding: 14px 28px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 10pt;
+        letter-spacing: 0.04em;
+      }
+      .btn:hover {
+        background: var(--espresso-deep);
+      }
+      .cta-eyebrow {
+        font-size: 8.5pt;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--slate-muted);
+        margin-bottom: 14px;
+      }
+
+      @media print {
+        .toolbar {
+          display: none;
+        }
+        body {
+          background: white;
+        }
+        .page {
+          padding: 0;
+          background: var(--peach-light);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <span class="crumb">← WellFull Collective</span>
+      <div class="toolbar-right">
+        <a class="research-link" href="/white-paper">Read our research &rarr;</a>
+        <a href="#" onclick="window.print(); return false;">Print / Save as PDF</a>
+      </div>
+    </div>
+
+    <main class="page">
+      <div class="nav-row">
+        <span class="left">← WellFull Collective</span>
+        <span>Our Design<br />Philosophy</span>
+      </div>
+
+      <div class="brand-mark">
+        WellFull<span class="sub">Collective</span>
+      </div>
+
+      <h1 class="headline">
+        A website isn't a brochure. It's the <em>first clinical touchpoint.</em>
+      </h1>
+
+      <p class="lede-italic">
+        Most website builders for therapists optimize for conversion. We start
+        from a different premise: the homepage is a 200-millisecond moment of
+        aesthetic judgment the neuroscience now shows is biologically
+        load-bearing.
+      </p>
+
+      <p>
+        We don't design pretty pages. We design the Sensory, Emotional, and
+        Meaning systems of a therapeutic encounter — the same three layers a
+        clinician works with in the room, but running the moment a prospective
+        patient lands on a homepage, before the first email, before the first
+        session, before the first click.
+      </p>
+
+      <div class="section">
+        <p class="eyebrow">The Aesthetic Triad</p>
+        <h2>
+          Three systems run in <em>parallel,</em> not in sequence.
+        </h2>
+        <p>
+          The neuroscience of aesthetic experience — built on two decades of
+          work by researchers like Chatterjee, Vartanian, Kawabata, Zeki,
+          Redies, and Ulrich — converges on a single finding. Aesthetic
+          judgment is not a single channel. It is three neural systems firing
+          at different speeds, all running at once.
+        </p>
+        <p>
+          We call this the <strong>Aesthetic Triad</strong>, and we use it as
+          the operating system for every website we build.
+        </p>
+
+        <div class="triad">
+          <div class="card sensory">
+            <div class="sys">System I</div>
+            <h3>Sensory</h3>
+            <div class="sub-tag">The 200 ms verdict</div>
+            <div class="body">
+              The early visual system fires its judgment before the user has
+              read a single word. Type, rhythm, focal point, contrast,
+              negative space. If this layer doesn't pass, nothing else matters
+              — the user is gone.
+            </div>
+            <div class="cite">Anchored in P2 &amp; LPP event-related potentials.</div>
+          </div>
+
+          <div class="card emotional">
+            <div class="sys">System II</div>
+            <h3>Emotional</h3>
+            <div class="sub-tag">The reward substrate</div>
+            <div class="body">
+              The brain's valuation circuitry (the medial orbitofrontal
+              cortex) tracks whether a design feels coherent and worth
+              returning to. This is where dopamine, the Michelangelo Loop, and
+              cognitive economy live — the design that feels easier to use is
+              the design that wins repeat visits.
+            </div>
+            <div class="cite">Anchored in mOFC imaging &amp; the PAD model.</div>
+          </div>
+
+          <div class="card meaning">
+            <div class="sys">System III</div>
+            <h3>Meaning</h3>
+            <div class="sub-tag">The cultural filter</div>
+            <div class="body">
+              The slow, top-down layer where cultural fit, identity coherence,
+              and physiological regulation happen. Biophilic substrate,
+              trauma-informed front doors, voice and tone that match a
+              clinician's actual practice. This is the layer a "website
+              builder" never touches.
+            </div>
+            <div class="cite">
+              Anchored in Redies' dual-channel model &amp; the biophilic-design
+              evidence base.
+            </div>
+          </div>
+        </div>
+
+        <div class="pullquote">
+          "We don't just dictate a screen's layout. We dictate human biology
+          and behavioral health."
+          <span class="cite">— The flagship brief, 2024</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <p class="eyebrow">Why this matters for therapy practices</p>
+        <h2>
+          The front door is doing <em>clinical</em> work, whether the design
+          knows it or not.
+        </h2>
+        <p>
+          The "A Space for Being" study — a neuroaesthetic collaboration
+          between IKEA and a global research team — proved that the right
+          combination of light, texture, color temperature, and biophilic
+          presence can measurably quiet an anxious nervous system inside a
+          lived-in room. The same research base, applied to a homepage, tells
+          us that the moment a prospective patient lands on a therapist's site,
+          the design is already regulating the encounter.
+        </p>
+        <p>
+          That means the site is not a marketing surface. It is the first
+          clinical artifact. The Sensory layer sets safety. The Emotional
+          layer earns trust. The Meaning layer signals that the practice
+          understands the person reading it.
+        </p>
+
+        <div class="system-box">
+          <h3>This is the design system behind every site we ship.</h3>
+          <p>
+            The <strong>Aesthetic Triad</strong> is not a vocabulary we
+            borrowed from neuroscience and applied as decoration. It is the
+            operating system of WellFull Collective — the theoretical and
+            methodological system by which we design therapist websites as the
+            patient's <strong>first clinical touchpoint</strong>.
+          </p>
+          <p>
+            We start from a different premise than a typical website builder
+            for therapists: that the homepage is a 200-millisecond moment of
+            aesthetic judgment the literature now shows is biologically
+            load-bearing, and the Triad grounds that moment in pre-conscious
+            sensory, emotional, and meaning systems — so the site becomes the
+            first clinical touchpoint, not a marketing funnel.
+          </p>
+          <p>
+            Every site we ship passes a three-layer audit before launch:
+            <strong>Sensory</strong> (the 200-ms hero test, hierarchy, rhythm),
+            <strong>Emotional</strong> (coherence, micro-interaction
+            calibration, PAD state), and <strong>Meaning</strong> (voice,
+            cultural fit, trauma-informed front-door audit). All three. Every
+            time.
+          </p>
+        </div>
+      </div>
+
+      <hr class="rule" />
+
+      <div class="cta-row">
+        <p class="cta-eyebrow">
+          Ready to build a site that meets the nervous system where it lives?
+        </p>
+        <a href="https://wellfullcollective.com" class="btn">Book a Consultation</a>
+      </div>
+
+      <!-- ============ FOOTER ============ -->
+      <footer class="footer">
+        <div class="footer-links">
+          <a href="ebook.html">Read our design philosophy</a>
+          <a href="/white-paper">Read our research</a>
+          <a href="/content/blog/index.html">Blog</a>
+        </div>
+        © 2026 WellFull Collective ·
+        <a href="https://www.wellfullcollective.com">wellfullcollective.com</a>
+      </footer>
+    </main>
+  </body>
+</html>

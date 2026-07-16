@@ -51,7 +51,7 @@ I help educational leaders navigate:
 
 I don't do "AI consulting." I architect regulatory life rafts.
 
-After managing $650M+ in educational assets and orchestrating digital transformations across multiple continents, I've distilled this into a framework that turns administrative friction into predictable, compliant automation.
+After managing $65M+ in educational assets and orchestrating digital transformations across multiple continents, I've distilled this into a framework that turns administrative friction into predictable, compliant automation.
 
 ## Let's Connect If:
 

@@ -1,4 +1,4 @@
-# NeroDesign Differentiation Claims
+# WellFull Collective — Differentiation Claims
 
 ## What Makes Us Distinct
 

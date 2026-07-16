@@ -31,4 +31,4 @@ tags: [wfc, delivery, risk]
 
 - Day 6: Risk register populated. Primary risk is human review bottleneck (R1). Greene + Patel enter critical window today.
 - No active builds or support retainers, so project-specific risks (approval delays, content bottlenecks, timeline slippage) are not yet applicable.
-- Privacy language risk: will apply once client content work begins. Pre-mitigated via design tokens and evidence-ledger governance in [[nerodesign]].
+- Privacy language risk: will apply once client content work begins. Pre-mitigated via design tokens and evidence-ledger governance in the WellFull Collective design system.

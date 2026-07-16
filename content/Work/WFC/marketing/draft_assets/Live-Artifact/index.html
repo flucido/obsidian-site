@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wellfull Collective — Websites that regulate before they convert</title>
+  <meta name="description" content="Wellfull Collective builds websites for therapists and care-centered professionals that regulate before they convert. We replace urgency with evidence, density with clarity, and conventions with cognitive science." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Atkinson+Hyperlegible:wght@400;700&display=swap" />
+  <style>
+    /* ---------- Design tokens (Wellfull Collective — Deep Umber + Sage) ---------- */
+    :root {
+      --color-surface-base: #ead5c8;
+      --color-surface-alt:  #f2e4db;
+      --color-surface-card: #dae8df;
+      --color-text-primary: #2e3d4a;
+      --color-text-secondary: #5e7282;
+      --color-action-primary: #5a3e2e;
+      --color-action-hover:   #483224;
+      --color-action-secondary: #e8dad5;
+      --color-accent-warm:  #c49088;
+      --color-border-subtle: #c8b8aa;
+      --color-focus-ring:   #483224;
+      --color-status-success: #4a6e64;
+      --color-status-error:   #a84238;
+
+      --font-display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+      --font-body:    'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+
+      --radius-sm: 0.75rem;
+      --radius-md: 1rem;
+      --radius-lg: 1.5rem;
+      --radius-xl: 2rem;
+
+      --shadow-soft: 0 1px 2px rgba(46, 61, 74, 0.04), 0 8px 24px -12px rgba(46, 61, 74, 0.10);
+      --shadow-lifted: 0 2px 4px rgba(46, 61, 74, 0.05), 0 20px 40px -16px rgba(46, 61, 74, 0.16);
+
+      --ease-calm: cubic-bezier(0.22, 1, 0.36, 1);
+      --duration-calm: 300ms;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+    }
+
+    /* ---------- Base ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--color-surface-base);
+      color: var(--color-text-primary);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-underline-offset: 3px; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--color-focus-ring);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+    p, ul, ol { max-width: 65ch; }
+
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--color-text-secondary);
+      margin: 0 0 0.75rem;
+    }
+    .display-hero {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: clamp(2.75rem, 8vw, 5.5rem);
+      line-height: 1.04;
+      letter-spacing: -0.015em;
+      margin: 0;
+    }
+    .display-feature {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: clamp(2.25rem, 6vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+    .h2 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      line-height: 1.12;
+      letter-spacing: -0.005em;
+      margin: 0 0 0.75rem;
+    }
+    .h3 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.375rem, 3vw, 1.875rem);
+      line-height: 1.2;
+      margin: 0 0 0.5rem;
+    }
+    .lead {
+      font-size: 1.125rem;
+      color: var(--color-text-secondary);
+      max-width: 60ch;
+    }
+
+    /* ---------- Page frame ---------- */
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 4vw, 3rem);
+    }
+
+    /* ---------- Top nav ---------- */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 0;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      color: var(--color-text-primary);
+    }
+    .brand-mark {
+      width: 300px; height: 300px;
+      border-radius: 12px;
+      display: inline-flex; align-items: center; justify-content: center;
+      letter-spacing: 0;
+    }
+    .nav-links {
+      display: none;
+      gap: 1.75rem;
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+    }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--color-text-primary); }
+    @media (min-width: 720px) { .nav-links { display: inline-flex; } }
+
+    .pill-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.15rem;
+      border-radius: 999px;
+      background: var(--color-action-primary);
+      color: #f6e7db;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.01em;
+      transition: background var(--duration-calm) var(--ease-calm), transform var(--duration-calm) var(--ease-calm);
+    }
+    .pill-cta:hover { background: var(--color-action-hover); transform: translateY(-1px); }
+    .pill-cta .arrow { transition: transform var(--duration-calm) var(--ease-calm); }
+    .pill-cta:hover .arrow { transform: translateX(3px); }
+
+    /* ---------- Section rhythm ---------- */
+    section { padding: clamp(3rem, 7vw, 6rem) 0; }
+    section + section { padding-top: 0; }
+
+    /* ---------- Hero ---------- */
+    .hero { padding-top: clamp(2.5rem, 5vw, 4rem); }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(1.5rem, 3vw, 2.5rem);
+      align-items: end;
+    }
+    @media (min-width: 880px) {
+      .hero-grid { grid-template-columns: 1.4fr 1fr; gap: 3.5rem; }
+    }
+    .hero-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .hero-meta .rule {
+      width: 56px; height: 2px;
+      background: var(--color-action-primary);
+      border-radius: 2px;
+    }
+    .hero-meta p { margin: 0; color: var(--color-text-secondary); }
+
+    /* ---------- Manifesto pull-quote ---------- */
+    .manifesto {
+      background: var(--color-surface-alt);
+      border-top: 1px solid var(--color-border-subtle);
+      border-bottom: 1px solid var(--color-border-subtle);
+    }
+    .manifesto-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: clamp(3rem, 8vw, 5rem) clamp(1.5rem, 5vw, 2.5rem);
+      text-align: left;
+    }
+    .manifesto blockquote {
+      margin: 0;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(1.5rem, 3.4vw, 2.25rem);
+      line-height: 1.25;
+      color: var(--color-text-primary);
+      position: relative;
+      padding-left: clamp(1rem, 3vw, 2rem);
+    }
+    .manifesto blockquote::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 0.4em; bottom: 0.4em;
+      width: 3px;
+      background: var(--color-action-primary);
+      border-radius: 3px;
+    }
+    .manifesto cite {
+      display: block;
+      margin-top: 1.5rem;
+      font-style: normal;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-text-secondary);
+    }
+
+    /* ---------- "What we do" triptych ---------- */
+    .section-head { margin-bottom: clamp(1.75rem, 3.5vw, 2.75rem); }
+    .section-head .lead { margin: 0.5rem 0 0; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    @media (min-width: 720px) { .cards { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1024px) { .cards { grid-template-columns: 1fr 1fr 1fr; } }
+
+    .card {
+      background: var(--color-surface-card);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: 1.75rem;
+      padding: clamp(1.5rem, 2.5vw, 2rem);
+      box-shadow: var(--shadow-soft);
+      transition: transform var(--duration-calm) var(--ease-calm), box-shadow var(--duration-calm) var(--ease-calm);
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lifted); }
+    .card .num {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--color-text-secondary);
+      letter-spacing: 0.1em;
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+    .card h3 { color: var(--color-text-primary); }
+    .card p { margin: 0.5rem 0 0; color: var(--color-text-secondary); font-size: 1rem; }
+
+    /* Decorative figure inside the first card */
+    .card-figure {
+      margin: 1.5rem -0.25rem 0;
+      height: 84px;
+      border-radius: 1.25rem;
+      background:
+        radial-gradient(circle at 18% 50%, rgba(196, 144, 136, 0.55), transparent 45%),
+        radial-gradient(circle at 78% 60%, rgba(74, 110, 100, 0.35), transparent 50%),
+        repeating-linear-gradient(45deg, rgba(90, 62, 46, 0.06) 0 6px, transparent 6px 14px);
+      position: relative;
+      overflow: hidden;
+    }
+    .card-figure::after {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(transparent 49%, rgba(46, 61, 74, 0.08) 50%, transparent 51%) 0 0 / 100% 18px;
+    }
+
+    /* ---------- Principles: inverted-pill list ---------- */
+    .principles {
+      background: var(--color-surface-base);
+      border-top: 1px dashed var(--color-border-subtle);
+    }
+    .principles-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(1.5rem, 4vw, 3rem);
+      align-items: start;
+    }
+    @media (min-width: 880px) { .principles-wrap { grid-template-columns: 0.9fr 1.1fr; } }
+
+    .pill-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .pill-list li {
+      background: var(--color-action-primary);
+      color: #f6e7db;
+      border-radius: 1.25rem;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      box-shadow: var(--shadow-soft);
+    }
+    .pill-list .check {
+      flex: 0 0 auto;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: rgba(246, 231, 219, 0.16);
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-top: 0.1rem;
+    }
+
+    .principles-aside .h2 { color: var(--color-text-primary); }
+    .principles-aside p { color: var(--color-text-secondary); }
+
+    /* ---------- Vision spread ---------- */
+    .vision {
+      background: var(--color-surface-card);
+      border-radius: clamp(1.5rem, 3vw, 2.5rem);
+      padding: clamp(2rem, 4vw, 3.5rem);
+      box-shadow: var(--shadow-soft);
+    }
+    .vision-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(1.75rem, 4vw, 3rem);
+      align-items: stretch;
+    }
+    @media (min-width: 880px) { .vision-grid { grid-template-columns: 1.1fr 0.9fr; gap: 3rem; } }
+
+    .vision-copy .eyebrow { color: var(--color-status-success); }
+    .vision-copy p { color: var(--color-text-primary); font-size: 1.05rem; }
+    .vision-copy p + p { margin-top: 1rem; }
+
+    .accent-panel {
+      background: var(--color-accent-warm);
+      border-radius: 1.75rem;
+      padding: clamp(1.5rem, 3vw, 2.25rem);
+      color: #fff;
+      box-shadow: var(--shadow-lifted);
+      position: relative;
+      overflow: hidden;
+    }
+    .accent-panel::before {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(255,255,255,0.18), transparent 50%),
+        radial-gradient(circle at 15% 85%, rgba(46, 61, 74, 0.18), transparent 55%);
+      pointer-events: none;
+    }
+    .accent-panel > * { position: relative; }
+    .accent-panel .label {
+      font-size: 0.75rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.78);
+      margin: 0 0 0.85rem;
+      font-weight: 700;
+    }
+    .accent-panel h3 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: clamp(1.5rem, 2.6vw, 2rem);
+      line-height: 1.15;
+      margin: 0 0 1.25rem;
+      color: #fff;
+    }
+    .accent-panel ul { padding-left: 1rem; margin: 0; color: rgba(255, 255, 255, 0.92); }
+    .accent-panel ul li { margin: 0.45rem 0; }
+    .accent-panel ul li::marker { color: rgba(255,255,255,0.6); }
+
+    /* ---------- Closing CTA strip ---------- */
+    .closing {
+      background: var(--color-action-primary);
+      color: #f6e7db;
+      border-radius: clamp(1.5rem, 3vw, 2.5rem);
+      padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
+      text-align: center;
+      box-shadow: var(--shadow-lifted);
+      position: relative;
+      overflow: hidden;
+    }
+    .closing::before {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(196, 144, 136, 0.35), transparent 45%),
+        radial-gradient(circle at 88% 82%, rgba(218, 232, 223, 0.18), transparent 50%);
+      pointer-events: none;
+    }
+    .closing > * { position: relative; }
+    .closing h2 { color: #f6e7db; }
+    .closing p { color: rgba(246, 231, 219, 0.85); margin: 0.75rem auto 0; max-width: 50ch; }
+    .closing .pill-cta {
+      background: #f6e7db;
+      color: var(--color-action-primary);
+      margin-top: 1.75rem;
+    }
+    .closing .pill-cta:hover { background: #fff; }
+
+    /* ---------- Footer ---------- */
+    .footer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 2.5rem 0 3rem;
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      border-top: 1px solid var(--color-border-subtle);
+      margin-top: 3rem;
+    }
+    .footer .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer a { text-decoration: none; border-bottom: 1px solid var(--color-border-subtle); }
+    .footer a:hover { color: var(--color-text-primary); }
+
+    /* ---------- Responsive nudges ---------- */
+    @media (max-width: 540px) {
+      .nav .pill-cta { padding: 0.55rem 0.95rem; font-size: 0.85rem; }
+      .pill-list li { font-size: 0.95rem; padding: 0.9rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <!-- ====== Top nav ====== -->
+    <nav class="nav" aria-label="Primary">
+<a href="#top" class="brand">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="300" height="300" role="img" aria-label="Wellfull Collective logo" style="width: 300px; height: 300px;">
+              <rect x="0" y="376" width="1024" height="272" rx="24" ry="24" fill="#F2E4DB"/>
+              <rect x="57"  y="456" width="60" height="60" rx="14" ry="14" fill="#5A3E2E"/>
+              <rect x="121" y="456" width="60" height="60" rx="14" ry="14" fill="#D1DDD7"/>
+              <rect x="57"  y="520" width="60" height="60" rx="14" ry="14" fill="#D1DDD7"/>
+              <rect x="121" y="520" width="60" height="60" rx="14" ry="14" fill="#5A3E2E"/>
+              <text x="280" y="535" font-family="Cormorant Garamond, Garamond, 'Times New Roman', serif" font-size="86" font-weight="500" fill="#5A3E2E" letter-spacing="0.5">WellFull Collective</text>
+            </svg>
+          </a>
+      <div class="nav-links" aria-label="Sections">
+        <a href="#mission">Mission</a>
+        <a href="#positioning">Positioning</a>
+        <a href="#what">What we do</a>
+        <a href="#principles">Principles</a>
+        <a href="#vision">Vision</a>
+      </div>
+      <a class="pill-cta" href="https://wellfullcollective.com/consult" target="_blank" rel="noopener">
+        Start a conversation
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </nav>
+
+    <!-- ====== Hero ====== -->
+    <header class="hero" id="top">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Cognitive-first web design · Est. for care-centered work</p>
+          <h1 class="display-hero">
+            We design digital environments that <em>regulate, clarify, and convert</em> — backed by cognitive science.
+          </h1>
+        </div>
+        <div class="hero-meta">
+          <span class="rule" aria-hidden="true"></span>
+          <p class="lead">
+            Wellfull Collective builds websites for therapists and care-centered professionals
+            that regulate before they convert. We replace urgency with evidence, density with
+            clarity, and conventions with cognitive science — so the people who most need support
+            can find it without being overwhelmed.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- ====== Mission ====== -->
+    <section id="mission" aria-labelledby="mission-h">
+      <div class="section-head">
+        <p class="eyebrow">Our mission</p>
+        <h2 class="display-feature" id="mission-h">Regulate before you convert.</h2>
+      </div>
+      <p class="lead" style="max-width: 60ch;">
+        Wellfull Collective builds websites for therapists and care-centered
+        professionals that regulate before they convert. We replace urgency with
+        evidence, density with clarity, and conventions with cognitive science —
+        so the people who most need support can find it without being overwhelmed.
+      </p>
+    </section>
+
+    <!-- ====== Manifesto pull-quote ====== -->
+    <section class="manifesto" aria-label="Positioning">
+      <div class="manifesto-inner">
+        <blockquote>
+          Your users are not browsing casually. They are seeking help, processing
+          difficult information, or making important decisions. Standard web design
+          fails these users because it assumes cognitive availability that does not
+          exist. We design for the user who is anxious, overwhelmed, or depleted.
+          And we prove it works — with evidence, not opinion.
+        </blockquote>
+        <cite>— The Wellfull Collective thesis</cite>
+      </div>
+    </section>
+
+    <!-- ====== What we do ====== -->
+    <section id="what" aria-labelledby="what-h">
+      <div class="section-head">
+        <p class="eyebrow">What we do</p>
+        <h2 class="h2" id="what-h">Websites built on cognitive science, not convention.</h2>
+        <p class="lead">
+          We are a web development studio for organizations that serve people at
+          their most vulnerable. Every design decision traces to neuroaesthetic
+          research — not trends, not intuition, not competitor copying.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span class="num">01 — Design</span>
+          <h3 class="h3">Cognitive-first web design</h3>
+          <p>
+            We shape every page from evidence about how brains actually respond
+            to interfaces — typography that supports reading under stress, color
+            systems that signal safety, and layouts that reduce cognitive load
+            before they ask for action.
+          </p>
+          <div class="card-figure" aria-hidden="true"></div>
+        </article>
+
+        <article class="card">
+          <span class="num">02 — Build</span>
+          <h3 class="h3">Accessible, fast, hand-built</h3>
+          <p>
+            We hand-build every site in modern HTML, CSS, and a lean JavaScript
+            core. No bloated CMS, no dark-pattern plugins, no surveillance
+            scripts. The result is fast, accessible, and respects the user at
+            every layer of the stack.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="num">03 — Prove</span>
+          <h3 class="h3">Evidence, not opinion</h3>
+          <p>
+            You will receive not just a website, but proof that it works for your
+            users. We deliver an emotional journey map, a token file, and a
+            critique report grounded in cognitive science — so you can measure
+            what matters: clarity, calm, and trust.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====== Positioning ====== -->
+    <section id="positioning" aria-labelledby="positioning-h">
+      <div class="section-head">
+        <p class="eyebrow">Who we are for</p>
+        <h2 class="h2" id="positioning-h">High-sensitivity sectors deserve high-sensitivity design.</h2>
+      </div>
+      <p class="lead" style="max-width: 60ch; margin-bottom: 0.5rem;">
+        For organizations in wellness, mental health, education, culture, and
+        care that need websites their users can actually handle, Wellfull
+        Collective is the web studio that designs from cognitive science, not
+        convention. Unlike standard agencies that optimize for conversion through
+        urgency and density, we regulate before we convert — because trust
+        precedes commitment.
+      </p>
+    </section>
+
+    <!-- ====== Principles ====== -->
+    <section class="principles" id="principles" aria-labelledby="principles-h">
+      <div class="principles-wrap">
+        <div class="principles-aside">
+          <p class="eyebrow">How we work</p>
+          <h2 class="h2" id="principles-h">What we stand on, every project.</h2>
+          <p>
+            These principles come from cognitive science, not design trends.
+            They are the reason our clients trust us with the people who most
+            need careful, calm design.
+          </p>
+        </div>
+        <ul class="pill-list">
+          <li>
+            <span class="check" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 6.5l2.5 2.5L10 3.5" stroke="#f6e7db" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span>Conversion without trust is extraction. We earn trust before we ask for anything.</span>
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 6.5l2.5 2.5L10 3.5" stroke="#f6e7db" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span>Design that works for the most vulnerable works for everyone. We start there.</span>
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M2 6.5l2.5 2.5L10 3.5" stroke="#f6e7db" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+            <span>Evidence is not the enemy of creativity — it is its foundation. Every choice is traceable.</span>
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 6.5l2.5 2.5L10 3.5" stroke="#f6e7db" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span>Your users are not neutral. They are seeking help, processing difficulty, or making important decisions.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ====== Vision spread ====== -->
+    <section id="vision" aria-labelledby="vision-h">
+      <div class="vision">
+        <div class="vision-grid">
+          <div class="vision-copy">
+            <p class="eyebrow" style="color: var(--color-status-success);">Our vision</p>
+            <h2 class="h2" id="vision-h">A web where the most vulnerable users are the best-served users.</h2>
+            <p>
+              We're proving that design grounded in neuroaesthetic research —
+              not trends, not manipulation, not guesswork — can become the
+              standard for every sector that serves people at their most human.
+              We will not change the internet on our own. But we can keep
+              proving, one project at a time, that calmer design is also
+              better design — for visitors, for organizations, and for the
+              people who run them.
+            </p>
+          </div>
+
+          <aside class="accent-panel" aria-label="What we say no to">
+            <p class="label">What we say no to</p>
+            <h3>Work that asks us to manipulate the visitor.</h3>
+            <ul>
+              <li>Clients who want urgency-based conversion tactics</li>
+              <li>Projects that serve industries we cannot ethically support</li>
+              <li>Work that requires dark patterns or manipulative design</li>
+              <li>"Make it look like [competitor]" without understanding why</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Closing CTA ====== -->
+    <section id="contact" aria-labelledby="cta-h">
+      <div class="closing">
+        <p class="eyebrow" style="color: rgba(246, 231, 219, 0.75);">We take on a handful of new partners each year</p>
+        <h2 class="h2" id="cta-h">If your users deserve a website that calms before it converts, let's talk.</h2>
+        <p>
+          A short, no-pressure conversation is the fastest way to find out if
+          we're a good fit. Tell us about your work, your users, and what you
+          hope the website will do for them.
+        </p>
+        <a class="pill-cta" href="https://wellfullcollective.com" target="_blank" rel="noopener">
+          Visit the studio
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ====== Footer ====== -->
+    <footer class="footer">
+      <div class="row">
+        <span>© Wellfull Collective — cognitive-first web design for care-centered professionals</span>
+        <span>Designed and built in-house</span>
+      </div>
+      <div class="row">
+        <a href="#mission">Mission</a>
+        <a href="#positioning">Positioning</a>
+        <a href="#what">What we do</a>
+        <a href="#principles">Principles</a>
+        <a href="#vision">Vision</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

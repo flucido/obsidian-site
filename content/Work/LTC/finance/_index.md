@@ -58,7 +58,7 @@ See [[LTC Pipeline]] for full pipeline status. Revenue-relevant fields:
 
 | Lead | Offer | Est. Value | Stage | PO | Collected |
 |------|-------|------------|-------|----|-----------|
-| [[leads/ltc-apple-valley-usd/draft]] | LTC-02 | $50K–75K | Qualified — Draft Ready | — | $0 |
+| [[leads/leads-deferred/ltc-apple-valley-usd/draft]] | LTC-02 | $50K–75K | Qualified — Draft Ready | — | $0 |
 | [[leads/ltc-santa-clara-county]] | LTC-01 | $10K–15K | New | — | $0 |
 | [[leads/ltc-beverly-hills-usd]] | LTC-01 | $5K–10K | New | — | $0 |
 

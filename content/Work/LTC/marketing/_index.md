@@ -1,7 +1,7 @@
 ---
 title: LTC Marketing Index
 created: 2026-05-19
-updated: 2026-05-27
+updated: 2026-06-11
 type: index
 tags: [ltc, marketing, index]
 ---
@@ -69,25 +69,26 @@ Gated on Day 1 review to validate voice/structure before scaling.
 |------|-------------|--------|
 | [[linkedin-content-calendar]] | 70/15/15 strategy — 12 posts over 4 weeks | Superseded by [[content-calendar]] for May–Jun 2026. Archive vs. merge decision deferred. |
 
-## LinkedIn Posts (Previously Reviewed — Pre-Calendar Batch)
+## LinkedIn Posts (Pre-Calendar Batch — SCHEDULED)
 
-| # | Date | Title | Pillar | Note |
-|---|------|-------|--------|------|
-| 1 | 2026-05-18 | [[ltc-li-post-2026-05-18-data-ownership\|Why Your School District Doesn't Own Its Data]] | Authority | Data sovereignty |
-| 2 | 2026-05-19 | [[ltc-li-post-2026-05-19-california-student-privacy\|California Student Privacy Beyond FERPA]] | Authority | Privacy laws stack |
-| 3 | 2026-05-23 | [[ltc-li-post-2026-05-23-building-it-infra\|What Building School IT Infrastructure Taught Me]] | Personal | Infrastructure lessons |
-| 4 | 2026-05-26 | [[ltc-li-post-2026-05-26-ferpa-compliance\|FERPA Compliance Without Enterprise Price]] | Authority | FERPA myths |
-| 5 | 2026-05-28 | [[ltc-li-post-2026-05-28-data-debt\|Hidden Cost of Data Debt in K-12]] | Authority | Data debt |
-| 6 | 2026-05-30 | [[ltc-li-post-2026-05-30-open-source\|Open Source for School Data Infrastructure]] | Authority | Open source |
+| # | Date | Title | Pillar | Status |
+|---|------|-------|--------|--------|
+| 1 | 2026-05-18 | [[ltc-li-post-2026-05-18-data-ownership\\|Why Your School District Doesn't Own Its Data]] | Authority | ✅ Scheduled |
+| 2 | 2026-05-19 | [[ltc-li-post-2026-05-19-california-student-privacy\\|California Student Privacy Beyond FERPA]] | Authority | ✅ Scheduled |
+| 3 | 2026-05-23 | [[ltc-li-post-2026-05-23-building-it-infra\\|What Building School IT Infrastructure Taught Me]] | Personal | ✅ Scheduled |
+| 4 | 2026-05-26 | [[ltc-li-post-2026-05-26-ferpa-compliance\\|FERPA Compliance Without Enterprise Price]] | Authority | ✅ Scheduled |
+| 5 | 2026-05-28 | [[ltc-li-post-2026-05-28-data-debt\\|Hidden Cost of Data Debt in K-12]] | Authority | ✅ Scheduled |
+| 6 | 2026-05-30 | [[ltc-li-post-2026-05-30-open-source\\|Open Source for School Data Infrastructure]] | Authority | ✅ Scheduled |
 
-> Note: posts 2, 4, 5 cover themes now expanded in the 30-day calendar (W2 + Days 1, 2). Consider consolidating or sequencing before scheduling to avoid duplication.
+> All 6 pre-calendar LinkedIn posts drafted, reviewed, and scheduled. Done. Next step: decide sequencing vs. 30-day calendar overlap.
 
 ## Long-Form Articles (External Site)
 
-| Title | Location |
-|-------|----------|
-| DuckDB and Polars for School District Data Teams | `/projects/frank-lucido-site/linkedin-content/reviewed/duckdb-polars-school-district-guide-linkedin-article.md` |
-| California Student Data Privacy: Complete Guide | `/projects/frank-lucido-site/linkedin-content/reviewed/california-student-data-privacy-complete-guide-linkedin-article.md` |
+| Title | Location | URL |
+|-------|----------|-----|
+| DuckDB and Polars for School District Data Teams | `/projects/frank-lucido-site/linkedin-content/reviewed/duckdb-polars-school-district-guide-linkedin-article.md` | — |
+| California Student Data Privacy: Complete Guide | `/projects/frank-lucido-site/linkedin-content/reviewed/california-student-data-privacy-complete-guide-linkedin-article.md` | — |
+| From Plain English to DuckDB SQL: Building LFED | `Drafts/lfed-build-small-hackathon-blog.md` | https://www.lucidotechnologyconsulting.com/blog/BuildingLFEDS |
 
 ## Lead Magnets
 
@@ -103,7 +104,7 @@ Gated on Day 1 review to validate voice/structure before scaling.
 | Asset | Location |
 |-------|----------|
 | LinkedIn About Section | [[personal-profile]] |
-| Website | franklucido.com |
+| Website | lucidotechnologyconsulting.com |
 
 ---
 

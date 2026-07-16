@@ -1,17 +1,17 @@
-# NeroDesign Market Narrative
+# Wellfull Collective  Market Narrative
 
 ## Tagline
-"We design digital environments that regulate, clarify, and convert — backed by cognitive science."
+"We design digital environments that clarify, comfort, and connect — backed by cognitive science."
 
 ## Elevator Pitch
-NeroDesign is a web development studio for organizations that serve people at their most vulnerable. We build websites that calm the nervous system, clarify the path forward, and respect the user's need for control. Every design decision traces to neuroaesthetic research — not trends, not intuition, not competitor copying.
+Wellfull Collective is a web development studio for organizations that serve people at their most vulnerable. We build websites that calm the nervous system, clarify the path forward, and respect the user's need for control. Every design decision traces to neuroaesthetic research — not trends, not intuition, not competitor copying.
 
 Our clients work in wellness, mental health, education, culture, and care. Their users are not browsing casually. They are seeking help, processing difficult information, or making important decisions. Standard web design fails these users because it assumes cognitive availability that does not exist.
 
 We design for the user who is anxious, overwhelmed, or depleted. And we prove it works — with evidence, not opinion.
 
 ## Positioning Statement
-For high-sensitivity sector organizations that need websites their users can actually handle, NeroDesign is the web studio that designs from cognitive science, not convention. Unlike standard agencies that optimize for conversion through urgency and density, we regulate before we convert — because trust precedes commitment.
+For high-sensitivity sector organizations that need websites their users can actually handle, WellFull Collective is the web studio that designs from cognitive science, not convention. Unlike standard agencies that optimize for conversion through urgency and density, we design for the most vulnerable — because what works for them works for everyone.
 
 ## Key Messages
 

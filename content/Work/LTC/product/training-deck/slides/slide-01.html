@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The 7-Layer Privacy Stack — Frank Lucido</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.slide-content {
+  width: 960px;
+  height: 540px;
+  position: relative;
+  transform-origin: center center;
+}
+</style>
+<script>
+function scaleSlide() {
+  const slide = document.querySelector('.slide-content');
+  if (!slide) return;
+  const slideWidth = 960;
+  const slideHeight = 540;
+  const scaleX = window.innerWidth / slideWidth;
+  const scaleY = window.innerHeight / slideHeight;
+  const scale = Math.min(scaleX, scaleY);
+  slide.style.width = slideWidth + 'px';
+  slide.style.height = slideHeight + 'px';
+  slide.style.transform = `scale(${scale})`;
+  slide.style.transformOrigin = 'center center';
+  slide.style.flexShrink = '0';
+}
+window.addEventListener('load', scaleSlide);
+window.addEventListener('resize', scaleSlide);
+</script>
+</head>
+<body>
+<div class="slide-content" style="background:#f4ecd8; font-family:'Times New Roman', serif; overflow:hidden;">
+
+  <!-- Soft cream hero band on right -->
+  <img src="imgs/cover.jpg" alt="7-layer privacy stack" style="position:absolute; right:0; top:0; width:520px; height:540px; object-fit:cover;"/>
+
+  <!-- Left content area with soft cream -->
+  <div style="position:absolute; left:0; top:0; width:480px; height:540px; background:#f4ecd8; padding:60px;"></div>
+
+  <!-- Top eyebrow pill -->
+  <svg width="148" height="26" viewBox="0 0 148 26" style="position:absolute; left:60px; top:60px;">
+    <rect width="148" height="26" rx="13" fill="#8a9e7e"/>
+    <text x="74" y="13" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="11" font-weight="700" fill="#fdfaf3" letter-spacing="2">A PRIVACY BRIEFING</text>
+  </svg>
+
+  <!-- Eyebrow -->
+  <p style="position:absolute; left:60px; top:104px; margin:0; font-size:11px; color:#a38060; letter-spacing:4px; font-weight:700;">FOR PARENTS &middot; FOR EDUCATORS</p>
+
+  <!-- Main title -->
+  <h1 style="position:absolute; left:60px; top:132px; margin:0; width:420px; font-size:62px; font-weight:700; color:#3d4a3a; line-height:0.98; letter-spacing:-2px;">The 7-Layer<br/>Privacy Stack</h1>
+
+  <!-- Decorative divider -->
+  <svg width="64" height="4" style="position:absolute; left:60px; top:280px;" aria-hidden="true">
+    <rect width="64" height="4" rx="2" fill="#c5694e"/>
+  </svg>
+
+  <!-- Subtitle -->
+  <p style="position:absolute; left:60px; top:300px; margin:0; width:380px; font-size:17px; font-weight:500; color:#7a5a40; line-height:1.4; font-style:italic;">Rights, responsibilities, and real data sovereignty in education.</p>
+
+  <!-- Supporting line -->
+  <p style="position:absolute; left:60px; top:362px; margin:0; width:380px; font-size:13px; color:#5e6b5a; line-height:1.55;">Protecting student data beyond the vendor dashboard &mdash; a clear-eyed look at what California law actually requires.</p>
+
+  <!-- Bottom meta strip -->
+  <svg width="380" height="1" style="position:absolute; left:60px; bottom:80px;" aria-hidden="true">
+    <rect width="380" height="1" fill="#c9bda0"/>
+  </svg>
+
+  <p style="position:absolute; left:60px; bottom:50px; margin:0; font-size:12px; color:#3d4a3a; letter-spacing:2px; font-weight:700;">FRANK LUCIDO</p>
+  <p style="position:absolute; left:60px; bottom:30px; margin:0; font-size:11px; color:#a38060; letter-spacing:1.5px;">LUCIDO TECHNOLOGY CONSULTING</p>
+
+</div>
+</body>
+</html>

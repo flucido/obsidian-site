@@ -1,6 +1,6 @@
 ---
 title: WFC Pipeline
-updated: 2026-05-22
+updated: 2026-07-09
 
 type: operational
 tags: [wfc, pipeline, revenue]
@@ -10,48 +10,65 @@ tags: [wfc, pipeline, revenue]
 
 > WellFull Collective — therapist website consult and build pipeline.
 > Updated daily during revenue block.
+>
+> **Strategy: Inbound-only.** All leads come through social media (IG + TikTok) →
+> website consult form → consult call → qualified → proposal.
+> No cold outreach. No cold DMs. No purchased lists.
+>
+> ⚡ **2026-07-09:** Susan Allen SOW SIGNED 7/8 (Himalaya envelope 34, 10:13 PT). WFC countersigned 7/8. Phase 1 = $1,000 floor. $500 Venmo deposit link sent 7/8 — not yet received as of 7/9 morning. Kick-off moved Fri 7/10 → **Tue 7/14 10:00–11:00 AM Zoom.** This is WFC's first signed engagement since the 6/1 inbound-only pivot.
+
+## Inbound Lead Flow
+
+```
+Social Content (IG/TikTok)
+  → Link-in-bio → wellfullcollective.com
+    → Consult form submission
+      → Consult call (human-led)
+        → Qualified → Proposal → Contract → Build → Launch → Retainer
+
+Email Inbound (New Channel)
+  → info@wellfullcollective.com
+    → Lauren assesses + responds
+      → Discovery call scheduled
+        → Qualified → Proposal → ...
+```
 
 ## Active Opportunities
 
-### Priority 1 — Approved (Draft Ready, Awaiting Human Review)
+### Priority 1 — Inquiry Received (Pre-Consult)
 
-| Lead | Practice Type | Offer Fit | Stage | Confidence | Next Action | Deadline | Last Contact |
-|------|---------------|-----------|-------|------------|-------------|----------|-------------|
-| [[leads/nathan-greene-psyd/draft\|Nathan Greene, PsyD]] | Established | 02 — CMS Site | Draft Ready | HIGH | Human review of outreach draft. Then send to ngreene@drnathangreene.com | 2026-05-24 | 2026-05-18 |
-| [[leads/ranjan-patel-psyd/draft\|Dr. Ranjan Patel, PsyD]] | Established | 02 — CMS Site | Draft Ready | HIGH | Human review of outreach draft. Then send to drranjanpatel@gmail.com | 2026-05-24 | 2026-05-18 |
-| [[leads/carl-shubs-lmft/draft\|Dr. Carl Shubs, LMFT]] | Established | 02 — CMS Site | Draft Ready | HIGH | Human review of outreach draft. Then send to DrShubs@DrCarlShubs.com | 2026-05-27 | 2026-05-20 |
-| [[leads/jennifer-tan-lcsw/draft\|Jennifer Tan, LCSW]] | Established | 02 — CMS Site | Draft Ready | HIGH | Human review of outreach draft. Then send to jtan@sfdbt.com | 2026-05-27 | 2026-05-20 |
-| [[leads/pamela-levy-lmft/draft\|Pamela Levy, LMFT]] | Established | 02 — CMS Site | Draft Ready | MEDIUM | Human review of outreach draft. Then send to pam@pamelalevymft.com | 2026-05-27 | 2026-05-20 |
+| Lead | Practice Type | Offer Fit | Stage | Source | Confidence | Next Action | Last Contact |
+|------|---------------|-----------|-------|--------|------------|-------------|-------------|
+| [[leads/wfc-susan-allen/dossier\|Susan Allen, LMFT]] | Reproductive/Perinatal Mental Health — Solo Private Practice | 02 — CMS Site ($3,500) → **Hybrid ($1,000 Phase 1)** | **SIGNED 7/8 (Phase 1)** | Email (info@) | HIGH | ✅ SOW signed 7/8; WFC countersigned; $500 Venmo deposit link sent 7/8 — pending receipt. **Kick-off Tue 7/14 10:00–11:00 AM Zoom.** Dossier: [[leads/wfc-susan-allen/dossier]]. | 2026-07-08 |
 
-### Priority 2 — Marin CAMFT (In Review, Ranked by Score)
+### Priority 2 — Qualified (Consult Completed)
 
-| Lead | Credential | Platform | Score | Stage | Next Action | Deadline |
-|------|-----------|----------|-------|-------|-------------|----------|
-| [[leads/marin-deborah-nelson-deb-nelson-psyd/dossier\|Deborah Nelson, PsyD]] | PsyD | TherapySites | 15 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-christine-armstrong/dossier\|Christine Armstrong]] | LMFT | Unknown | 14 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-tina-mcmillan/dossier\|Tina McMillan]] | LMFT | TherapySites | 13 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-susan-kenny/dossier\|Susan Kenny]] | LMFT | Wix | 13 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-pamela-lister-private-practice/dossier\|Pamela Lister]] | LMFT | TherapySites | 13 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-nicole-livingston-nicole-livingston-mft/dossier\|Nicole Livingston, MFT]] | LMFT | Unknown | 13 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-myron-walters-myron-walters-lmft-sep-cmp/dossier\|Myron Walters, LMFT]] | LMFT | Unknown | 13 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-lois-friedlander-mcamft/dossier\|Lois Friedlander, MFT]] | LMFT | TherapySites | 13 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-deborah-due-as-growtherapy-com/dossier\|Deborah Dueñas]] | LMFT | Unknown | 13 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-cathy-della-valle/dossier\|Cathy Della Valle]] | LMFT | TherapySites | 13 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-amy-cosby-frost/dossier\|Amy Cosby-Frost]] | LMFT | TherapySites | 13 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-w-keith-sutton-institute-for-the-advancement-of-ps/dossier\|W. Keith Sutton, PsyD]] | PsyD | Weebly | 12 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-suzanna-de-sanz/dossier\|Suzanna de Sanz]] | LMFT | Squarespace | 12 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-susan-allen/dossier\|Susan Allen]] | LMFT | Squarespace | 12 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-sheena-simpson-kodo-couples-therapy/dossier\|Sheena Simpson]] | LMFT | Squarespace | 12 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-maysie-tift/dossier\|Maysie Tift]] | LMFT | Weebly | 12 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-maryellen-mullin-san-francisco-family-therapy/dossier\|Maryellen Mullin]] | LMFT | Custom/WordPress | 12 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-jennifer-couture-child-therapy-marin/dossier\|Jennifer Couture]] | LMFT | Squarespace | 12 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-cheryl-clementson/dossier\|Cheryl Clementson]] | LMFT | Unknown | 12 | Review | Human review of dossier | 2026-05-26 |
-| [[leads/marin-anne-asch-asch-therapy-group/dossier\|Anne Asch]] | LMFT | Custom/WordPress | 11 | Review | Human review of dossier | 2026-05-26 |
+| Lead | Practice Type | Offer Fit | Stage | Source | Confidence | Next Action |
+|------|---------------|-----------|-------|--------|------------|-------------|
+| [[leads/wfc-laurie-chandler/dossier\|Laurie Chandler, LMFT]] | Depth/Jungian Psychotherapy — Solo Private Practice | 02 — CMS Site ($3,500) | **Qualified** (Follow-Up Sent 6/19) | LinkedIn | HIGH | ⚠ Follow up Mon/Tue 6/22-23 if no reply. Follow-up email sent 6/19 — ask if she needs additional information. |
+
+### Priority 3 — Proposal Out
+
+| Lead | Offer | Value | Stage | Sent | Next Action |
+|------|-------|-------|-------|------|-------------|
+| — | — | — | — | — | — |
+
+## Market Intelligence — DEFERRED (Moved 6/17)
+
+> The Marin CAMFT directory scrape (20 scored dossiers + 5 outreach drafts)
+> has been moved to `leads/leads-deferred/` and the associated marketing
+> campaign files to `Work/WFC/marketing-deferred/`. These are NOT deleted —
+> they're preserved for future reference if the inbound strategy changes.
+> No outreach will be sent to any of them. They are out of the active pipeline.
+>
+> Deferred lead directories: `leads/leads-deferred/marin-*` (20 dirs) +
+> `leads/leads-deferred/{nathan-greene-psyd,ranjan-patel-psyd,carl-shubs-lmft,jennifer-tan-lcsw,pamela-levy-lmft}` (5 dirs)
+> Deferred marketing files: `Work/WFC/marketing-deferred/` (9 files — Marin CAMFT competitive analysis, scrape plan, email campaign, skills review, intro briefs, mission/vision, FAQ, LinkedIn opening, LinkedIn profile)
 
 ## Stage Definitions
 
-- **Consult**: Initial consult requested or scheduled
-- **Qualified**: Offer fit confirmed, needs documented
+- **Consult Requested**: Form submission received, consult not yet held
+- **Qualified**: Consult completed, offer fit confirmed, needs documented
 - **Proposal**: Proposal delivered
 - **Commitment**: Agreement reached, onboarding
 - **Active Build**: In production
@@ -60,42 +77,38 @@ tags: [wfc, pipeline, revenue]
 
 ## Offer Paths
 
-- **01 — Landing Page**: Single-page site, fast turnaround
-- **02 — CMS Site**: Full practice website with content management
-- **03 — Monthly Support**: Ongoing maintenance, updates, analytics
+- **01 — Landing Page**: Single-page site, fast turnaround. $1,500 one-time.
+- **02 — CMS Site**: Full practice website with content management. $3,500 + $100-250/mo.
+- **03 — Web Application**: Custom web app. Custom quote.
+
+All prices reference [[Work/Shared/pricing-catalog|Pricing Catalog]]. No ad-hoc quoting.
 
 ## KPI Targets
 
 | Metric | Current | Target |
 |--------|---------|--------|
+| Social followers (IG + TikTok combined) | 0 | >= 500 |
+| Website visits (weekly) | 0 | >= 200 |
 | Consult Requests (weekly) | 0 | >= 5 |
-| Verified Leads (total) | 25 | >= 20 |
-| Approved Leads (outreach-ready) | 5 | >= 10 |
-| Awaiting Human Review | 20 Marin + 3 dossiers + 2 drafts | 0 |
 | Consult-to-Proposal Ratio | N/A | >= 40% |
 | Build Cycle Time (days) | N/A | <= 14 |
 | Support Retention Rate | N/A | >= 85% |
 
 ## Follow-Up Queue
 
-|Due Date | Lead | Action | Status |
+| Due Date | Lead | Action | Status |
 |----------|------|--------|--------|
-| 2026-05-24 | Nathan Greene, PsyD | ~~Draft outreach~~ ✓ [[leads/nathan-greene-psyd/draft]]. **Next: human review → send** | review |
-| 2026-05-24 | Ranjan Patel, PsyD | ~~Draft outreach~~ ✓ [[leads/ranjan-patel-psyd/draft]]. **Next: human review → send** | review |
-| 2026-05-27 | Carl Shubs, LMFT | ~~Draft outreach~~ ✓ [[leads/carl-shubs-lmft/draft]]. **Next: human review → send to DrShubs@DrCarlShubs.com** | review |
-| 2026-05-27 | Jennifer Tan, LCSW | ~~Draft outreach~~ ✓ [[leads/jennifer-tan-lcsw/draft]]. **Next: human review → send to jtan@sfdbt.com** | review |
-| 2026-05-27 | Pamela Levy, LMFT | ~~Draft outreach~~ ✓ [[leads/pamela-levy-lmft/draft]]. **Next: human review → send to pam@pamelalevymft.com** | review |
-| 2026-05-26 | Marin CAMFT Top 20 | Human review of all 20 dossiers. Approve for outreach or reject | pending |
+| 2026-06-18 | Laurie Chandler, LMFT | Discovery call. Lauren leads (relationship), Frank closes (SEO/GEO). Dossier: [[leads/wfc-laurie-chandler/dossier]]. | scheduled |
+
+> No active follow-ups. Strategy shift 6/1: cold outreach queue cleared. Inbound-only from this date forward.
 
 ## Notes
 
-- Pipeline reconfigured 5/20: 25 total WFC leads (5 approved, 20 Marin CAMFT in review).
-- Marin CAMFT leads ranked by score (11–15). Top scoring: Deborah Nelson PsyD (15), Christine Armstrong LMFT (14).
-- Platform distribution: 6 TherapySites, 5 Unknown, 5 Squarespace, 3 Weebly, 2 Wix, 2 Custom/WordPress, 2 other.
-- Bottleneck: 25 items awaiting human review (2 outreach drafts + 3 dossiers + 20 Marin dossiers). Zero outreach sent.
-- Critical path: Human review gate → outreach → consult → proposal → revenue.
-- Pipeline value (max one-time): $87,500 (25 × $3,500). Weighted: ~$48,000.
-- Potential MRR: $1,250/mo (if all 25 retain at $50/mo avg).
-- Lead source: Marin CAMFT (20), Psychology Today (5). Next source target: San Francisco CAMFT chapter.
-- Always preserve privacy-conscious language in client-facing artifacts.
+- **Strategy pivot 2026-06-01**: Cold email outreach retired. All lead generation is inbound via [[Work/WFC/marketing/social-media-campaign|social media campaign]] (IG + TikTok) → website consult form.
+- Archived leads (25 total: 5 approved drafts + 20 Marin CAMFT dossiers) preserved as market intelligence — informing content pillars, competitive benchmarks, and therapist pain point data. No outreach will be sent to any of them.
+- The outreach drafts and dossiers remain at their original paths for research reference. See `leads/` directory.
+- Campaign not yet launched. Pre-launch checklist: [[Work/WFC/marketing/launch-checklist|launch checklist]].
+- Consult form live at `/api/consultation` on wellfullcollective.com. Ready to receive submissions.
+- All external communications require human approval (governance rule).
+- Privacy-conscious language in all client-facing artifacts.
 - Do not force leads into a package before fit signals are clear.

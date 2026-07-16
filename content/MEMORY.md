@@ -5,74 +5,257 @@ sticker: emoji//1f9e0
 
 Active operational state for Lucido Technology Consulting (LTC) and WellFull Collective (WFC).
 
-## Current State (2026-05-27 — WEDNESDAY, WEEK 22)
+## Current State (2026-07-16 — THURSDAY, WEEK 29 — MORNING)
 
-### Operations — All Layers Live
-- **Pipeline/Marketing:** 5-gate lead verification, dual pipelines, 25 WFC leads + 4 LTC leads, Marin CAMFT scrape complete. All draft production complete across both orgs.
-- **Finance:** Pricing catalog, proposal templates, contract terms, invoice templates, revenue dashboard — both orgs. Combined pipeline: $152,500–187,500. Pre-revenue — no money collected.
-- **Legal:** Entity structure (proposed: LTC single-member LLC, WFC multi-member LLC 50/50), partnership agreement (proposed), compliance matrix
-- **Research:** Market verticals populated (therapist + education), competitive landscape, lead source rankings. FCMAT reports = LTC intelligence channel
-- **Daily cadence:** Startup → standup → revenue → delivery → strategic → shutdown → evening reflection
-- **Launch marketing:** WFC LinkedIn profile, opening announcement, Marin email campaign, skills review — all in vault, awaiting human go-decision
-- **Production milestone achieved 5/22:** 9 outreach drafts total (5 WFC + 4 LTC). Draft production is no longer the bottleneck — human review is.
+### WFC — Susan Allen First Revenue + New Lead (Leighna Harrison)
+- **Strategy:** Cold outreach retired 6/1. All lead generation inbound via IG + TikTok → website consult form.
+- **Campaign: in-flight 7/13 09:43 PT** — was Day 27+ blocker; workstream started. First IG post target Thu 7/17. 4 new open loops (W7-W10). Downgraded CRITICAL → HIGH.
+- **Susan Allen, LMFT:** Discovery call COMPLETE 6/30. Engagement pivoted to **hybrid** (Squarespace template update + SEO/GEO + content strategy). **SOW SIGNED 7/8** by Susan (Himalaya envelope 34, 10:13 PT). WFC countersigned 7/8. **$500 Venmo deposit RECEIVED 7/10** — WFC's first signed engagement is also first revenue signal. WFC pipeline: $0 → **$500 collected of $1,000 Phase 1 floor**. **🔴 KICK-OFF HELD 7/14 10:01–10:58 AM PT — Lauren led solo (Frank did NOT attend; correction from 7/10 13:58 plan).** Lauren ran using WFC aesthetic triad framework (Sensory/Emotional/Meaning), not the OKF-named agenda Frank drafted. **Susan provided Squarespace admin access live on the call** (login `susanallenlmft@gmail.com`; password NOT in vault — Frank to record in password manager; 2FA status TBD). Full notes: [[leads/wfc-susan-allen/kick-off-notes-2026-07-14]]. Phase 1 active build underway: Lauren has this week (7/14-7/18) for Milestones 1+2; **Lauren OOO 7/22-8/2 (Japan trip)**; resumes 8/3; **target wrap ~8/22** (revised from 8/11-8/14 to absorb Japan gap). Phase 2 SEO range $1.6K-$3K (separate SOW after Phase 1). **Frank's open decision: OKF vs aesthetic-triad framework reconciliation + Phase 1 timeline confirmation with Susan + Frank's role clarification (asynchronous design lead?).** Susan's mom + brother died in past 6 months — affects work's emotional register; reinforces Lauren as relationship owner.
+- **🆕 NEW LEAD: Leighna Harrison** — Consultation request via wellfullcollective.com form, dated 2026-06-25, sat unread in info@ for **19+ days** as of 7/14. No dossier yet. Needs immediate triage by Lauren (disengagement signal).
+- **Lauren handled Northbridge + "the other lead"** during Frank's vacation (per 7/6 kickoff message). Specifically: Lauren followed up with Northridge — need to confirm which Northridge and capture outcomes in vault. **Northridge dossier folder does NOT exist on disk** — only wikilink placeholder.
+- **Laurie Chandler, LMFT:** Discovery call COMPLETED 6/17. Follow-up sent 6/19. Deferred — circle back 9/16-10/14. Dossier: [[leads/wfc-laurie-chandler/dossier]].
+- **WFC blog:** Restored 6/29 on `add-blog-nav` branch (commit 9b922e67). NOT pushed to main. Adds /blog route + nav link. Turn-on pending (Thu 7/16, code-repo, Frank only).
+- **Client onboarding guide:** [[Work/WFC/operations/client-onboarding-guide]]. Lauren approved 6/17.
+- **Tagline:** "Design that works for the most vulnerable works for everyone."
+- **WFC email:** info@wellfullcollective.com + frank@wellfullcollective.com connected via MailAfiniti/Himalaya.
+- **Pipeline:** **$500 collected**. 1 signed (Susan, Phase 1 — kick-off COMPLETE 7/14, active build underway) + 1 new inbound untriaged (Leighna, 19d+) + 1 deferred (Laurie). KPIs: 0 followers, 0 visits, 1 inquiry.
 
-### WFC Pipeline
-- 25 verified leads: 5 approved with completed drafts (Greene/Patel/Shubs/Tan/Levy) + 20 Marin CAMFT scored 11–15 in pipeline
-- ⚠ **Greene + Patel — Day 7, DEADLINE 5/23 (TOMORROW).** If unreviewed by EOD 5/23, re-audit websites and confirm emails before sending. Drafts are 6 days old and reflect website state from 5/16.
-- Shubs + Tan + Levy drafts complete. Human review pending. Deadline 5/27.
-- 20 Marin CAMFT dossiers scored, ranked, integrated into pipeline. Human review deadline 5/26.
-- Pipeline value: $87,500 one-time, $3,750/mo potential MRR
-- **Bottleneck:** 29 items awaiting human review (9 outreach drafts + 20 Marin dossiers). Zero outreach sent. WFC risk register: R1 = human review bottleneck (CRITICAL).
+### LTC Pipeline — 9 Leads (Frank in Inbound-Only Mode)
+- **Signed (1):** North Bridge Academy — **🆕 Phase 1 SOW SIGNED 7/16 10:49 PT** (per Frank verbal: "Got a signed SOW back from Northbridge so we're ready to roll on that"). NBA is now **LTC's first signed engagement** + Active Build. **LTC pipeline: $0 collected → ??? (terms TBD; Frank to specify SOW amount + deposit + start date).** Annie Crowder approved all 3 workstreams 6/17. 7/7 on-site Mosyle + ASM walkthrough with Erin COMPLETED. Live notes at [[leads/ltc-north-bridge-academy/meeting-2026-07-07-erin-mosyle]] (121 iPads spanning generations, 8 Macs in ASM, 8 Apple TVs). 6/25 Annie meeting notes confirmed "already in" by Frank 7/10 (RESOLVED; not yet linked from dossier). **✅ 7/15 11:04 PT:** NBA Phase 1 SOW + follow-up email + upgrade-recommendations ALL SENT. **✅ 7/15 11:04 PT:** NBA inventory list REFINEMENT DONE. **🛑 7/15 11:04 PT:** NBA Matt thread DROPPED. Drafts at [[leads/ltc-north-bridge-academy/sow-phase-1-2026-07-13-draft]] + [[leads/ltc-north-bridge-academy/follow-up-email-2026-07-13-draft]] + [[leads/ltc-north-bridge-academy/upgrade-recommendations-2026-07-13]]. **🆕 7/16 10:49 PT:** NBA Phase 1 SOW SIGNED. **LTC critical path is now unblocked end-to-end AND has its first signed engagement.** Next: kickoff planning (terms + Annie/Erin/Avram email + kickoff call).
+- **PARKED per Frank 7/10:** Apple Valley USD (17d past 6/24 deadline, Aug 2026 SIS go-live is reactivation window — risk shifts from "stale outreach" to "lost deal" if no engagement by Aug), Jim Siegl (14d no confirmation, time-tolerant policy contact).
+- **On Hold (2):** SCCOE + Alum Rock — hackathon gate.
+- **Blocked (1):** Beverly Hills — CTO contact missing (7/15 deadline).
+- **Networking (3):** Pauline Nagle (✅ 6/17), Erin Lindheim (✅ 6/19), Edgar Fuentes (InMail 6/11).
+- **Northridge:** Meeting TBD. **Dossier folder MISSING** — only wikilink placeholder exists. Needs enrichment + Lauren check-in.
+- **Pipeline value:** $65–100K (Apple Valley estimate). $0 revenue collected. North Bridge TBD.
 
-### LTC Pipeline
-- 4 entries, all with completed drafts:
-  - **Apple Valley USD (HIGH):** Jason Buchanan (IT Dir), jason_buchanan@avusd.org. SIS migration Aeries→Focus, data conversion phase, go-live Aug 2026. Draft at [[leads/ltc-apple-valley-usd/draft]]. Drafted 5/21 — 2 days unreviewed. Migration window narrowing.
-  - **SCCOE (HIGH):** Nabil Shahin (nshahin@sccoe.org). CARE Rules Engine launched April 2026. Draft at [[leads/ltc-santa-clara-county/draft]]. Send by end of May to stay within CARE relevance window. 46-district COE route.
-  - **Alum Rock USD (MEDIUM — Q3 hold):** Brett Littrell (brett.littrell@arusd.org). Draft at [[leads/ltc-santa-clara-county/alum-rock-usd-draft]]. Intentionally held until Q3 ($8M deficit, 38 layoffs = survival mode).
-  - **Beverly Hills USD (LOW — BLOCKED):** Draft at [[leads/ltc-beverly-hills-usd/draft]]. ⚠ Cannot send — no CTO contact. LCAP not reviewed. Lowest priority.
-- Pipeline value: $65–100K one-time
-- LinkedIn content operation: 7 reviewed posts, calendar, profile — ready for scheduling
-- **30-day sovereign-data content calendar (5/27):** [[Work/LTC/marketing/content-calendar]] — full multi-channel calendar synthesized from 4 source drafts in `Work/LTC/marketing/Drafts/`. Structure: 30 blog posts (1,200–1,800 words each) + 30 LinkedIn posts (900–1,300 chars) + 4 weekly LinkedIn Articles (1,800–2,500 words). Four-week arc: W1 Diagnosis → W2 California 7-layer compliance → W3 Sovereign Stack (DuckDB/Polars/LanceDB/Ollama/vLLM/Mac Studio) → W4 Behavior Engineering (PEFT/QLoRA/LoRA/RAG). Three named voice skills codified in calendar (Technical Explainer, Thought Leadership Essayist, Hook Architect with 6 hook patterns). Recurring anchor characters: Mac Studio cluster, Marin auditor, Wednesday-night Excel analyst, $50K SLA. Banned phrases list enforced.
-- **Day 1 production drafted as template (5/27):** [[Work/LTC/marketing/blog-day-01-support-ticket-trap]] (~1,250 words, Define→Anchor→Consequence, Monday Morning Checklist close) + [[Work/LTC/marketing/linkedin-day-01-support-ticket-trap]] (~1,280 chars, Specific Artifact hook, no hashtags/emojis, question close). Both demonstrate voice/structure for Days 2–30. Awaiting human review before publish. Prior `linkedin-content-calendar.md` left untouched but marked superseded in `Work/LTC/marketing/_index.md`.
-- LTC risk register: R1 = Apple Valley timing window (HIGH), R5 = Beverly Hills missing contact (LOW)
+### Content Engine
 
-### Risk Registers (Populated 5/22)
-- WFC: 5 active risks. R1 = human review bottleneck (CRITICAL — 29 items, zero sends). R2 = Greene + Patel staleness (HIGH — Day 7 tomorrow). R3 = Marin batch review load (MEDIUM). R4 = Tan + Levy deadline gap (MEDIUM). R5 = zero revenue collection (LOW — expected at pipeline stage).
-- LTC: 5 active risks. R1 = Apple Valley migration window (HIGH — narrowing daily). R2 = SCCOE CARE relevance window (MEDIUM — ~2 months remaining). R3 = Alum Rock fiscal instability (MEDIUM — mitigated by Q3 hold). R4 = Beverly Hills contact gap (LOW — blocked anyway). R5 = zero LTC outreach sends (MEDIUM).
+### 🆕 Week 29 Content Workstreams (Frank 7/13 09:43 PT)
+- **WFC content load** — 2 weeks IG + LinkedIn + blog. Resolves Day 30+ campaign blocker. First IG post Thu 7/17. Open loops W7-W10.
+- **K-12 research blog series** — 1-2 posts/wk for 2-3 wks. Tied to local-data-stack research. First post target Fri 7/17. Open loops R1-R4.
+- **Outreach** — co-authors + case-study partners for the K-12 research. Channels TBD. Drafts this week, sends gated on Frank review.
+- **LTC blog post #2 (DSPy):** ✅ WRITTEN 6/29. File at `~/Downloads/DSPy Optimization_ Model Size Matters.md`. Publishing deferred through vacation — still deferred (LOW).
+- **LFED blog post:** ✅ LIVE at lucidotechnologyconsulting.com/blog/BuildingLFEDS.
+- **LinkedIn open-source series Day 01 (DuckDB):** ✅ POSTED 6/17.
+- **Day 1 (blog + LinkedIn):** Drafted 5/27 — **43+ days stale**. ⚠ HUMAN REVIEW BLOCKS 64 PIECES.
 
-## Open Loops
-- **⚠ Human review bottleneck (29 items):** 9 outreach drafts + 20 Marin dossiers. Zero outreach sent. Combined $152,500–187,500 pipeline is entirely hypothetical.
-- ⚠ Greene + Patel — Day 7, deadline 5/23 (tomorrow). ESCALATED to human. If unreviewed: re-audit websites, confirm emails.
-- ⚠ Apple Valley — Day 3 unreviewed (drafted 5/21). Migration data conversion underway.
-- SCCOE — draft ready 5/22. Human review pending. CARE window: send by end of May.
-- Alum Rock — intentionally held until Q3. Draft ready, no urgency.
-- Beverly Hills — CTO contact missing. LCAP not reviewed. Cannot send.
-- Tan + Levy dossier review deadline 5/25
-- Marin CAMFT 20-dossier review deadline 5/26
-- 6 fake lead files — Day 7, manual human deletion needed
-- Entity formation + partnership agreement — awaiting human action
-- No outreach sent yet — all leads awaiting human review
-- No revenue collected — pre-revenue, pipeline-only
-- **Content engine review queue (5/27):** Day 1 blog + LinkedIn post awaiting human review. Days 2–30 not yet drafted — gated on Day 1 approval to validate voice/structure before scaling.
+### Hackathon — Kasualdad LFED (SUBMITTED 6/15 ✅)
+- **Space:** https://huggingface.co/spaces/build-small-hackathon/Kasualdad_LFED — RUNNING on ZeroGPU.
+- **Status: SUBMITTED.** Awaiting judge assessment.
+
+### Infrastructure
+- **Oracle Cloud — flucido-hermes-vm:** RUNNING. 2 OCPU, 12GB, us-sanjose-1. Public IP: 163.192.52.35.
+- **Google OAuth: ⚠ REVOKED — Day 17+** — `invalid_grant: Token has been expired or revoked`. Cannot refresh — needs browser re-consent. Blocks Gmail API + Calendar API + LinkedIn-via-Gmail. **Workaround standing: Gmail web compose + Himalaya `gmail` account (app password, not OAuth).**
+- **Domain:** lucidotechnologyconsulting.com
+- **Tailscale:** Mac reachable (Frank home from vacation).
+
+### Mavis Agent Team (DEPLOYED 2026-07-10) 🆕
+- **6 role contracts** in `Work/Shared/Ops/agents/`: orchestrator, ltc-pipeline, wfc-pipeline, delivery, content-marketing, compliance-qa.
+- **6 reusable skills** in same directory: morning-standup, evening-reflection, lead-dossier, outreach-draft, mpq, wikilink-audit.
+- **5 vault-resident specialists** registered at `~/.mavis/agents/`: ltc-operator, wfc-operator, content-marketer, vault-hygienist, compliance-qa. Plus built-in mavis (orchestrator), coder, verifier, general.
+- **3 cron routines** active (America/Los_Angeles, weekdays 7:00-19:00): `morning-routine` (7:30 AM), `midday-delivery-check` (12:30 PM), `evening-shutdown` (6:00 PM). All on `mavis` agent. Session mode: new. Report-to-root enabled.
+- **HARD SCOPE RULE:** agents operate on vault + LTC + WFC pipelines ONLY. Code repos (wellfullcollective/, frank-lucido-site/, nerodesign/, local-data-stack/) are human-in-the-loop.
+- **6 governance rules** preserved: no outbound sends, pricing/contracts human-only, QA gate, every decision links to vault artifact, drafts not final, no code-repo writes.
+- **Visibility:** [[Work/Shared/Ops/agents/TEAM.md]] + [[Work/Shared/Ops/agents/TEAM.html]] (dark Bloomberg-dashboard aesthetic). Index at [[Work/Shared/Ops/agent-team-index]].
+- **This is a structural shift, not a task:** the team's center of gravity has moved from "Hermes is the only agent" to "Hermes orchestrates a 6-agent company." Future daily work should be delegated: any task in [[Work/LTC/]], [[Work/WFC/]], [[leads/]], [[Daily/]] is an `ltc-operator` / `wfc-operator` / `vault-hygienist` / `compliance-qa` candidate.
+
+### Risk Register (refreshed 2026-07-15 18:00 PT)
+- **Shared:** Google OAuth REVOKED (CRITICAL) — Day 24+ `invalid_grant` at 7/16 07:30 PT (was Day 23+ at 7/15 18:00 PT, Day 22+ at 7/15 11:04 PT, Day 21+ at 7/14 18:00 PT, Day 20+ at 6/24, Day 17+ when first detected). Blocks every Gmail API + Calendar API workflow. Re-consent in browser (5 min) or formally extend workaround. **The single 5-min move has been deferred every day since 6/24. Highest-leverage 5-min move available. Decision overdue every day. Should be very first thing today (Thu 7/16).**
+- **WFC:** Campaign launch — Day 32+ (HIGH, downgraded from CRITICAL 7/13 09:43 PT). Workstream in-flight; first IG post target Thu 7/17.
+- **WFC:** Leighna Harrison 19d+ untriaged inbound (HIGH). Disengagement signal on inbound-only strategy. Lauren triage by Fri 7/17.
+- **WFC:** Susan 6/30 discovery notes — **SUPERSEDED 7/14** by kick-off notes (which cover everything 6/30 did, plus more). Item struck from active list.
+- **WFC:** Phase 1 timeline revision — Japan OOO 7/22-8/2 absorbed; target wrap ~8/22 instead of 8/11-8/14. Frank to confirm with Susan at Discovery.
+- **LTC:** ~~NBA Matt (Apple / Mac rep) intro — BLOCKED on Frank disambiguation (HIGH, 6d). Frank to confirm full name + role Wed 7/15 AM.~~ **🛑 RESOLVED 7/15 11:04 PT** (Frank: "just drop it" — Matt thread DROPPED entirely).
+- **LTC:** ~~NBA initial inventory list REFINEMENT — scaffold on disk, Frank to refine per-cart + Mac reconciliation (MEDIUM, 6d overdue). Highest-leverage LTC action Wed 7/15 AM.~~ **✅ RESOLVED 7/15 11:04 PT** (Frank: "is done").
+- **LTC:** ~~NBA Phase 1 SOW + follow-up email + upgrade-recs — DRAFTED 7/13 16:12/16:58 PT, awaiting Frank review + send (MEDIUM, drafting → review).~~ **✅ ALL SENT 7/15 11:04 PT** (Frank: "went out"). **🆕 🟢 SIGNED 7/16 10:49 PT** (Frank: "Got a signed SOW back from Northbridge so we're ready to roll on that"). NBA now in Active Build. **LTC's first signed engagement.**
+- **LTC (NEW):** NBA Phase 1 kickoff planning — terms TBD + draft kickoff email to Annie + Erin + Avram + schedule kickoff call + confirm Phase 1 milestones. (MEDIUM). 30-60 min. Owner: Frank. Due: this week.
+- **LTC:** Northridge dossier — folder missing on disk, 33d stale (MEDIUM). Lauren check-in Tue 7/14.
+- **Shared:** MPQ 31 days stale (MEDIUM). 45-min task deferred 7+ days. Wed 7/15.
+- **Shared:** Day 1 blog + LinkedIn 47+ days stale (MEDIUM). Gating 64 downstream pieces.
+- **WFC (mkt):** Postiz running state unknown (MEDIUM, transient). 32d+ since launch decision. Quick health check Tue 7/14.
+- **Process:** Cron 7:30 AM slot — 3rd miss in 5 days (MEDIUM). Structural fix needed this week: re-register `morning-routine` in a fresh session with 24hr buffer; add 5-min lockout to prevent back-to-back fires.
+- **Process:** Lead → Contact promotion undefined (LOW). Back-burner design.
+- **PARKED (per Frank 7/10, not active risk):** Apple Valley USD (PARKED, Aug 2026 SIS go-live = natural reactivation window — risk shifts from "stale outreach" to "lost deal" if no re-engagement by Aug), Jim Siegl (PARKED, time-tolerant policy contact), 6/25 Annie meeting notes (RESOLVED per Frank verbal — not yet linked from dossier).
+- **NBA post-walkthrough email REACTIVATED 7/13 16:12 PT** (new draft, awaiting Frank review + send Wed 7/15).
+- **RESOLVED 7/10:** Susan $500 Venmo deposit (was MEDIUM-watch since 7/8), 6/25 Annie meeting notes (was HIGH since 6/26, Frank confirmed "already in").
+- **RESOLVED 7/13 08:55 PT:** Susan kick-off calendar invite (was HIGH 1d overdue, sent 7/13 08:55 PT per Frank verbal), Susan kick-off agenda final review (was MEDIUM, finalized 7/13 08:55 PT per Frank verbal).
+- **RESOLVED 7/13 16:12 PT:** NBA Phase 1 SOW gap (was HIGH, was 6d overdue on drafting — now DRAFTED awaiting Frank review).
+- **🆕 RESOLVED 7/15 11:04 PT:** NBA Matt thread (was HIGH blocking 6d+ on Frank disambiguation). Frank verbal: "Stop with the NBA-Matt disambiguation. Just drop it." Matt references removed from active state. No Matt intro email will be sent.
+- **🆕 RESOLVED 7/15 11:04 PT:** NBA inventory list REFINEMENT (was MEDIUM 6d+ overdue). Frank verbal: "is done." Per-cart breakdown + 8-of-N Mac reconciliation with Erin complete.
+- **🆕 RESOLVED 7/15 11:04 PT:** NBA Phase 1 SOW + follow-up email + upgrade-recs (was MEDIUM, drafting → review). Frank verbal: "went out." All 3 artifacts sent to North Bridge Academy. Send window for drafts 7/13 16:12-16:58 PT is closed; outreach complete.
+- **🆕 🟢 RESOLVED 7/16 10:49 PT:** NBA Phase 1 SOW SIGNED (was MEDIUM, awaiting response). Frank verbal: "Got a signed SOW back from Northbridge so we're ready to roll on that." **NBA is now LTC's first signed engagement.** Stage: Outreach-Sent → **Signed + Active Build**. Terms TBD (amount + deposit + start date) — Frank to specify. **Zero-revenue LTC pipeline risk downgraded from CRITICAL → MEDIUM** (NBA SOW is the closest path to first LTC revenue; now activated).
+- **🆕 ✅ RESOLVED 7/16 10:49 PT:** C1 (Lauren kick-off summary + template shortlist + Discovery scheduling) was MEDIUM (transient) and OVERDUE 1d as of 7/16 07:30 PT. Frank verbal: "All the follow-up emails went out to Susan yesterday." Lauren delivered 7/15; Frank confirmed 7/16. Susan block fully unblocked. Susan pre-Japan shipping window intact.
+- **🆕 🟢 ADDED 7/16 10:49 PT:** NBA Phase 1 kickoff planning. New MEDIUM action item. Owner: Frank. Due: this week. 30-60 min. Sub-tasks: (a) confirm SOW terms (amount + deposit + start date), (b) draft kickoff email to Annie + Erin + Avram, (c) schedule kickoff call, (d) confirm Phase 1 milestones.
+- **🆕 ADDED 7/16 10:49 PT:** 2 active builds. Susan in Lauren's hands (kick-off COMPLETE 7/14, Phase 1 active build underway pre-Japan) + NBA in Frank's hands (SOW SIGNED 7/16 10:49 PT, awaiting kickoff). Frank's bandwidth is the constraint. The WFC first IG Fri 7/17 + NBA kickoff + OAuth re-auth are the three highest-leverage 7/16 actions.
+- **RESOLVED 7/14 10:58 AM PT:** Susan kick-off gap (was CRITICAL transient; all preconditions met; call held successfully; Susan provided admin access; Lauren committed 7/15 AM deliverables; Phase 1 active build started). Notes: [[leads/wfc-susan-allen/kick-off-notes-2026-07-14]].
+- **🆕 ADDED 7/14 11:10 PT:** Susan Phase 1 timeline revised to ~8/22 (Japan OOO 7/22-8/2 absorbed). Lauren OOO is hard constraint; Phase 1 split into pre-Japan (audit + template selection + quick wins) and post-8/3 (config + content + SEO/QA).
+- **🆕 ADDED 7/14 11:10 PT:** OKF vs aesthetic-triad framework reconciliation needed. Lauren ran kick-off using "aesthetic triad" terminology; Frank's pre-kick-off agenda named "OKF introduction." Both are referenced in the vault. Frank to decide canonical WFC language. Affects the content-scaffold deliverable packaging.
+- **🆕 ADDED 7/14 11:10 PT:** Frank's role clarification for Susan engagement. Lauren ran kick-off solo + is leading the WFC work pre-Japan. Frank's role going forward: asynchronous design + technical lead, with Lauren owning the client relationship + clinical/content + cadence. Material split from original 7/10 13:58 plan (Frank solo lead). Frank to confirm this role allocation.
+- **🆕 ADDED 7/13 09:43 PT:** K-12 research blog series + outreach workstream (no risk yet, but blocked on Frank confirming channels + target list by Tue 7/14). WFC content load workstream (campaign launch blocker resolution — first IG post target Thu 7/17; risk severity downgraded from CRITICAL to HIGH/in-flight).
+- **🆕 ADDED 7/13 10:45 PT:** Agent observability project — RE-SCOPED as standalone development idea (not Mavis team integration). PRD outline complete; awaiting Frank feasibility review. My rec: defer to Q4 2026 or 2027 if bandwidth-constrained.
+- **🆕 ADDED 7/14 09:23 PT:** Cron 7:30 AM slot — 3rd miss in 5 days. Structural fix needed. Risk severity MEDIUM (transient) — not blocking today's work since Frank does manual recovery, but pattern is concerning.
+- **🆕 ADDED 7/14 16:01 PT:** Ontology Design project KICKED OFF (Frank verbal). 5 sub-articles in `Research/ontology-design-2026-07-14/`: WFC design ontology (9 classes) + K-12 research ontology (10 classes) + shared 7-layer structure + 5-lifecycle phases + 12 open design questions. Both at SKETCHED phase. Not a build, not a PRD — concept exploration. My rec: defer formalization to Q4 2026 (Oct-Dec) when other work has landed.
+- **🆕 ADDED 7/14 18:00 PT (EOD):** K-12 research outreach evening reminder cron SET 15:47 PT (one-shot, fires 19:02 PT tonight, 3h15m delay, cron ID 76cd1b06-9b4b-4372-8d88-1a358fe6ea77). First-time self-evening-reminder pattern. Frank's source-of-truth: R1-R4 open loops + K-12 Blog Series weekly plan section. Goal: end-of-Week-30 → 1-2 co-author + 1-2 case-study partner conversations. Frank reviews all drafts before any send (governance rule #1).
+- **🆕 ADDED 7/14 18:00 PT (EOD):** Heavy-ideation pattern observed this week. Frank opened 3 new project threads in 48 hours: (a) K-12 research blog series + outreach (7/13 09:43 PT), (b) agent observability PRD outline (7/13 10:45 PT, 31K chars), (c) Ontology Design (7/14 16:01 PT, 5 sub-articles). All ideation; all scheduled to be deferred or downstreamed. Implication: Frank's bandwidth is in discovery mode, not delivery mode. The 7 recommended afternoon delivery actions from 12:30 PT slipped. HIGH risks (Matt disambiguation, Google OAuth) remain unmitigated. Carry to Wed 7/15 with explicit owners.
+- **🆕 ADDED 7/15 18:00 PT (EOD):** 12:30-18:00 PT 5.5h window had no Frank verbal in vault. 6+ items recommended at 12:30 PT midday check (OAuth re-auth, Susan reconciliation C6/C7, Lauren check-in, Postiz + IG load, O1 confirmation, etc.) are **UNKNOWN** whether touched — carried forward to Thu 7/16 with explicit owners + new due dates. **Honest "UNKNOWN" beats fabricated "DONE"** (prevention rule generalized from 7/10).
+- **🆕 ADDED 7/15 18:00 PT (EOD):** Google OAuth Day 22+ → Day 23+ at 18:00 PT. **The single 5-min move has been deferred every day since 6/24.** This is the highest-leverage 5-min move available; the longest-running CRITICAL in the vault. **Should be the very first thing tomorrow morning (Thu 7/16).**
+- **🆕 ADDED 7/15 18:00 PT (EOD):** Susan 2FA status on Squarespace — **UNKNOWN** as of 18:00 PT. Lauren to coordinate with Susan if it triggers on initial login. If Susan hasn't logged in yet, 2FA may not be set up at all (good for now; risk for later). Carry forward as C9.
+- **🆕 ADDED 7/15 18:00 PT (EOD):** MPQ 31d → 32d stale at 18:00 PT. Cannot defer further. **45-min task, due Thu 7/16 evening.**
 
 ## Latest Decisions
 
-### 5/27
-- **LTC content engine spun up.** 30-day sovereign-data calendar generated from 4 source drafts. Production approach: each day = 1 blog + 1 LinkedIn post; each week ends with 1 LinkedIn Article. Total deliverable per 30 days: 30 blogs + 30 LinkedIn posts + 4 articles = 64 pieces.
-- **Voice codified as three reusable skills inside the calendar file itself** — Technical Explainer (Define→Anchor→Consequence), Thought Leadership Essayist (Local→Regional→Structural), Hook Architect (6 rotating patterns: Counter-Consensus, Receipt-First, Confession, Specific Artifact, Misdiagnosis, Unspoken Trade). Future drafts must pull from these patterns, not invent voice ad-hoc.
-- **Day 1 is the template.** Days 2–30 should be drafted by lifting the structure of `blog-day-01-support-ticket-trap.md` + `linkedin-day-01-support-ticket-trap.md`, not by re-deriving format choices. Drafting time per day should fall after Day 1 is approved.
-- **Naming convention locked:** `blog-day-NN-<slug>.md` + `linkedin-day-NN-<slug>.md` in `Work/LTC/marketing/`. Frontmatter must include `day`, `week`, `theme`, `hook_pattern` (LinkedIn only), `source` wikilinks, `companion` wikilink to paired piece, `calendar` wikilink.
-- **Superseded, not deleted:** prior `linkedin-content-calendar.md` (12-post 70/15/15 strategy) left in place but marked superseded in index. Decision on archive vs. merge deferred to human review.
-- **Human review is still the bottleneck.** Adding 64 pieces of content production to a pipeline where 29 outreach items already sit unreviewed will compound, not relieve, the review bottleneck. Recommend Day 1 review/approval before drafting Days 2–7.
+### 7/16 (10:49 PT — Frank verbal, mid-day wins)
+- **🆕 NBA Phase 1 SOW SIGNED 7/16 10:49 PT.** Per Frank: "Got a signed SOW back from Northbridge so we're ready to roll on that." **LTC's first signed engagement.** Was "Sent 7/15 11:04 PT awaiting response" → "SIGNED 7/16 10:49 PT, Active Build, awaiting kickoff date." NBA joins Susan as the second active build of the year. **LTC pipeline: $0 collected → ??? (terms TBD; Frank to specify SOW amount + deposit + start date).** LTC critical path is no longer just "unblocked outreach" — it's "active engagement with revenue implications." **New action item:** NBA Phase 1 kickoff planning (30-60 min, this week) — confirm terms, draft kickoff email to Annie + Erin + Avram, schedule kickoff call, confirm Phase 1 milestones.
+- **🆕 C1 RESOLVED 7/16 10:49 PT (Lauren delivered Susan follow-ups 7/15).** Per Frank: "All the follow-up emails went out to Susan yesterday." Lauren delivered her 7/15 AM commitments (kick-off summary + template shortlist + Discovery scheduling link) on 7/15. C1 (overdue 1d as of 7/16 07:30 PT) → DONE. Susan block is fully unblocked. Susan can now: pick template (C3, Fri 7/18) → Discovery session (C4, 7/16-7/17) → pre-Japan shipping (C10/C11 photos, C12 B&W vs color at Discovery). **Susan's pre-Japan shipping window is intact.**
+- **🆕 Frank's 7/16 day is now 2 active builds.** Susan in Lauren's hands + NBA signed/starting. Order of attack stays the same (OAuth → Susan reconciliation → WFC content load → blog turn-on → NBA kickoff planning → Lauren check-in → O1 → MPQ). The LTC critical path is no longer just "unblocked outreach" — it's "active engagement with revenue implications."
+- **🆕 Counter-balance to heavy-ideation pattern maintained, 2nd day.** 7/15 11:04 PT = 4-5 LTC items closed. 7/16 10:49 PT = 2 more wins (NBA SOW SIGNED + C1 RESOLVED). Frank's delivery mode is real. Recommend maintaining: 7/16 EOD should add 1-2 more closures (OAuth re-auth = single highest-leverage).
+- **🆕 Frank follow-up question (1):** **NBA SOW terms** — what's the amount, deposit schedule, and start date? I can update pipeline value + revenue collected + Phase 1 milestones once I have these. Without them, NBA pipeline value stays "TBD."
 
-### 5/22 EOD
-- **Bottleneck confirmed as review, not production.** 9/9 drafts exist. Capacity is not the constraint. Escalation is the only lever.
-- Draft staleness rule: re-audit websites for any draft > 7 days old before sending. Greene + Patel cross threshold 5/23.
-- Beverly Hills pre-qual rule: no outreach draft for leads without a named contact. Contact research must precede drafting.
-- Template ROI validated: LTC template saved ~60 minutes across 3 drafts today.
-- Alum Rock intentionally held until Q3 — send after fiscal stabilization, not during layoffs.
+### 7/16 (07:30 PT — Morning brief)
+- **🆕 Morning brief fired correctly 7/16 07:30 PT** (2nd consecutive day after 7/15 recovery). Cron infrastructure is stable; **structural fix (C27) still pending this week** — pattern is 3 misses in 5 days, recovery is real but not fix.
+- **🆕 4-5 LTC items confirmed carried closed from 7/15 11:04 PT (no 7/16 morning reversals).** NBA Matt (DROPPED) + inventory REFINEMENT (DONE) + Phase 1 SOW + follow-up email + upgrade-recs (ALL SENT). LTC critical path remains unblocked end-to-end.
+- **🆕 C1 (Lauren kick-off summary + template shortlist + Discovery scheduling) is OVERDUE 1d as of 7/16 07:30 PT.** Was due Wed 7/15 AM per 7/10 plan. Affects Susan pre-Japan shipping + Discovery session scheduling. **Frank to confirm with Lauren today (5 min).**
+- **🆕 Google OAuth Day 23+ → Day 24+ at 7/16 07:30 PT.** The 5-min move has been deferred every day since 6/24. Should be the very first thing this morning. **Longest-running CRITICAL in the vault.**
+- **🆕 First IG post target Fri 7/17 (TOMORROW).** If WFC content load (Postiz + IG + blog turn-on) does not close today by EOD, first IG slips to Mon 7/20+. WFC campaign Day 33+ HIGH in-flight.
+- **🆕 7/15 12:30-18:00 PT 5.5h window had no Frank verbal in vault** (carry-forward from 7/15 EOD). Items recommended at 12:30 PT (OAuth re-auth, Susan reconciliation C6/C7, Lauren check-in, Postiz + IG load, O1 confirmation, etc.) **remain UNKNOWN whether touched** — carry forward to today with explicit owners + new due dates. **Honest "UNKNOWN" beats fabricated "DONE"** (prevention rule generalized from 7/10).
+- **🆕 Frank's 7/16 day is delivery mode, not ideation mode** (counter-balance to 7/13-7/14 heavy-ideation pattern maintained). 4-5 LTC items shipped 7/15 11:04 PT; 7/16 should be another delivery-first day. Top 6: OAuth re-auth (5 min) → Susan reconciliation C6+C7 (60 min) → WFC content load (50+30 min, gates first IG TOMORROW) → Lauren check-in (30 min) → O1 confirmation (5 min) → MPQ refresh (45 min, evening).
 
-### 5/21
-- Integrity rule: zero tolerance for ambiguous claims in outreach. All drafts must pass: (1) no invented accomplishments, (2) unambiguous referents, (3) every claim traces to dossier source
-- Template-first pattern: build reusable template after first draft to extract patterns — validated on LTC, worth applying to WFC
-- WFC escalation: if Greene + Patel not reviewed by EOD 5/22, hard escalation. Pipeline blocked at gate 1.
+### 7/15 (18:00 PT — EOD shutdown)
+- **🆕 C8 (Frank role clarification) RESOLVED 7/15 11:12 PT.** Frank is asynchronous design + technical lead on Susan engagement; Lauren owns client relationship. Confirmed via 7/15 11:12 PT state correction (Zoom account displays "Lauren Solo" but Frank was the actual attendee per 7/10 13:58 plan; account is shared). **The 7/10 13:58 plan + the 7/14 11:10 post-kick-off correction + the 7/15 11:12 C8 RESOLVED entry all converge on the same operational pattern.** Ambiguity gone. **Implication for future kick-offs:** lock the role split in the kick-off agenda, not after the call.
+- **🆕 4-5 LTC items closed in one morning delivery pass (recap from 11:04 PT).** NBA Matt (DROPPED) + inventory REFINEMENT (DONE) + Phase 1 SOW (SENT) + follow-up email (SENT) + upgrade-recs (SENT) = 5 items closed. **LTC critical path unblocked end-to-end.** NBA in active outreach window; awaiting response.
+- **🆕 Counter-balance to heavy-ideation pattern.** 7/13-7/14 = 3 new project threads (70K+ chars); 7/15 11:04 PT = 4-5 LTC items shipped. Frank can do delivery-first days when prompted. **Recommend maintaining the counter-balance: Thu 7/16 should be another delivery-first day (OAuth + Susan reconciliation + WFC content load).**
+- **🆕 Frank verbal gap 12:30 → 18:00 PT (5.5h).** Vault state has no Frank verbal during that window. 6+ items recommended at 12:30 PT are UNKNOWN whether touched. **Honest "UNKNOWN" + carry-forward with explicit owners is the correct move.** Next standup resolves UNKNOWN → known.
+- **🆕 Email wrap-up SKIPPED 7/15 18:00 PT** per 7/10 prevention rule (issues-fixes-log.md I-2026-07-10-C). Gmail OAuth REVOKED Day 23+; do not probe degraded auth. Re-consent 5 min in browser is the only safe path. Frank reads EOD wrap-up directly in [[Daily/2026-07-15]] + [[Work/Shared/Ops/evening-reflection]]. Logged as new incident I-2026-07-15-A.
+
+### 7/15 (11:04 PT — Frank verbal, mid-day delivery pass)
+- **🆕 NBA Matt thread DROPPED per Frank 11:04 PT.** Verbatim: "Stop with the NBA-Matt disambiguation. Just drop it." All Matt-related state references removed from active state, risk register, and open loops. No Matt intro email will be sent. 6d+ HIGH BLOCKING risk RESOLVED.
+- **🆕 NBA inventory list REFINEMENT DONE per Frank 11:04 PT.** Verbatim: "is done." Per-cart breakdown + 8-of-N Mac reconciliation with Erin complete. 6d+ MEDIUM risk RESOLVED.
+- **🆕 NBA Phase 1 SOW + follow-up email + upgrade-recommendations ALL SENT per Frank 11:04 PT.** Verbatim: "The phase one SOW went out, as did the recommendations and reviews." All 3 artifacts shipped to North Bridge Academy. Drafts (7/13 16:12-16:58 PT) → sent. Send window closed; outreach complete. Awaiting NBA response.
+- **🆕 4 LTC items closed in one morning** — major delivery pass. LTC critical path is now unblocked end-to-end. Google OAuth re-auth is **NOW #1 priority** (was #2, blocked behind Matt). Remaining time-block: Susan reconciliation C6/C7/C8 → Lauren check-in → MPQ → Postiz + IG load.
+- **🆕 Heavy-ideation pattern still standing but delivery-first day** is happening 7/15 11:04 PT. Recommend Frank close OAuth re-auth next (5 min, 22d+ CRITICAL) before any new ideation work. Susan reconciliation C6/C7/C8 with Lauren is the relational close-out (15-60 min).
+
+### 7/15 (21:54 PT — Frank verbal, K-12 privacy/security project)
+- **🆕 K-12 Privacy and Security project container CREATED** (Frank 7/15 21:54 PT). Frank asked to add a note about [Cloudflare Project Cybersafe Schools](https://www.cloudflare.com/lp/cybersafe-schools/) to "my local data project in my overall K through 12 privacy and security project." New vault project file: [[Research/k12-privacy-and-security-2026-07-15/NOTES]] (9K chars) — captures the two layers of K-12 data privacy (data-warehouse side: Stage 2B; district cybersecurity side: Cybersafe Schools), the compliance landscape (FERPA / CIPA / California / COPPA), the FPF + Jim Siegl connection, the EDM/LA paper link, and 4 open questions. 2 file updates in the code repo: `oss_framework/dbt/models/mart_privacy/README.md` (added "Free External Resources" section) + `oss_framework/dbt/STAGE2B_PRIVACY_DESIGN.md` (added §11 "See Also — Free External Resources"). Cybersafe Schools = free Zero Trust program for small K-12 public school districts (US, ≤2,500 students), launched 2023-08-08 at White House, 60K+ users currently protected, 9.8K eligible districts. Provides email protection + DNS filtering (CIPA compliance). **District outreach angle:** mention in kickoff meetings + case-study paper + the privacy/security NOTES file. Why it complements local-data-stack: Frees district budget for analytics work; defense-in-depth against query-URL phishing; one less CIPA item for district IT.
+
+### 7/14 (16:01 PT — Frank verbal, new project thread)
+- **🆕 Ontology Design project kicked off** (Frank 7/14 16:01 PT). Third new project thread today. Frank's framing: "this is just an idea I had but I want to try to flesh it out. It is about designing an ontology for the Wellfull Collective design theory and also one for the local data stack. K through 12 research should have their own kind of ontological architecture that the data models fit into." **Not a build, not a PRD — concept exploration only.** 5 sub-articles at [[Research/ontology-design-2026-07-14/]]: README + WFC design ontology sketch (12K chars) + K-12 research ontology sketch (13K chars) + shared structure (9K chars) + 12 open design questions. Both ontologies follow the same 7-layer structure (Entity, Property, Relationship, Vocabulary, Derivation, Mapping, Suppression) and the same 5-phase lifecycle (Implicit → Sketched → Formalized → Operationalized → Published). The K-12 ontology's killer feature: the K12-Bench failure modes are *ontology violations* — making the ontology explicit is making the benchmark testable. 12 questions for Frank, organized by domain. My recommendation: **defer formalization to Q4 2026** (Oct-Dec) when other work has landed. The sketches are the seed.
+
+### 7/14 (18:00 PT — EOD shutdown)
+- **🆕 K-12 research outreach evening reminder cron SET 15:47 PT** (one-shot, fires 19:02 PT tonight, 3h15m delay, cron ID 76cd1b06-9b4b-4372-8d88-1a358fe6ea77, deletes after run). First-time self-evening-reminder pattern in the vault. Frank's source-of-truth: [[Work/LTC/follow-up-queue]] R1-R4 + [[Work/LTC/weekly-plan]] K-12 Blog Series section. Frank's instruction verbatim: "I want to work on my local data stack research paper request for either a co-author or a case study. Volunteers." Goal: end-of-Week-30 → 1-2 co-author + 1-2 case-study partner conversations. Governance rule #1: Frank reviews all drafts before any send.
+- **🆕 Heavy-ideation pattern observation** (orchestrator note, 18:00 PT). Frank opened 3 new project threads in 48 hours: (a) K-12 research blog series + outreach (7/13 09:43 PT, R1-R4), (b) agent observability PRD outline (7/13 10:45 PT, 31K chars, 19 sections), (c) Ontology Design (7/14 16:01 PT, 5 sub-articles, 70K+ chars total). All scheduled to be deferred or downstreamed. **Implication:** Frank's bandwidth is in discovery mode, not delivery mode. The 7 recommended Frank afternoon delivery actions from 12:30 PT (Matt disambig, OAuth re-auth, NBA inventory REFINEMENT, NBA SOW + email + upgrade-recs REVIEW, Susan reconciliation C6/C7/C8, Lauren check-in, Postiz verify) all slipped to Wed 7/15. HIGH risks (Matt disambig 6d+, Google OAuth Day 21+ CRITICAL) unmitigated. Carry forward with explicit owners. Recommend: **one delivery-first half-day on Wed 7/15** before any new ideation work.
+- **🆕 Email wrap-up SKIPPED** per 7/10 prevention rule (issues-fixes-log.md I-2026-07-10-C). Gmail OAuth REVOKED Day 21+; do not probe degraded auth. Re-consent 5 min in browser is the only safe path. Frank reads EOD wrap-up directly in [[Daily/2026-07-14]].
+
+### 7/14 (15:47 PT — Frank verbal, evening reminder set)
+- **🆕 K-12 research outreach evening reminder SET 7/14 15:47 PT.** One-shot cron `k12-research-evening-reminder-2026-07-14` scheduled for ~19:02 PT (3h15m from now). Resumes root session. Will delete after run. Prompt reminds Frank to pick a channel (HF KDDSTLC / CA CS-ed faculty / CA district IT analysts) and draft the first outreach message for the local-data-stack research paper (co-authors + case-study volunteers). Frank's instruction: "I want to work on my local data stack research paper request for either a co-author or a case study. Volunteers." Source-of-truth for the workstream: [[Work/LTC/follow-up-queue]] (R1-R4 open loops) + [[Work/LTC/weekly-plan]] (K-12 Research Blog Series + Co-Author / Case-Study Outreach section). Goal: 1-2 conversations with potential co-authors, 1-2 with potential case-study partners by end of Week 30.
+
+### 7/14 (11:10 PT — post-kick-off)
+- **🔴 Susan kick-off HELD 7/14 10:01–10:58 AM PT — Lauren led solo.** Frank did NOT attend. The 7/10 13:58 PT plan ("Frank leads 60 min solo, Lauren NOT on kick-off") did not execute as planned. Lauren actually attended and led the call using the WFC aesthetic triad framework (Sensory / Emotional / Meaning) over the pre-prepared 7/13 audit. OKF not named explicitly. Susan engaged, gave full Squarespace admin access on the call, articulated her goals clearly. **Material state correction** — Frank is now effectively "asynchronous design + technical lead" with Lauren owning the client relationship for this engagement.
+- **🔴 Phase 1 timeline must absorb Lauren Japan OOO 7/22–8/2.** Original target 8/11-8/14 → revised to ~8/22. Lauren has this week (7/14-7/18) for Milestones 1+2 + quick wins; resumes 8/3 for Milestones 3-5. Frank to confirm revised timeline with Susan.
+- **🆕 Squarespace admin access received live on kick-off.** Login `susanallenlmft@gmail.com`; password provided verbally 10:50:46-10:52:19 PT, **NOT stored in vault** — Frank to record in password manager. 2FA status TBD; Lauren to coordinate with Susan if it triggers on initial login.
+- **🆕 Personal context surfaced:** Susan's mom + brother died in past 6 months. Affects work's emotional register; reinforces Lauren as the right relationship owner (not Frank).
+- **🆕 Open framework decision:** OKF vs aesthetic-triad. Lauren ran the call using "aesthetic triad" terminology; Frank's pre-kick-off agenda named "OKF introduction" (10-min block). Both referenced in the vault. Frank to decide canonical WFC language. Affects the content-scaffold deliverable packaging.
+- **🆕 13 new open items for Susan engagement** — see [[leads/wfc-susan-allen/dossier#Next-Actions]] items 33-42 (Frank: credential storage + framework decision + timeline revision + role clarification; Susan: 2FA check, headshot, template pick, photographs, B&W vs color decision, HIPAA notice review; Lauren: kick-off summary + template shortlist + Discovery scheduling by 7/15 AM).
+
+### 7/14 (Morning 09:23 — manual trigger)
+- **🔴 Morning routine manually triggered 7/14 09:23 PT.** 3rd 7:30 AM cron miss in 5 days (after 7/10 + 7/13). Manual recovery is standing pattern. **Structural fix needed this week:** re-register `morning-routine` cron in a separate session with 24hr buffer; add 5-min lockout to prevent back-to-back fires. Filed as Process risk MEDIUM.
+- **🔴 Susan kick-off is TODAY 7/14 10:00–11:00 AM PT.** WFC's first signed engagement since the 6/1 inbound-only pivot. All hard preconditions met (SOW signed 7/8, $500 deposit received 7/10, calendar invite SENT 7/13 08:55 PT, agenda FINALIZED 7/13 08:55 PT). Frank runs the 60-min call solo. Lauren is named once in team-intro; Discovery session with Lauren is separate follow-up. WFC's tonal moment for the year.
+
+### 7/13 (EOD 18:00)
+- **🆕 NBA Phase 1 SOW DRAFTED 7/13 16:12 PT** at [[leads/ltc-north-bridge-academy/sow-phase-1-2026-07-13-draft]] (Frank review before send). Scope: MDM + Apple School Manager cleanup, ~3 weeks from kickoff, milestone-gated. Closes 6d-overdue HIGH engagement-action item.
+- **🆕 NBA follow-up email REACTIVATED 7/13 16:12 PT** — replaces 7/9 PARKED draft at [[leads/ltc-north-bridge-academy/follow-up-email-2026-07-13-draft]]. **Reactivation is implicit in the new draft creation; Frank to confirm intent before Wed 7/15 send.**
+- **🆕 NBA upgrade-recommendations created 7/13 16:58 PT** at [[leads/ltc-north-bridge-academy/upgrade-recommendations-2026-07-13]]. Refresh-cycle: Q3 2026 for 20 Hamlin-vintage iPads, 2027-28 rolling for 62 iPad 9th gen, post-Phase-1 Mac decision. Provides strategic frame for the SOW conversation.
+- **🆕 EOD state transfer populated 7/13 18:00 PT** (this entry). 24 carry-forward items, all with explicit owners + new due dates. No silent carry.
+- **🆕 Agent Observability project — RE-SCOPED 7/13 10:45 PT** (Frank verbal). Original 10:06 PT framing was "close the loop on the Mavis team." Frank reframed: **standalone development idea, not a Mavis team integration.** The Mavis team is one reference use case, not the only customer. Platform could serve solo practitioners, small teams, K-12 research, etc. Three answers locked: **Q1=C (full LangChain-style span tree, OTel-compatible), Q2=not for current workflow (standalone product, external storage), Q3=C (LLM-as-judge on every event, fine-tuned small model).** Output: **PRD outline, not code.** Goal: **feasibility review.** Deliverable: [[Research/agent-observability-2026-07-13/PRD-outline]] (31K chars, 19 sections, 4-6 week MVP build plan, decision matrix). My recommendation: **defer to Q4 2026 or 2027** if Frank is bandwidth-constrained; **build MVP** if Frank has 10-15 hrs/week for 4-6 weeks. The article is interesting but the work is a lot.
+- **🆕 Agent Observability project kicked off** (Frank 7/13 10:06 PT). New conversation/project thread. Anchor article: [LangChain — *Improving Agents is a Data Mining Problem*](https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem) (Vivek Trivedy, 7/7/2026). Goal: close the agent improvement loop on the Mavis team. Four sub-articles at [[Research/agent-observability-2026-07-13/]]: README + article analysis + current-state audit + recommendations (5 concrete next moves ranked by leverage, total ~12-15 hours of build over 90 days). **Recommendation 1 (structured event schema) is the minimum viable version** — 1 hour of work, unlocks everything else. Three open questions pending Frank's input: (a) what does "trace" mean to you, (b) where does observability live, (c) who does the mining.
+- **🆕 K-12 research blog series + co-author/case-study outreach workstream added** (Frank 7/13 09:43 PT). Two parallel tracks tied to the local-data-stack EDM/LA research agenda: (a) blog series 1-2 posts/week for 2-3 weeks covering LFED stack, accountability-metric reasoning, case study + K12-Bench; (b) outreach looking for co-authors OR case-study partners. Channels TBD — Frank to confirm. Drafts by end of week; outreach sends gated on Frank's review per agent team governance. 4 new open loops (R1-R4) added to [[Work/Shared/Ops/morning-standup]] + [[Work/LTC/follow-up-queue]] + [[Work/LTC/weekly-plan]].
+- **🆕 WFC content load workstream added** (Frank 7/13 09:43 PT). 2 weeks of Instagram content (Postiz at localhost:4007), LinkedIn scheduling, blog publish (merge `add-blog-nav` branch + activate `/blog` route + publish 1-2 posts). **This IS the resolution to the Day 30+ WFC campaign blocker.** First IG post target Thu 7/17. 4 new open loops (W7-W10) added to [[Work/Shared/Ops/morning-standup]] + [[Work/WFC/follow-up-queue]] + [[Work/WFC/weekly-plan]]. WFC campaign launch risk severity downgraded from CRITICAL to in-flight.
+- **Susan kick-off calendar invite SENT (Zoom link + Gmail web compose)** — confirmed by Frank 7/13 08:55 PT. Susan has the invite in hand for Tue 7/14 10:00–11:00 AM. Susan invite risk (was HIGH 1d overdue) **RESOLVED**.
+- **Susan kick-off agenda FINALIZED (rev. 2)** — confirmed by Frank 7/13 08:55 PT. No further revisions needed pre-kick-off. Susan agenda risk (was MEDIUM) **RESOLVED**.
+- **NBA initial inventory list SCAFFOLDED by Hermes 7/13 08:47 PT** at [[leads/ltc-north-bridge-academy/inventory-2026-07-09]] — first-pass table from 7/7 walkthrough counts (121 iPads / 8 Macs in ASM / 8 Apple TVs / 12-per-cart × ~10 carts). Frank to refine per-cart + Mac reconciliation. Risk severity dropped HIGH → MEDIUM (scaffold on disk, refine pending).
+- **Morning routine: dual-agent event detected.** Mavis (orchestrator) ran the standard morning-routine skill at 08:45 PT (5 file updates: Daily/2026-07-13, LTC weekly-plan, WFC weekly-plan, morning-standup dashboard, log.md). Hermes (a separate process) appears to have run a parallel morning routine at 08:47 PT (created the NBA inventory scaffold + overwrote Daily/2026-07-13 with a different structure). Mavis's 08:55 PT update merged Frank's Susan invite + agenda confirmation into both versions. **Cron registration: 2nd miss in 4 days at 7:30 AM slot.** Manual recovery is standing.
+
+### 7/10
+- **Susan Allen $500 Venmo deposit RECEIVED** — confirmed by Frank 13:05 PT. WFC's first signed engagement is also first revenue signal. Pipeline: $0 → $500 collected of $1,000 Phase 1 floor. Susan deposit MEDIUM-watch risk RESOLVED. Reflects in [[Work/WFC/follow-up-queue]] (5 → 4 active, $0 → $500 collected) and [[Work/WFC/weekly-plan]].
+- **4 LTC items deprioritized per Frank verbal** (13:05 PT): NBA post-walkthrough email send (PARKED — Frank: "I will not be following up with... Dave"), Apple Valley USD nudge (PARKED — Aug 2026 SIS go-live is natural reactivation window), Jim Siegl follow-up (PARKED — time-tolerant), 6/25 Annie meeting notes (RESOLVED per Frank). Risk surface shrank, not grew.
+- **Susan kick-off is Frank solo, no Lauren** (13:58 PT) — Lauren NOT on the invite; Frank leads 60 min solo. Lauren named once in team-intro; Discovery session with Lauren is the natural follow-up. Lauren has confirmed Tue 10:00 AM as working slot; Frank + Lauren align on 2-3 specific Discovery time options post-kick-off.
+- **Susan kick-off artifacts drafted (rev. 2):** [[leads/wfc-susan-allen/kick-off-agenda-2026-07-14]] (60-min Frank solo lead) and [[leads/wfc-susan-allen/kick-off-calendar-invite-2026-07-14]] (no Lauren CC). Both DRAFT — awaiting Frank review + Zoom link + send via Gmail web compose.
+- **Mavis agent team deployed** (11:09–11:50 PT) — 6 role contracts + 6 reusable skills + 5 vault-resident specialists (ltc-operator, wfc-operator, content-marketer, vault-hygienist, compliance-qa) + 3 cron routines (morning-routine, midday-delivery-check, evening-shutdown). Hard scope rule codified: agents operate on vault + LTC + WFC pipelines only — code repos are human-in-the-loop. Structural shift: team center of gravity moved from "Hermes is the only agent" to "Hermes orchestrates a 6-agent company."
+- **Morning-standup cron missed 7:30 AM slot** (registered 11:50 AM, after scheduled fire time). 12:30 PM midday-delivery-check + 13:05 PT Frank verbal brief + 18:00 PT EOD populated recovered the day. **Prevention rule:** register cron in separate session with 24-hour buffer before first fire; build in manual backfill on day 1.
+- **Email wrap-up to frank.lucido@gmail.com — DEFERRED** — Gmail OAuth still REVOKED (Day 17+). Skipped per [[Work/Shared/Ops/agents/evening-reflection-skill]] Step 7 "if Gmail blocked, skip." Frank reads wrap-up in Daily note directly.
+
+### 7/9
+- **Susan Allen SOW signed 7/8** — Phase 1 = $1,000 floor (8 hrs × $125 hybrid). $500 Venmo deposit link sent 7/8 — **deposit not yet received** as of 7/9 morning startup. Kick-off moved Fri 7/10 → **Tue 7/14 10:00–11:00 AM Zoom** per Susan's 7/8 reply. Phase 2 SEO estimate ($1.6K-$3K) was delivered in 7/7 reply. Today's WFC anchor: Venmo status check + gentle nudge if silent + kick-off agenda draft.
+- **NBA post-walkthrough integration begins** — 7/7 on-site walkthrough captured live; today's deliverable: post-walkthrough email to Erin (CC Annie + Dave) + initial inventory list refinement (121 iPads / 8 Macs / 8 Apple TVs) + Matt intro email (pending disambiguation).
+- **Daily note backfill protocol used** — 7/8 daily note was missed; backfilled 7/9 from Frank's verbal brief. Only items Frank explicitly closed (Susan signature + Venmo link + kick-off move) captured in [[Daily/2026-07-08]].
+- **Susan Allen SOW signed-budget approved** — Phase 1 at $1,000 (8 hrs × $125). Two scope revisions captured: (a) drop online booking / calendaring / contact forms (HIPAA-sensitive), (b) provide Phase 2 SEO/AI-findability estimate upfront. Lauren already approved scope. Kick-off target Friday 7/10 (Susan has Fridays off + some Tuesdays free).
+- **North Bridge — Apple School Manager access confirmed** — Frank now has both Mosyle + ASM accounts at NBA. First on-site walkthrough today 11 AM with Erin (Lower School Head). ASM is the upstream Apple-side for Mosyle's zero-touch enrollment.
+- **Lead → Contact promotion process** — Frank raised idea of qualifying engagements to "contacts" once they cross certain thresholds (SOW signed, deliverable scheduled, decision-makers named, engagement model settled, financial terms confirmed). Back-burner — design in next quiet 30-min session. Triggers: North Bridge on Phase 1 SOW send; Susan Allen on signature.
+
+### 7/6
+- **Post-vacation kickoff** — Frank back. Resume all deferred pipeline work. Susan Allen follow-up + SOW draft is WFC anchor. New Leighna Harrison lead untriaged (11d in info@ inbox).
+- **Lauren handled Northridge follow-up during vacation** — outcome pending capture. Need to confirm with Lauren which Northbridge (the LTC private school in Mill Valley, or another?) and record the follow-up in vault.
+
+### 6/30
+- **Susan Allen discovery call completed** — Engagement pivoted to hybrid (Squarespace template update + SEO/GEO + content strategy). Not CMS Site rebuild. Frank to populate meeting notes.
+- **Vacation mode active** — Back ~7/7. All pipeline follow-ups, blog publishing, campaign launch deferred.
+
+### 6/24
+- **North Bridge:** Annie responded 6/23 with Avram's network assessment. Meeting held 6/25 1pm. Post-meeting artifacts pending.
+
+### 6/22
+- **Oracle Cloud instance built** — flucido-hermes-vm. Target for Hermes migration.
+- **Susan Allen, LMFT — WFC pipeline entry** — Reproductive/perinatal specialist. Dossier: [[leads/wfc-susan-allen/dossier]].
+
+### 6/17
+- Dashboards split: WFC and LTC fully separate.
+- North Bridge green-lit: Annie Crowder approved 3 workstreams.
+- Tagline changed. Onboarding guide updated. franklucido.com corrected → lucidotechnologyconsulting.com.
+- LFED blog post published.
+
+### 6/16
+- Google OAuth activated. MailAfiniti connected.
+
+---
+
+### Susan Allen — Phase 1 Status (7/15 07:30 PT carry)
+- **Phase 1 active build in Lauren's hands this week (7/14-7/18).** Lauren 7/15 AM commitments: kick-off summary + template shortlist (4 candidates: Clove / Jenani / Clune / Aurora) + Discovery scheduling link. Susan block does NOT compete for Frank's time on 7/15. Pre-Japan shipping window pressure (Lauren OOO 7/22-8/2).
+- **Frank's open decisions for the week (3 MEDIUM):** C6 OKF vs aesthetic-triad framework reconciliation, C7 Phase 1 timeline confirm ~8/22, C8 Frank role clarification (asynchronous design + technical lead, Lauren owns relationship). 1-hr conversation with Lauren resolves all 3.
+
+### Susan Kick-off → Phase 1 Active — Carry-Forward
+- **Phase 1 scope (locked):** $1,000 floor (8 hrs × $125 hybrid). Squarespace template update + SEO/GEO + content strategy. NO online booking / calendaring / contact forms (HIPAA-sensitive). Phase 2 SEO/AI-findability separate SOW after Phase 1, $1.6-3K range.
+- **Pre-Japan milestones (7/14-7/18):** M1 Audit 1-pager (client-friendly version of 7/13 audit) + M2 Template shortlist delivery + selection process + Quick wins (color/contrast/header placeholders) + HIPAA-aware communications notice draft. All by Lauren.
+- **Susan inputs needed (pre-8/3):** DIY professional headshot (iPhone + daughter), photographs (office, specialty-relevant), B&W vs color decision (at Discovery 7/16-17), 2FA status check on Squarespace, template pick by Fri 7/18.
+- **Open framework decision (C6):** OKF vs aesthetic-triad. Lauren ran the call using "aesthetic triad" terminology; Frank's pre-kick-off agenda named "OKF introduction" (10-min block). Both referenced in the vault. Frank to decide canonical WFC language. Affects the content-scaffold deliverable packaging.
+
+### North Bridge Academy — Phase 1 SOW + Outreach SENT (7/15 11:04 PT update)
+- **🆕 7/15 11:04 PT — SENT.** Per Frank verbal: "The phase one SOW went out, as did the recommendations and reviews." NBA Phase 1 SOW + follow-up email + upgrade-recommendations all shipped to North Bridge Academy. Inventory list REFINEMENT complete (per-cart + 8-of-N Mac reconciliation with Erin).
+- **NBA Matt thread DROPPED per Frank 11:04 PT.** "Just drop it." All Matt-related state references removed. No Matt intro email will be sent. Risk register HIGH (6d+) RESOLVED.
+- **LTC critical path is now unblocked end-to-end.** 4 items closed in one morning (Matt + inventory + SOW + email + upgrade-recs). Remaining LTC work: Northridge dossier enrichment (post-Lauren check-in), Beverly Hills CTO research (back-burner), MPQ refresh (45 min, 31d stale).
+- **NBA Phase 1 scope (sent):** MDM + Apple School Manager cleanup, ~3 weeks from kickoff, milestone-gated. Upgrade-recommendations: Q3 2026 Hamlin (20 iPads) / 2027-28 iPad 9th gen (62) / post-Phase-1 Mac decision. Outreach complete; awaiting North Bridge response.
+
+### Content Engine — Day 33+ WFC Campaign (7/15 07:30 PT carry)
+- **WFC content load workstream (R in-flight since 7/13 09:43 PT).** First IG post target Thu 7/17. Postiz health check at localhost:4007 is the 5-min unblocker. 2 weeks IG + LinkedIn scheduling + blog turn-on (Thu 7/16, code-repo) is the workstream scope.
+- **K-12 research blog series (R1-R4):** First post target Fri 7/17. Topics TBD; Frank to confirm channels + target list (15 min). Outreach plan for co-authors + case-study partners (Frank reviews all drafts before any send per governance rule #1).
+- **🆕 O1 (carry):** K-12 outreach evening reminder cron FIRED 7/14 19:02 PT (one-shot, deleted after run). Vault state has no record of Frank's response. Frank to confirm at next standup whether reminder produced a draft or was skipped.
+
+### Heavy-Ideation Pattern → Recommend Delivery-First Day (7/15 07:30 PT carry → 11:04 PT update → 18:00 PT EOD)
+- **3 new project threads in 48 hours** (K-12 outreach + agent observability + ontology design). All scheduled to be deferred or downstreamed. Implication: Frank's bandwidth is in discovery mode, not delivery mode. The HIGH risk (Google OAuth Day 22+ CRITICAL) remains unmitigated; **Matt disambig RESOLVED 7/15 11:04 PT (DROPPED)**, **NBA inventory REFINEMENT RESOLVED 7/15 11:04 PT (DONE)**, **NBA SOW + email + upgrade-recs RESOLVED 7/15 11:04 PT (SENT)**.
+- **🆕 7/15 11:04 PT delivery pass — Frank closed 4 LTC items in one morning.** Order of attack is moot now; the LTC critical path is unblocked. Remaining priority order: **OAuth re-auth (5 min, NOW #1)** → Susan reconciliation C6/C7/C8 (15-60 min, MEDIUM) → Lauren check-in (30 min, HIGH) → MPQ refresh (45 min, MEDIUM) → Postiz health check (5 min, HIGH) + WFC IG load (45 min, HIGH). Total: ~3 hr focused work in remaining 7 hours.
+- **🆕 7/15 18:00 PT EOD — Delivery-first half-day achieved.** 4-5 LTC items closed before noon. **Counter-balance to 7/13-7/14 heavy-ideation pattern is now established.** Frank can do delivery-first days when prompted. The 12:30-18:00 PT 5.5h window had no Frank verbal — 6+ items recommended at 12:30 PT are UNKNOWN whether touched. **Honest "UNKNOWN" + carry-forward with explicit owners is the correct move.** Recommend maintaining the counter-balance: **Thu 7/16 should be another delivery-first day** (OAuth re-auth → Susan reconciliation C6/C7 → WFC content load Postiz + IG → Lauren check-in → MPQ).
+
+### Cron 7:30 AM Slot — RECOVERED 7/15, Fix Still Pending (7/15 07:30 PT carry)
+- **🆕 Cron fired correctly today (7/15 07:30 AM PT)** after 3 consecutive misses (7/10, 7/13, 7/14). **Recovery, not fix.** Manual recovery was standing pattern for the 3 prior days.
+- **Structural fix (C27) still pending this week:** re-register `morning-routine` in a fresh session with 24hr buffer; add 5-min lockout to prevent back-to-back fires. Cron infrastructure works; registration protocol does not. Filed as Process risk MEDIUM (transient).
+
+*Last updated: 2026-07-16 10:49 (Mid-day wins — NBA Phase 1 SOW SIGNED (LTC's first signed engagement) + C1 RESOLVED (Susan follow-ups shipped); 4-5 LTC items carried closed from 7/15 11:04 PT; OAuth Day 24+ still unmitigated; first IG target TOMORROW Fri 7/17; C8 RESOLVED 7/15 11:12 PT; 2 active builds underway)*
+*⚠ Items flagged HUMAN REVIEW above require sign-off before they become canonical.*
+
+### North Bridge Status (7/10 — Week 28)
+- 7/7 on-site Mosyle + ASM walkthrough with Erin (Lower School Head) COMPLETED. Frank now has both Mosyle + Apple School Manager (ASM) accounts. Live notes at [[leads/ltc-north-bridge-academy/meeting-2026-07-07-erin-mosyle]] (121 iPads spanning generations, 8 Macs in ASM, 8 Apple TVs, Erin ran Mosyle Sum/Manager last year).
+- **6/25 Annie meeting notes confirmed "already in" by Frank 7/10 13:05 PT** — RESOLVED. Not yet linked from dossier.
+- **Post-walkthrough email to Erin (CC Annie + Dave) is PARKED per Frank 7/10** ("I will not be following up with... Dave"). Draft preserved at [[leads/ltc-north-bridge-academy/follow-up-email-2026-07-09-draft]]. Frank reactivation trigger.
+- **NBA initial inventory list — was due 7/9, 1d overdue.** Source: [[leads/ltc-north-bridge-academy/Apple iPad Accessibility Features — Complete Structured Inventory]] (Erin pulled day-prior to 7/7). Convert to engagement-ready deliverable with columns: device group, generation, ASM-enrolled Y/N, Mosyle-enrolled Y/N, current assignment, accessories (Logitech keyboard), notes. Save as [[leads/ltc-north-bridge-academy/inventory-2026-07-09]]. **Frank can act without external gating.** Due 7/13 Mon.
+- **Matt (Apple / Mac rep) intro email — BLOCKED on Frank disambiguation.** "Mac Apple rep" is ambiguous: Apple Education / Apple Business / Apple at Work / third-party reseller (CDW-G, Insight). Frank to confirm full name + role. Best-guess interpretation: Apple Education or Apple at Work rep covering North Bay / Marin-Sonoma. Fallback: 2-line reach-out asking Matt to confirm his email. Due 7/14 Tue.
+- Beverly Hills USD CTO contact research deadline 7/15 — back-burner; not in active queue.
+- 6/25 Annie meeting notes still in Frank's personal notes (verbal); future ask: where do they live so we can file.

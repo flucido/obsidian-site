@@ -1,4 +1,4 @@
-# NeroDesign Studio Thesis
+# WellFull Collective — Studio Thesis
 
 ## The Problem
 Ordinary web design assumes users in a neutral, high-energy browsing state. Design patterns optimized for conversion — urgency cues, aggressive CTAs, information density, auto-playing media — work well for users who are cognitively available and emotionally regulated.
@@ -13,7 +13,7 @@ But the sectors we serve — wellness, mental health, education, culture, care �
 When these users encounter standard web design, the result is not just poor conversion. It is cognitive overwhelm, distrust, and abandonment — often at the moment they most need support.
 
 ## Our Thesis
-**Design should regulate before it converts.**
+**Design should work for the most vulnerable — because what works for them works for everyone.**
 
 A digital environment that calms the nervous system, clarifies the path forward, and respects the user's need for control will not only serve high-sensitivity users better — it will convert better, because trust precedes commitment.
 

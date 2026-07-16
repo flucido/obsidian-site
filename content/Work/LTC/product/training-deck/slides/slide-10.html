@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>School Responsibilities</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.slide-content {
+  width: 960px;
+  height: 540px;
+  position: relative;
+  transform-origin: center center;
+}
+</style>
+<script>
+function scaleSlide() {
+  const slide = document.querySelector('.slide-content');
+  if (!slide) return;
+  const slideWidth = 960;
+  const slideHeight = 540;
+  const scaleX = window.innerWidth / slideWidth;
+  const scaleY = window.innerHeight / slideHeight;
+  const scale = Math.min(scaleX, scaleY);
+  slide.style.width = slideWidth + 'px';
+  slide.style.height = slideHeight + 'px';
+  slide.style.transform = `scale(${scale})`;
+  slide.style.transformOrigin = 'center center';
+  slide.style.flexShrink = '0';
+}
+window.addEventListener('load', scaleSlide);
+window.addEventListener('resize', scaleSlide);
+</script>
+</head>
+<body>
+<div class="slide-content" style="background:#f4ecd8; font-family:'Times New Roman', serif; overflow:hidden;">
+
+  <!-- Audience tag -->
+  <svg width="160" height="26" viewBox="0 0 160 26" style="position:absolute; left:60px; top:46px;">
+    <rect width="160" height="26" rx="13" fill="#7a9aa6"/>
+    <text x="80" y="13" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="11" font-weight="700" fill="#fdfaf3" letter-spacing="2">FOR EDUCATORS &amp; SCHOOLS</text>
+  </svg>
+
+  <!-- Eyebrow -->
+  <p style="position:absolute; left:60px; top:84px; margin:0; font-size:11px; color:#7a5a40; letter-spacing:4px; font-weight:700;">THE DISTRICT AS DATA STEWARD</p>
+
+  <!-- Title -->
+  <h1 style="position:absolute; left:60px; top:108px; margin:0; font-size:42px; font-weight:700; color:#3d4a3a; line-height:1.05; letter-spacing:-0.5px;">School responsibilities</h1>
+
+  <!-- Subtitle -->
+  <p style="position:absolute; left:60px; top:170px; margin:0; width:840px; font-size:14px; color:#7a5a40; line-height:1.5; font-style:italic;">Moving from marketing promises to technical reality.</p>
+
+  <!-- Accent -->
+  <svg width="64" height="4" style="position:absolute; left:60px; top:208px;" aria-hidden="true">
+    <rect width="64" height="4" rx="2" fill="#7a9aa6"/>
+  </svg>
+
+  <!-- Left column: image -->
+  <div style="position:absolute; left:60px; top:236px; width:300px;">
+    <img src="imgs/school-resp.jpg" alt="School with audit clipboard" style="width:300px; height:240px; object-fit:cover; border-radius:14px; display:block; box-shadow: 0 6px 20px rgba(120, 90, 50, 0.18);"/>
+    <div style="margin-top:14px; padding:14px; background:#7a9aa6; border-radius:10px;">
+      <p style="margin:0; font-size:12px; color:#fdfaf3; line-height:1.5;"><span style="font-weight:700;">Auditors want technical evidence</span> &mdash; not vendor attestations.</p>
+    </div>
+  </div>
+
+  <!-- Right column: bullets -->
+  <div style="position:absolute; right:40px; top:236px; width:540px;">
+
+    <!-- Item 1 -->
+    <div style="display:flex; align-items:center; margin-bottom:14px; padding:14px 18px; background:#dde7e6; border-radius:10px;">
+      <svg width="36" height="36" viewBox="0 0 36 36" style="flex-shrink:0; margin-right:14px;" aria-hidden="true">
+        <circle cx="18" cy="18" r="18" fill="#7a9aa6"/>
+        <path d="M11 18 L15 22 L25 12" stroke="#fdfaf3" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p style="margin:0; font-size:14px; color:#3d4a3a; line-height:1.45;"><span style="font-weight:700;">Verify code-level access logs</span> &mdash; not just vendor attestations.</p>
+    </div>
+
+    <!-- Item 2 -->
+    <div style="display:flex; align-items:center; margin-bottom:14px; padding:14px 18px; background:#dde7e6; border-radius:10px;">
+      <svg width="36" height="36" viewBox="0 0 36 36" style="flex-shrink:0; margin-right:14px;" aria-hidden="true">
+        <circle cx="18" cy="18" r="18" fill="#7a9aa6"/>
+        <path d="M11 18 L15 22 L25 12" stroke="#fdfaf3" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p style="margin:0; font-size:14px; color:#3d4a3a; line-height:1.45;">Compliance is an <span style="font-weight:700;">operational discipline</span>, not a procurement item.</p>
+    </div>
+
+    <!-- Item 3 -->
+    <div style="display:flex; align-items:center; padding:14px 18px; background:#dde7e6; border-radius:10px;">
+      <svg width="36" height="36" viewBox="0 0 36 36" style="flex-shrink:0; margin-right:14px;" aria-hidden="true">
+        <circle cx="18" cy="18" r="18" fill="#7a9aa6"/>
+        <path d="M11 18 L15 22 L25 12" stroke="#fdfaf3" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p style="margin:0; font-size:14px; color:#3d4a3a; line-height:1.45;">Prepare for <span style="font-weight:700;">stringent county-level audits</span>.</p>
+    </div>
+  </div>
+
+  <!-- Source -->
+  <p style="position:absolute; left:60px; bottom:32px; margin:0; font-size:10px; color:#a38060; letter-spacing:1px;">PRACTICAL GUIDANCE &middot; MARIN, SAN FRANCISCO, SONOMA, CONTRA COSTA COUNTY AUDITS</p>
+
+  <!-- Page number badge -->
+  <svg style="position:absolute; right:32px; bottom:24px;" width="36" height="36" viewBox="0 0 36 36">
+    <circle cx="18" cy="18" r="18" fill="#8a9e7e"/>
+    <text x="18" y="18" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="14" font-weight="600" fill="#fdfaf3">10</text>
+  </svg>
+
+</div>
+</body>
+</html>

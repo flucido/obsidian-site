@@ -1,7 +1,7 @@
 # Research-to-Design Translation Workflow
 
 ## Purpose
-This workflow ensures every design rule in the NeroDesign system has a traceable chain from source evidence to interface decision. No design rule exists without a documented origin.
+This workflow ensures every design rule in the WellFull Collective system has a traceable chain from source evidence to interface decision. No design rule exists without a documented origin.
 
 ## The Translation Chain
 

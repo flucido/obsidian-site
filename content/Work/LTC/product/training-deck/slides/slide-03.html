@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The 7-Layer Privacy Stack — Overview</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.slide-content {
+  width: 960px;
+  height: 540px;
+  position: relative;
+  transform-origin: center center;
+}
+</style>
+<script>
+function scaleSlide() {
+  const slide = document.querySelector('.slide-content');
+  if (!slide) return;
+  const slideWidth = 960;
+  const slideHeight = 540;
+  const scaleX = window.innerWidth / slideWidth;
+  const scaleY = window.innerHeight / slideHeight;
+  const scale = Math.min(scaleX, scaleY);
+  slide.style.width = slideWidth + 'px';
+  slide.style.height = slideHeight + 'px';
+  slide.style.transform = `scale(${scale})`;
+  slide.style.transformOrigin = 'center center';
+  slide.style.flexShrink = '0';
+}
+window.addEventListener('load', scaleSlide);
+window.addEventListener('resize', scaleSlide);
+</script>
+</head>
+<body>
+<div class="slide-content" style="background:#f4ecd8; font-family:'Times New Roman', serif; overflow:hidden;">
+
+  <!-- Eyebrow -->
+  <p style="position:absolute; left:60px; top:48px; margin:0; font-size:11px; color:#c5694e; letter-spacing:4px; font-weight:700;">THE FULL FRAMEWORK</p>
+
+  <!-- Title -->
+  <h1 style="position:absolute; left:60px; top:74px; margin:0; font-size:38px; font-weight:700; color:#3d4a3a; line-height:1.05; letter-spacing:-0.5px;">The 7-Layer Privacy Stack</h1>
+
+  <!-- Accent -->
+  <svg width="64" height="4" style="position:absolute; left:60px; top:138px;" aria-hidden="true">
+    <rect width="64" height="4" rx="2" fill="#8a9e7e"/>
+  </svg>
+
+  <!-- Subtitle -->
+  <p style="position:absolute; left:60px; top:154px; margin:0; width:840px; font-size:13px; color:#7a5a40; line-height:1.5; font-style:italic;">The required standard for California schools. Any vendor claiming "full compliance" must address all of these.</p>
+
+  <!-- Two columns: Federal + California -->
+  <!-- Left: Federal -->
+  <div style="position:absolute; left:60px; top:200px; width:430px; height:300px; background:#dde7e6; border-radius:14px; padding:24px; box-shadow: 0 6px 20px rgba(120, 90, 50, 0.10);">
+    <div style="display:flex; align-items:center; margin-bottom:14px;">
+      <svg width="36" height="36" viewBox="0 0 36 36" style="margin-right:12px;" aria-hidden="true">
+        <rect width="36" height="36" rx="8" fill="#7a9aa6"/>
+        <text x="18" y="18" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="14" font-weight="700" fill="#fdfaf3">FB</text>
+      </svg>
+      <div>
+        <p style="margin:0; font-size:10px; color:#5a7378; letter-spacing:3px; font-weight:700;">LAYERS 1&ndash;3</p>
+        <p style="margin:2px 0 0 0; font-size:22px; font-weight:700; color:#3d4a3a;">Federal Baseline</p>
+      </div>
+    </div>
+
+    <div style="display:flex; align-items:flex-start; margin-bottom:12px; padding:10px; background:#f4ecd8; border-radius:8px;">
+      <svg width="22" height="22" viewBox="0 0 22 22" style="flex-shrink:0; margin-right:12px;" aria-hidden="true">
+        <circle cx="11" cy="11" r="11" fill="#7a9aa6"/>
+        <text x="11" y="11" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="10" font-weight="700" fill="#fdfaf3">1</text>
+      </svg>
+      <div>
+        <p style="margin:0; font-size:13px; font-weight:700; color:#3d4a3a;">FERPA</p>
+        <p style="margin:2px 0 0 0; font-size:11px; color:#5e6b5a; line-height:1.4;">Privacy of educational records (1974)</p>
+      </div>
+    </div>
+
+    <div style="display:flex; align-items:flex-start; margin-bottom:12px; padding:10px; background:#f4ecd8; border-radius:8px;">
+      <svg width="22" height="22" viewBox="0 0 22 22" style="flex-shrink:0; margin-right:12px;" aria-hidden="true">
+        <circle cx="11" cy="11" r="11" fill="#7a9aa6"/>
+        <text x="11" y="11" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="10" font-weight="700" fill="#fdfaf3">2</text>
+      </svg>
+      <div>
+        <p style="margin:0; font-size:13px; font-weight:700; color:#3d4a3a;">PPRA</p>
+        <p style="margin:2px 0 0 0; font-size:11px; color:#5e6b5a; line-height:1.4;">Surveys &amp; evaluations consent (1978)</p>
+      </div>
+    </div>
+
+    <div style="display:flex; align-items:flex-start; padding:10px; background:#f4ecd8; border-radius:8px;">
+      <svg width="22" height="22" viewBox="0 0 22 22" style="flex-shrink:0; margin-right:12px;" aria-hidden="true">
+        <circle cx="11" cy="11" r="11" fill="#7a9aa6"/>
+        <text x="11" y="11" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="10" font-weight="700" fill="#fdfaf3">3</text>
+      </svg>
+      <div>
+        <p style="margin:0; font-size:13px; font-weight:700; color:#3d4a3a;">COPPA</p>
+        <p style="margin:2px 0 0 0; font-size:11px; color:#5e6b5a; line-height:1.4;">Children&rsquo;s online privacy &lt; 13 (1998)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: California -->
+  <div style="position:absolute; right:40px; top:200px; width:430px; height:300px; background:#e8dcc4; border-radius:14px; padding:24px; box-shadow: 0 6px 20px rgba(120, 90, 50, 0.10);">
+    <div style="display:flex; align-items:center; margin-bottom:14px;">
+      <svg width="36" height="36" viewBox="0 0 36 36" style="margin-right:12px;" aria-hidden="true">
+        <rect width="36" height="36" rx="8" fill="#c5694e"/>
+        <text x="18" y="18" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="14" font-weight="700" fill="#fdfaf3">CA</text>
+      </svg>
+      <div>
+        <p style="margin:0; font-size:10px; color:#a04a30; letter-spacing:3px; font-weight:700;">LAYERS 4&ndash;7</p>
+        <p style="margin:2px 0 0 0; font-size:22px; font-weight:700; color:#3d4a3a;">California Mandates</p>
+      </div>
+    </div>
+
+    <div style="display:flex; align-items:flex-start; margin-bottom:10px; padding:9px; background:#f4ecd8; border-radius:8px;">
+      <svg width="22" height="22" viewBox="0 0 22 22" style="flex-shrink:0; margin-right:12px;" aria-hidden="true">
+        <circle cx="11" cy="11" r="11" fill="#c5694e"/>
+        <text x="11" y="11" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="10" font-weight="700" fill="#fdfaf3">4</text>
+      </svg>
+      <div>
+        <p style="margin:0; font-size:13px; font-weight:700; color:#3d4a3a;">SOPIPA</p>
+        <p style="margin:2px 0 0 0; font-size:11px; color:#5e6b5a; line-height:1.4;">No ads, no profiling, no selling (2014)</p>
+      </div>
+    </div>
+
+    <div style="display:flex; align-items:flex-start; margin-bottom:10px; padding:9px; background:#f4ecd8; border-radius:8px;">
+      <svg width="22" height="22" viewBox="0 0 22 22" style="flex-shrink:0; margin-right:12px;" aria-hidden="true">
+        <circle cx="11" cy="11" r="11" fill="#c5694e"/>
+        <text x="11" y="11" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="10" font-weight="700" fill="#fdfaf3">5</text>
+      </svg>
+      <div>
+        <p style="margin:0; font-size:13px; font-weight:700; color:#3d4a3a;">AB 1584</p>
+        <p style="margin:2px 0 0 0; font-size:11px; color:#5e6b5a; line-height:1.4;">District ownership of records (2014)</p>
+      </div>
+    </div>
+
+    <div style="display:flex; align-items:flex-start; margin-bottom:10px; padding:9px; background:#f4ecd8; border-radius:8px;">
+      <svg width="22" height="22" viewBox="0 0 22 22" style="flex-shrink:0; margin-right:12px;" aria-hidden="true">
+        <circle cx="11" cy="11" r="11" fill="#c5694e"/>
+        <text x="11" y="11" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="10" font-weight="700" fill="#fdfaf3">6</text>
+      </svg>
+      <div>
+        <p style="margin:0; font-size:13px; font-weight:700; color:#3d4a3a;">CCPA</p>
+        <p style="margin:2px 0 0 0; font-size:11px; color:#5e6b5a; line-height:1.4;">Right to know, delete, opt out (2018)</p>
+      </div>
+    </div>
+
+    <div style="display:flex; align-items:flex-start; padding:9px; background:#f4ecd8; border-radius:8px;">
+      <svg width="22" height="22" viewBox="0 0 22 22" style="flex-shrink:0; margin-right:12px;" aria-hidden="true">
+        <circle cx="11" cy="11" r="11" fill="#c5694e"/>
+        <text x="11" y="11" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="10" font-weight="700" fill="#fdfaf3">7</text>
+      </svg>
+      <div>
+        <p style="margin:0; font-size:13px; font-weight:700; color:#3d4a3a;">AB 2273</p>
+        <p style="margin:2px 0 0 0; font-size:11px; color:#5e6b5a; line-height:1.4;">Privacy by default, DPIAs (2022)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page number badge -->
+  <svg style="position:absolute; right:32px; bottom:24px;" width="36" height="36" viewBox="0 0 36 36">
+    <circle cx="18" cy="18" r="18" fill="#8a9e7e"/>
+    <text x="18" y="18" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="14" font-weight="600" fill="#fdfaf3">03</text>
+  </svg>
+
+</div>
+</body>
+</html>

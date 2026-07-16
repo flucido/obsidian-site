@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>COPPA — Layer 3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.slide-content {
+  width: 960px;
+  height: 540px;
+  position: relative;
+  transform-origin: center center;
+}
+</style>
+<script>
+function scaleSlide() {
+  const slide = document.querySelector('.slide-content');
+  if (!slide) return;
+  const slideWidth = 960;
+  const slideHeight = 540;
+  const scaleX = window.innerWidth / slideWidth;
+  const scaleY = window.innerHeight / slideHeight;
+  const scale = Math.min(scaleX, scaleY);
+  slide.style.width = slideWidth + 'px';
+  slide.style.height = slideHeight + 'px';
+  slide.style.transform = `scale(${scale})`;
+  slide.style.transformOrigin = 'center center';
+  slide.style.flexShrink = '0';
+}
+window.addEventListener('load', scaleSlide);
+window.addEventListener('resize', scaleSlide);
+</script>
+</head>
+<body>
+<div class="slide-content" style="background:#f4ecd8; font-family:'Times New Roman', serif; overflow:hidden;">
+
+  <!-- Layer badge -->
+  <svg width="120" height="26" viewBox="0 0 120 26" style="position:absolute; left:60px; top:46px;">
+    <rect width="120" height="26" rx="13" fill="#7a9aa6"/>
+    <text x="60" y="13" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="11" font-weight="700" fill="#fdfaf3" letter-spacing="2">LAYER 3</text>
+  </svg>
+
+  <!-- Eyebrow -->
+  <p style="position:absolute; left:60px; top:84px; margin:0; font-size:11px; color:#7a5a40; letter-spacing:4px; font-weight:700;">THE UNDER-13 RULE</p>
+
+  <!-- Title -->
+  <h1 style="position:absolute; left:60px; top:108px; margin:0; font-size:46px; font-weight:700; color:#3d4a3a; line-height:1.05; letter-spacing:-0.5px;">COPPA</h1>
+
+  <!-- Subtitle -->
+  <p style="position:absolute; left:60px; top:174px; margin:0; font-size:16px; color:#7a5a40; line-height:1.5; font-style:italic;">Children&rsquo;s Online Privacy Protection Rule (1998)</p>
+
+  <!-- Accent -->
+  <svg width="64" height="4" style="position:absolute; left:60px; top:216px;" aria-hidden="true">
+    <rect width="64" height="4" rx="2" fill="#8a9e7e"/>
+  </svg>
+
+  <!-- Left column: bullets in soft card -->
+  <div style="position:absolute; left:60px; top:248px; width:420px;">
+    <div style="display:flex; align-items:flex-start; margin-bottom:18px;">
+      <svg width="40" height="40" viewBox="0 0 40 40" style="flex-shrink:0; margin-right:14px;" aria-hidden="true">
+        <rect width="40" height="40" rx="10" fill="#dde7e6"/>
+        <text x="20" y="20" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="16" font-weight="700" fill="#7a9aa6">&lt;13</text>
+      </svg>
+      <div>
+        <p style="margin:0; font-size:14px; font-weight:700; color:#3d4a3a;">Applies to online services directed at children under 13.</p>
+      </div>
+    </div>
+
+    <div style="display:flex; align-items:flex-start; margin-bottom:18px;">
+      <svg width="40" height="40" viewBox="0 0 40 40" style="flex-shrink:0; margin-right:14px;" aria-hidden="true">
+        <rect width="40" height="40" rx="10" fill="#dde7e6"/>
+        <polyline points="12 21 18 27 28 14" stroke="#7a9aa6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <p style="margin:0; font-size:14px; font-weight:700; color:#3d4a3a;">Requires <span style="color:#c5694e;">verifiable parental consent</span> for data collection.</p>
+      </div>
+    </div>
+
+    <div style="display:flex; align-items:flex-start;">
+      <svg width="40" height="40" viewBox="0 0 40 40" style="flex-shrink:0; margin-right:14px;" aria-hidden="true">
+        <rect width="40" height="40" rx="10" fill="#dde7e6"/>
+        <path d="M20 10 L26 16 L26 22 L14 22 L14 16 Z" fill="none" stroke="#7a9aa6" stroke-width="2.5" stroke-linejoin="round"/>
+        <rect x="17" y="22" width="6" height="6" fill="#7a9aa6"/>
+      </svg>
+      <div>
+        <p style="margin:0; font-size:14px; font-weight:700; color:#3d4a3a;">Crucial for any platform requiring a direct student login.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right column: image with note -->
+  <div style="position:absolute; right:40px; top:248px; width:340px;">
+    <img src="imgs/coppa.jpg" alt="COPPA playground gate" style="width:340px; height:200px; object-fit:cover; border-radius:14px; display:block; box-shadow: 0 6px 20px rgba(120, 90, 50, 0.18);"/>
+    <div style="margin-top:14px; padding:14px; background:#dde7e6; border-radius:10px;">
+      <p style="margin:0; font-size:11px; color:#5a7378; letter-spacing:2px; font-weight:700;">WHY IT MATTERS</p>
+      <p style="margin:6px 0 0 0; font-size:13px; color:#3d4a3a; line-height:1.5;">Affects the day-to-day apps used in elementary and middle schools &mdash; most directly.</p>
+    </div>
+  </div>
+
+  <!-- Source -->
+  <p style="position:absolute; left:60px; bottom:32px; margin:0; font-size:10px; color:#a38060; letter-spacing:1px;">15 U.S.C. &sect;&sect; 6501&ndash;6506 &middot; 16 C.F.R. PART 312</p>
+
+  <!-- Page number badge -->
+  <svg style="position:absolute; right:32px; bottom:24px;" width="36" height="36" viewBox="0 0 36 36">
+    <circle cx="18" cy="18" r="18" fill="#8a9e7e"/>
+    <text x="18" y="18" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="14" font-weight="600" fill="#fdfaf3">05</text>
+  </svg>
+
+</div>
+</body>
+</html>

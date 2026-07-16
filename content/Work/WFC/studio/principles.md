@@ -1,4 +1,4 @@
-# NeroDesign Design Principles
+# WellFull Collective — Design Principles
 
 ## Purpose
 These principles are the bridge between research evidence and concrete design decisions. Each principle is derived from the Evidence Ledger (Tier 1 or Tier 2) and governs all downstream token, component, and page archetype decisions.

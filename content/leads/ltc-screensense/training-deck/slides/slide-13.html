@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Sovereign Tech Stack</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.slide-content {
+  width: 960px;
+  height: 540px;
+  position: relative;
+  transform-origin: center center;
+}
+</style>
+<script>
+function scaleSlide() {
+  const slide = document.querySelector('.slide-content');
+  if (!slide) return;
+  const slideWidth = 960;
+  const slideHeight = 540;
+  const scaleX = window.innerWidth / slideWidth;
+  const scaleY = window.innerHeight / slideHeight;
+  const scale = Math.min(scaleX, scaleY);
+  slide.style.width = slideWidth + 'px';
+  slide.style.height = slideHeight + 'px';
+  slide.style.transform = `scale(${scale})`;
+  slide.style.transformOrigin = 'center center';
+  slide.style.flexShrink = '0';
+}
+window.addEventListener('load', scaleSlide);
+window.addEventListener('resize', scaleSlide);
+</script>
+</head>
+<body>
+<div class="slide-content" style="background:#f4ecd8; font-family:'Times New Roman', serif; overflow:hidden;">
+
+  <!-- Section badge -->
+  <svg width="240" height="26" viewBox="0 0 240 26" style="position:absolute; left:60px; top:46px;">
+    <rect width="240" height="26" rx="13" fill="#8a9e7e"/>
+    <text x="120" y="13" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="11" font-weight="700" fill="#fdfaf3" letter-spacing="1.5">THE SOLUTION &middot; LOCAL-FIRST</text>
+  </svg>
+
+  <!-- Eyebrow -->
+  <p style="position:absolute; left:60px; top:84px; margin:0; font-size:11px; color:#7a5a40; letter-spacing:4px; font-weight:700;">TRUE DATA SOVEREIGNTY</p>
+
+  <!-- Title -->
+  <h1 style="position:absolute; left:60px; top:108px; margin:0; font-size:44px; font-weight:700; color:#3d4a3a; line-height:1.05; letter-spacing:-0.5px;">The sovereign tech stack</h1>
+
+  <!-- Subtitle -->
+  <p style="position:absolute; left:60px; top:170px; margin:0; font-size:14px; color:#7a5a40; line-height:1.5; font-style:italic;">Local-first data analytics for districts &mdash; the practical alternative.</p>
+
+  <!-- Accent -->
+  <svg width="64" height="4" style="position:absolute; left:60px; top:208px;" aria-hidden="true">
+    <rect width="64" height="4" rx="2" fill="#8a9e7e"/>
+  </svg>
+
+  <!-- Left image -->
+  <div style="position:absolute; left:60px; top:236px; width:300px;">
+    <img src="imgs/sovereign.jpg" alt="Sovereign stack" style="width:300px; height:240px; object-fit:cover; border-radius:14px; display:block; box-shadow: 0 6px 20px rgba(120, 90, 50, 0.18);"/>
+  </div>
+
+  <!-- Right column: bullets -->
+  <div style="position:absolute; right:40px; top:236px; width:540px;">
+
+    <!-- Item 1 -->
+    <div style="display:flex; align-items:flex-start; margin-bottom:12px; padding:12px 16px; background:#e0d9b9; border-radius:10px;">
+      <svg width="36" height="36" viewBox="0 0 36 36" style="flex-shrink:0; margin-right:14px;" aria-hidden="true">
+        <circle cx="18" cy="18" r="18" fill="#8a9e7e"/>
+        <path d="M10 18 L18 10 L26 18 L18 26 Z" fill="none" stroke="#fdfaf3" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="18" cy="18" r="3" fill="#fdfaf3"/>
+      </svg>
+      <p style="margin:0; font-size:13px; color:#3d4a3a; line-height:1.45;">Processing stays entirely on <span style="font-weight:700;">district-controlled hardware</span>.</p>
+    </div>
+
+    <!-- Item 2 -->
+    <div style="display:flex; align-items:flex-start; margin-bottom:12px; padding:12px 16px; background:#e0d9b9; border-radius:10px;">
+      <svg width="36" height="36" viewBox="0 0 36 36" style="flex-shrink:0; margin-right:14px;" aria-hidden="true">
+        <circle cx="18" cy="18" r="18" fill="#8a9e7e"/>
+        <rect x="10" y="10" width="16" height="16" rx="2" fill="none" stroke="#fdfaf3" stroke-width="2"/>
+        <line x1="14" y1="14" x2="22" y2="14" stroke="#fdfaf3" stroke-width="2"/>
+        <line x1="14" y1="18" x2="22" y2="18" stroke="#fdfaf3" stroke-width="2"/>
+        <line x1="14" y1="22" x2="20" y2="22" stroke="#fdfaf3" stroke-width="2"/>
+      </svg>
+      <p style="margin:0; font-size:13px; color:#3d4a3a; line-height:1.45;">Uses embedded analytical engines like <span style="font-weight:700;">DuckDB</span> &mdash; no cloud, no network calls.</p>
+    </div>
+
+    <!-- Item 3 -->
+    <div style="display:flex; align-items:flex-start; margin-bottom:12px; padding:12px 16px; background:#e0d9b9; border-radius:10px;">
+      <svg width="36" height="36" viewBox="0 0 36 36" style="flex-shrink:0; margin-right:14px;" aria-hidden="true">
+        <circle cx="18" cy="18" r="18" fill="#8a9e7e"/>
+        <path d="M18 10 L18 20 M18 23 L18 26" stroke="#fdfaf3" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M14 14 L22 22" stroke="#fdfaf3" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <p style="margin:0; font-size:13px; color:#3d4a3a; line-height:1.45;">Analyzes millions of rows locally <span style="font-weight:700;">in under a second</span>.</p>
+    </div>
+
+    <!-- Item 4 -->
+    <div style="display:flex; align-items:flex-start; padding:12px 16px; background:#e0d9b9; border-radius:10px;">
+      <svg width="36" height="36" viewBox="0 0 36 36" style="flex-shrink:0; margin-right:14px;" aria-hidden="true">
+        <circle cx="18" cy="18" r="18" fill="#8a9e7e"/>
+        <path d="M11 18 L18 11 L25 18 L18 25 Z" fill="none" stroke="#fdfaf3" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="18" cy="18" r="2" fill="#fdfaf3"/>
+      </svg>
+      <p style="margin:0; font-size:13px; color:#3d4a3a; line-height:1.45;">Local AI models process queries <span style="font-weight:700;">without external APIs</span>.</p>
+    </div>
+  </div>
+
+  <!-- Bottom takeaway -->
+  <div style="position:absolute; left:60px; bottom:32px; width:840px;">
+    <p style="margin:0; font-size:12px; color:#3d4a3a; line-height:1.4;"><span style="font-weight:700; color:#c5694e;">The simple argument:</span> You can&rsquo;t leak what you don&rsquo;t send.</p>
+  </div>
+
+  <!-- Page number badge -->
+  <svg style="position:absolute; right:32px; bottom:24px;" width="36" height="36" viewBox="0 0 36 36">
+    <circle cx="18" cy="18" r="18" fill="#8a9e7e"/>
+    <text x="18" y="18" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="14" font-weight="600" fill="#fdfaf3">13</text>
+  </svg>
+
+</div>
+</body>
+</html>

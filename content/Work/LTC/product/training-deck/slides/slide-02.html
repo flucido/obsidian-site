@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FERPA is the Floor, Not the Ceiling</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.slide-content {
+  width: 960px;
+  height: 540px;
+  position: relative;
+  transform-origin: center center;
+}
+</style>
+<script>
+function scaleSlide() {
+  const slide = document.querySelector('.slide-content');
+  if (!slide) return;
+  const slideWidth = 960;
+  const slideHeight = 540;
+  const scaleX = window.innerWidth / slideWidth;
+  const scaleY = window.innerHeight / slideHeight;
+  const scale = Math.min(scaleX, scaleY);
+  slide.style.width = slideWidth + 'px';
+  slide.style.height = slideHeight + 'px';
+  slide.style.transform = `scale(${scale})`;
+  slide.style.transformOrigin = 'center center';
+  slide.style.flexShrink = '0';
+}
+window.addEventListener('load', scaleSlide);
+window.addEventListener('resize', scaleSlide);
+</script>
+</head>
+<body>
+<div class="slide-content" style="background:#f4ecd8; font-family:'Times New Roman', serif; overflow:hidden;">
+
+  <!-- Eyebrow -->
+  <p style="position:absolute; left:60px; top:48px; margin:0; font-size:11px; color:#c5694e; letter-spacing:4px; font-weight:700;">THE ILLUSION OF COMPLIANCE</p>
+
+  <!-- Title -->
+  <h1 style="position:absolute; left:60px; top:74px; margin:0; width:840px; font-size:40px; font-weight:700; color:#3d4a3a; line-height:1.05; letter-spacing:-0.5px;">FERPA is the floor, not the ceiling.</h1>
+
+  <!-- Underline accent -->
+  <svg width="64" height="4" style="position:absolute; left:60px; top:148px;" aria-hidden="true">
+    <rect width="64" height="4" rx="2" fill="#8a9e7e"/>
+  </svg>
+
+  <!-- Subtitle -->
+  <p style="position:absolute; left:60px; top:166px; margin:0; width:560px; font-size:14px; color:#7a5a40; line-height:1.5; font-style:italic;">Why standard vendor assurances fall short.</p>
+
+  <!-- Left column: stat callout -->
+  <div style="position:absolute; left:60px; top:218px; width:380px;">
+    <p style="margin:0 0 8px 0; font-size:11px; color:#7a5a40; letter-spacing:3px; font-weight:600;">THE COMMON ASSURANCE</p>
+    <p style="margin:0; font-size:88px; font-weight:700; color:#a38060; line-height:1; letter-spacing:-3px;">"FERPA<br/>Compliant"</p>
+    <p style="margin:14px 0 0 0; font-size:13px; color:#3d4a3a; line-height:1.55;">is not a complete privacy strategy. It&rsquo;s the baseline &mdash; not the destination.</p>
+  </div>
+
+  <!-- Right column: what FERPA doesn't cover (rounded card) -->
+  <div style="position:absolute; right:40px; top:218px; width:420px; height:280px; background:#ede1c4; border-radius:14px; padding:24px; box-shadow: 0 6px 20px rgba(120, 90, 50, 0.12);">
+
+    <p style="margin:0 0 14px 0; font-size:11px; color:#c5694e; letter-spacing:3px; font-weight:700;">FERPA DOES NOT ADDRESS:</p>
+
+    <div style="display:flex; align-items:flex-start; margin-bottom:14px;">
+      <svg width="22" height="22" viewBox="0 0 22 22" style="flex-shrink:0; margin-right:12px;" aria-hidden="true">
+        <circle cx="11" cy="11" r="11" fill="#c5694e"/>
+        <path d="M7 11 L10 14 L15 8" stroke="#fdfaf3" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p style="margin:0; font-size:13px; color:#3d4a3a; line-height:1.45;"><span style="font-weight:700;">Student profiling.</span> Behavioral data shapes that quietly follow kids.</p>
+    </div>
+
+    <div style="display:flex; align-items:flex-start; margin-bottom:14px;">
+      <svg width="22" height="22" viewBox="0 0 22 22" style="flex-shrink:0; margin-right:12px;" aria-hidden="true">
+        <circle cx="11" cy="11" r="11" fill="#c5694e"/>
+        <path d="M7 11 L10 14 L15 8" stroke="#fdfaf3" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p style="margin:0; font-size:13px; color:#3d4a3a; line-height:1.45;"><span style="font-weight:700;">"Privacy by default" for minors.</span> Not required at the federal level.</p>
+    </div>
+
+    <div style="display:flex; align-items:flex-start; margin-bottom:14px;">
+      <svg width="22" height="22" viewBox="0 0 22 22" style="flex-shrink:0; margin-right:12px;" aria-hidden="true">
+        <circle cx="11" cy="11" r="11" fill="#c5694e"/>
+        <path d="M7 11 L10 14 L15 8" stroke="#fdfaf3" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p style="margin:0; font-size:13px; color:#3d4a3a; line-height:1.45;"><span style="font-weight:700;">District possession &amp; control.</span> No mandate to own the data.</p>
+    </div>
+
+    <div style="display:flex; align-items:flex-start;">
+      <svg width="22" height="22" viewBox="0 0 22 22" style="flex-shrink:0; margin-right:12px;" aria-hidden="true">
+        <circle cx="11" cy="11" r="11" fill="#c5694e"/>
+        <path d="M7 11 L10 14 L15 8" stroke="#fdfaf3" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p style="margin:0; font-size:13px; color:#3d4a3a; line-height:1.45;"><span style="font-weight:700;">Behavioral data for AI.</span> Often fair game for vendor training.</p>
+    </div>
+  </div>
+
+  <!-- Source -->
+  <p style="position:absolute; left:60px; bottom:32px; margin:0; font-size:10px; color:#a38060; letter-spacing:1px;">SOURCE: 20 U.S.C. &sect; 1232g &middot; FAMILY EDUCATIONAL RIGHTS AND PRIVACY ACT</p>
+
+  <!-- Page number badge -->
+  <svg style="position:absolute; right:32px; bottom:24px;" width="36" height="36" viewBox="0 0 36 36">
+    <circle cx="18" cy="18" r="18" fill="#8a9e7e"/>
+    <text x="18" y="18" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="14" font-weight="600" fill="#fdfaf3">02</text>
+  </svg>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Economics of Sovereignty & Next Steps</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.slide-content {
+  width: 960px;
+  height: 540px;
+  position: relative;
+  transform-origin: center center;
+}
+</style>
+<script>
+function scaleSlide() {
+  const slide = document.querySelector('.slide-content');
+  if (!slide) return;
+  const slideWidth = 960;
+  const slideHeight = 540;
+  const scaleX = window.innerWidth / slideWidth;
+  const scaleY = window.innerHeight / slideHeight;
+  const scale = Math.min(scaleX, scaleY);
+  slide.style.width = slideWidth + 'px';
+  slide.style.height = slideHeight + 'px';
+  slide.style.transform = `scale(${scale})`;
+  slide.style.transformOrigin = 'center center';
+  slide.style.flexShrink = '0';
+}
+window.addEventListener('load', scaleSlide);
+window.addEventListener('resize', scaleSlide);
+</script>
+</head>
+<body>
+<div class="slide-content" style="background:#f4ecd8; font-family:'Times New Roman', serif; overflow:hidden;">
+
+  <!-- Closing badge -->
+  <svg width="240" height="26" viewBox="0 0 240 26" style="position:absolute; left:60px; top:46px;">
+    <rect width="240" height="26" rx="13" fill="#c5694e"/>
+    <text x="120" y="13" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="11" font-weight="700" fill="#fdfaf3" letter-spacing="1.5">THE BOTTOM LINE &amp; NEXT STEPS</text>
+  </svg>
+
+  <!-- Eyebrow -->
+  <p style="position:absolute; left:60px; top:84px; margin:0; font-size:11px; color:#a04a30; letter-spacing:4px; font-weight:700;">SAVING BUDGETS, SECURING DATA</p>
+
+  <!-- Title -->
+  <h1 style="position:absolute; left:60px; top:108px; margin:0; font-size:38px; font-weight:700; color:#3d4a3a; line-height:1.05; letter-spacing:-0.5px;">The economics of sovereignty</h1>
+
+  <!-- Subtitle -->
+  <p style="position:absolute; left:60px; top:160px; margin:0; font-size:13px; color:#7a5a40; line-height:1.5; font-style:italic;">Reinvesting in the classroom.</p>
+
+  <!-- Accent -->
+  <svg width="64" height="4" style="position:absolute; left:60px; top:194px;" aria-hidden="true">
+    <rect width="64" height="4" rx="2" fill="#c5694e"/>
+  </svg>
+
+  <!-- Two-column cost comparison -->
+  <!-- Left: Cloud -->
+  <div style="position:absolute; left:60px; top:218px; width:400px; height:160px; background:#e8dcc4; border-radius:14px; padding:20px; box-shadow: 0 6px 20px rgba(120, 90, 50, 0.10);">
+    <p style="margin:0 0 6px 0; font-size:10px; color:#a04a30; letter-spacing:3px; font-weight:700;">PROPRIETARY CLOUD AI</p>
+    <p style="margin:0 0 10px 0; font-size:30px; font-weight:700; color:#c5694e; line-height:1; letter-spacing:-1px;">$50K&ndash;$200K <span style="font-size:14px; color:#7a5a40; font-weight:500;">/ year</span></p>
+    <svg width="360" height="1" style="display:block; margin-bottom:8px;" aria-hidden="true">
+      <rect width="360" height="1" fill="#c9bda0"/>
+    </svg>
+    <p style="margin:0; font-size:12px; color:#3d4a3a; line-height:1.45;"><span style="font-weight:700;">$375K over 5 years</span> with no residual district asset.</p>
+  </div>
+
+  <!-- Right: Local -->
+  <div style="position:absolute; right:40px; top:218px; width:400px; height:160px; background:#d8e0c8; border-radius:14px; padding:20px; box-shadow: 0 6px 20px rgba(120, 90, 50, 0.10);">
+    <p style="margin:0 0 6px 0; font-size:10px; color:#5e6b3a; letter-spacing:3px; font-weight:700;">LOCAL HARDWARE (MAC STUDIO CLUSTER)</p>
+    <p style="margin:0 0 10px 0; font-size:30px; font-weight:700; color:#5e6b3a; line-height:1; letter-spacing:-1px;">$12,000 <span style="font-size:14px; color:#7a5a40; font-weight:500;">upfront</span></p>
+    <svg width="360" height="1" style="display:block; margin-bottom:8px;" aria-hidden="true">
+      <rect width="360" height="1" fill="#a8b89e"/>
+    </svg>
+    <p style="margin:0; font-size:12px; color:#3d4a3a; line-height:1.45;"><span style="font-weight:700;">Zero marginal cost</span> per query &mdash; depreciable district asset.</p>
+  </div>
+
+  <!-- Next steps card -->
+  <div style="position:absolute; left:60px; top:392px; width:820px; padding:14px 18px; background:#c5694e; border-radius:10px;">
+    <p style="margin:0 0 4px 0; font-size:10px; color:#fde4d8; letter-spacing:3px; font-weight:700;">NEXT STEPS</p>
+    <p style="margin:0; font-size:13px; color:#fdfaf3; line-height:1.5;">Assess vendor agreements &middot; demand technical evidence &middot; invest in sovereign infrastructure. <span style="font-weight:700;">Questions?</span></p>
+  </div>
+
+  <!-- Bottom signature -->
+  <div style="position:absolute; left:60px; bottom:24px;">
+    <p style="margin:0; font-size:11px; color:#a38060; letter-spacing:2px; font-weight:700;">FRANK LUCIDO &middot; LUCIDO TECHNOLOGY CONSULTING</p>
+  </div>
+
+  <!-- Page number badge -->
+  <svg style="position:absolute; right:32px; bottom:24px;" width="36" height="36" viewBox="0 0 36 36">
+    <circle cx="18" cy="18" r="18" fill="#8a9e7e"/>
+    <text x="18" y="18" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="14" font-weight="600" fill="#fdfaf3">14</text>
+  </svg>
+
+</div>
+</body>
+</html>

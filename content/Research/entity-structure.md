@@ -23,7 +23,7 @@ Frank Lucido (Individual)
     │   Type: LLC (single-member, CA)
     │   Owner: Frank Lucido (100%)
     │   Domain: K-12 data infrastructure consulting
-    │   Website: franklucido.com
+    │   Website: lucidotechnologyconsulting.com
     │   Assets: frank-lucido-site repo, LTC pipeline, LinkedIn content
     │
     ├── WellFull Collective (WFC) — Co-Owner
@@ -83,7 +83,7 @@ Frank Lucido (Individual)
 | NeroDesign methodology | Frank Lucido | WFC | Royalty-free, perpetual license. WFC may use methodology in client work. Frank retains right to license elsewhere. |
 | Design tokens (per-client) | WFC | Client | Co-owned — client owns brand-specific tokens; WFC retains methodology |
 | wellfullcollective.com codebase | WFC | WFC | WFC-owned |
-| franklucido.com codebase | Frank Lucido / LTC | LTC | Frank/LTC-owned |
+| lucidotechnologyconsulting.com codebase | Frank Lucido / LTC | LTC | Frank/LTC-owned |
 | Obsidian vault (operational) | Shared | Both | Joint operational use. Frank administers. |
 | Hermes Agent infrastructure | Frank Lucido / LTC | Both | LTC bears infrastructure cost. Both orgs benefit. |
 | LinkedIn content + calendar | Frank Lucido / LTC | Both | LTC-owned. Positions Frank, which benefits both orgs. |

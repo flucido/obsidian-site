@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Agent Team — Vault Operating System</title>
+<style>
+  :root {
+    --canvas: #080d14;
+    --panel: #ede8d4;
+    --panel-dim: #d6d0b9;
+    --amber: #f59e0b;
+    --amber-dim: #b97506;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --line: #c7bfa3;
+    --green: #2d6a4f;
+    --red: #b91c1c;
+    --rust: #c2410c;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.5;
+    padding: 32px 16px;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  header {
+    background: var(--panel);
+    border-left: 6px solid var(--amber);
+    padding: 24px 28px;
+    margin-bottom: 28px;
+    border-radius: 2px;
+  }
+  header h1 {
+    font-family: var(--mono);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--ink);
+    text-transform: uppercase;
+  }
+  header .sub {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  header .meta {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--amber-dim);
+    margin-top: 14px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .card {
+    background: var(--panel);
+    border-radius: 2px;
+    padding: 18px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--amber);
+  }
+  .card.specialist::before { background: var(--amber); }
+  .card.hygienist::before { background: var(--green); }
+  .card.qa::before { background: var(--rust); }
+  .card.orchestrator::before { background: var(--amber-dim); }
+  .card .role-icon {
+    font-size: 22px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .card .name {
+    font-family: var(--mono);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .card .name code {
+    font-family: var(--mono);
+    background: var(--canvas);
+    color: var(--amber);
+    padding: 1px 6px;
+    border-radius: 2px;
+    font-size: 12px;
+  }
+  .card .tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .card .desc {
+    font-size: 13px;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .card .triggers {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-soft);
+    background: var(--panel-dim);
+    padding: 8px 10px;
+    border-radius: 2px;
+    margin-bottom: 8px;
+  }
+  .card .triggers .label {
+    color: var(--amber-dim);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 4px;
+  }
+  .card .contract {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-soft);
+  }
+  .card .contract a {
+    color: var(--amber-dim);
+    text-decoration: none;
+  }
+  .card .contract a:hover { text-decoration: underline; }
+  .card .scope {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--red);
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--line);
+  }
+  .card .scope .label {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  section {
+    background: var(--panel);
+    border-radius: 2px;
+    padding: 22px 26px;
+    margin-bottom: 16px;
+  }
+  section h2 {
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--amber);
+  }
+  .cron-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+  .cron-table th {
+    text-align: left;
+    padding: 8px 10px;
+    background: var(--panel-dim);
+    color: var(--ink);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--line);
+  }
+  .cron-table td {
+    padding: 10px;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+  }
+  .cron-table td.time {
+    color: var(--amber-dim);
+    font-weight: 700;
+  }
+  .cron-table td.days {
+    color: var(--ink-soft);
+  }
+  .scope-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .scope-col {
+    font-family: var(--mono);
+    font-size: 11px;
+  }
+  .scope-col h3 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--green);
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--line);
+  }
+  .scope-col.out h3 { color: var(--red); }
+  .scope-col ul {
+    list-style: none;
+    padding: 0;
+  }
+  .scope-col li {
+    padding: 4px 0;
+    color: var(--ink);
+  }
+  .scope-col li code {
+    font-family: var(--mono);
+    background: var(--panel-dim);
+    padding: 1px 4px;
+    border-radius: 2px;
+    font-size: 10px;
+  }
+  .rules {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+  }
+  .rule {
+    background: var(--panel-dim);
+    border-left: 3px solid var(--rust);
+    padding: 10px 12px;
+    font-size: 12px;
+    color: var(--ink);
+  }
+  .rule .num {
+    font-family: var(--mono);
+    font-weight: 700;
+    color: var(--rust);
+    margin-right: 6px;
+  }
+  .cli {
+    font-family: var(--mono);
+    font-size: 11px;
+    background: var(--canvas);
+    color: var(--panel);
+    padding: 16px;
+    border-radius: 2px;
+    overflow-x: auto;
+    line-height: 1.7;
+  }
+  .cli .cmd { color: var(--amber); }
+  .cli .comment { color: var(--panel-dim); }
+  .footer {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--panel-dim);
+    text-align: center;
+    margin-top: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Agent Team — Vault Operating System</h1>
+    <div class="sub">Lucido Technology Consulting + WellFull Collective</div>
+    <div class="meta">Last updated 2026-07-10 · Active 6 agents · 3 scheduled routines</div>
+  </header>
+
+  <div class="grid">
+    <div class="card orchestrator">
+      <span class="role-icon">🧭</span>
+      <div class="tag">Orchestrator</div>
+      <div class="name"><code>mavis</code> (Mavis)</div>
+      <div class="desc">Daily synthesis, top-3 per org, MEMORY + MPQ steward, dispatches specialists. You are talking to it right now.</div>
+      <div class="triggers"><span class="label">Triggers</span>"Run morning startup" / "Process pipeline" / "Run evening shutdown"</div>
+      <div class="contract">Vault: <a href="Work/Shared/Ops/agents/orchestrator.md">orchestrator.md</a></div>
+    </div>
+
+    <div class="card specialist">
+      <span class="role-icon">🏫</span>
+      <div class="tag">LTC Pipeline</div>
+      <div class="name"><code>ltc-operator</code></div>
+      <div class="desc">K-12 education data infrastructure. Pipeline accuracy, lead triage, post-meeting notes, outreach drafts. FERPA / AB 1584 / CIS Controls v8 aware.</div>
+      <div class="triggers"><span class="label">Triggers</span>"Process LTC pipeline" / "Triage LTC leads" / "Capture NBA meeting notes"</div>
+      <div class="contract">Vault: <a href="Work/Shared/Ops/agents/ltc-pipeline.md">ltc-pipeline.md</a></div>
+    </div>
+
+    <div class="card specialist">
+      <span class="role-icon">🌱</span>
+      <div class="tag">WFC Pipeline</div>
+      <div class="name"><code>wfc-operator</code></div>
+      <div class="desc">Therapist website design. Inbound-only since 6/1. 24h consult triage SLA. SOW drafts. HIPAA-adj + WCAG AA aware. Co-owned with Lauren Ogren.</div>
+      <div class="triggers"><span class="label">Triggers</span>"Process WFC pipeline" / "Triage WFC inbound" / "Draft Susan follow-up"</div>
+      <div class="contract">Vault: <a href="Work/Shared/Ops/agents/wfc-pipeline.md">wfc-pipeline.md</a></div>
+    </div>
+
+    <div class="card specialist">
+      <span class="role-icon">✍️</span>
+      <div class="tag">Content + Marketing</div>
+      <div class="name"><code>content-marketer</code></div>
+      <div class="desc">Blog, LinkedIn (LTC open-source series), WFC social (IG + TikTok), FAQ, content calendar. Voice match per org. Drafts only — never publishes.</div>
+      <div class="triggers"><span class="label">Triggers</span>"Draft LinkedIn Day NN" / "Draft blog post" / "Draft IG post"</div>
+      <div class="contract">Vault: <a href="Work/Shared/Ops/agents/content-marketing.md">content-marketing.md</a></div>
+    </div>
+
+    <div class="card qa">
+      <span class="role-icon">🔍</span>
+      <div class="tag">Compliance + QA</div>
+      <div class="name"><code>compliance-qa</code></div>
+      <div class="desc">QA gate on every outbound artifact (email, SOW, blog, LinkedIn, contract). Validates against compliance matrix + source citations. Review only — never sends.</div>
+      <div class="triggers"><span class="label">Triggers</span>"QA review on [file]" / "Run contract gate" / "Validate against compliance matrix"</div>
+      <div class="contract">Vault: <a href="Work/Shared/Ops/agents/compliance-qa.md">compliance-qa.md</a></div>
+    </div>
+
+    <div class="card hygienist">
+      <span class="role-icon">🧹</span>
+      <div class="tag">Vault Infrastructure</div>
+      <div class="name"><code>vault-hygienist</code></div>
+      <div class="desc">Wikilink audit, naming, frontmatter, orphan files. <strong>Low-risk autonomous</strong> — only role that can fix small issues without explicit approval (with audit log).</div>
+      <div class="triggers"><span class="label">Triggers</span>"Audit vault hygiene" / "Find dead links" / "Check naming conventions"</div>
+      <div class="contract">Vault: <a href="Work/Shared/Ops/agents/wikilink-audit-skill.md">wikilink-audit-skill.md</a></div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Scheduled Routines</h2>
+    <table class="cron-table">
+      <thead>
+        <tr>
+          <th>Routine</th>
+          <th>Time (PT)</th>
+          <th>Days</th>
+          <th>Cron Name</th>
+          <th>What it does</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>☀️ Morning</td>
+          <td class="time">7:30 AM</td>
+          <td class="days">Mon–Fri</td>
+          <td><code>morning-routine</code></td>
+          <td>Reads state, generates today's Daily note, populates morning-standup.md, bumps MEMORY.md, sends morning briefing</td>
+        </tr>
+        <tr>
+          <td>🌤️ Midday</td>
+          <td class="time">12:30 PM</td>
+          <td class="days">Mon–Fri</td>
+          <td><code>midday-delivery-check</code></td>
+          <td>Checks active engagements (NBA, Susan), surfaces overdue items, updates weekly plans, flags HIGH risks</td>
+        </tr>
+        <tr>
+          <td>🌙 Evening</td>
+          <td class="time">6:00 PM</td>
+          <td class="days">Mon–Fri</td>
+          <td><code>evening-shutdown</code></td>
+          <td>Reconciles day, populates EOD state transfer, updates evening-reflection.md, bumps MEMORY.md, sends wrap-up</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-family: var(--mono); font-size: 11px; color: var(--ink-soft); margin-top: 12px;">
+      Active hours: <strong>7:00 AM – 7:00 PM PT</strong>. Timezone: <code>America/Los_Angeles</code>.
+      Adjust: <code>mavis cron update mavis &lt;name&gt; --schedule "..."</code>
+    </p>
+  </section>
+
+  <section>
+    <h2>Hard Scope Rule</h2>
+    <p style="font-size: 13px; color: var(--ink); margin-bottom: 14px;">
+      <strong>The team operates on the vault + LTC + WFC pipelines ONLY.</strong>
+      Code repos are human-in-the-loop. Agents PROPOSE; Frank commits.
+    </p>
+    <div class="scope-grid">
+      <div class="scope-col">
+        <h3>✅ In Scope (agents touch)</h3>
+        <ul>
+          <li><code>/Users/flucido/workspace/</code> (the vault)</li>
+          <li><code>Work/LTC/</code>, <code>Work/WFC/</code>, <code>Work/Shared/</code></li>
+          <li><code>leads/ltc-*/</code>, <code>leads/wfc-*/</code></li>
+          <li><code>Daily/</code>, <code>Research/</code>, <code>People/</code>, <code>Personal/</code></li>
+        </ul>
+      </div>
+      <div class="scope-col out">
+        <h3>🚫 Out of Scope (human-only)</h3>
+        <ul>
+          <li><code>~/projects/wellfullcollective/</code> (WFC code)</li>
+          <li><code>~/projects/frank-lucido-site/</code> (LTC website)</li>
+          <li><code>~/projects/nerodesign/</code> (design system)</li>
+          <li><code>~/projects/local-data-stack/</code> (LTC data project)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Six Governance Rules</h2>
+    <div class="rules">
+      <div class="rule"><span class="num">1.</span> No outbound sends — drafts only. Frank sends.</div>
+      <div class="rule"><span class="num">2.</span> Pricing, contracts, legal = human-in-the-loop only.</div>
+      <div class="rule"><span class="num">3.</span> QA gate on all external communications.</div>
+      <div class="rule"><span class="num">4.</span> Every decision links to a vault artifact.</div>
+      <div class="rule"><span class="num">5.</span> Drafts are not final — Orchestrator commits canonical state.</div>
+      <div class="rule"><span class="num">6.</span> No writes to code repos (human-in-the-loop).</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>CLI Quick Reference</h2>
+    <div class="cli">
+<span class="comment"># List all agents (built-in + your team)</span>
+<span class="cmd">mavis agent list -H</span>
+
+<span class="comment"># Show details for one agent</span>
+<span class="cmd">mavis agent info mavis</span>
+<span class="cmd">mavis agent info ltc-operator</span>
+
+<span class="comment"># See what skills an agent can use</span>
+<span class="cmd">mavis skill list mavis</span>
+<span class="cmd">mavis skill list ltc-operator</span>
+
+<span class="comment"># Manage cron routines</span>
+<span class="cmd">mavis cron list mavis</span>
+<span class="cmd">mavis cron info mavis morning-routine</span>
+<span class="cmd">mavis cron update mavis morning-routine --schedule "0 8 * * 1-5"</span>
+<span class="cmd">mavis cron trigger mavis morning-routine</span>   <span class="comment"># fire once now</span>
+<span class="cmd">mavis cron disable mavis midday-delivery-check</span>   <span class="comment"># pause</span>
+    </div>
+  </section>
+
+  <div class="footer">Vault Operating System · Built 2026-07-10 · Maintained by the Orchestrator</div>
+</div>
+</body>
+</html>

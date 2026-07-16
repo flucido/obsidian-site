@@ -1,7 +1,7 @@
 ---
 title: Master Priority Queue
 created: 2026-05-17
-updated: 2026-05-22
+updated: 2026-06-11
 type: operational
 tags: [shared, priorities, daily]
 ---
@@ -9,81 +9,101 @@ tags: [shared, priorities, daily]
 # Master Priority Queue
 
 > Cross-organization priority queue. Updated daily by Executive Orchestrator.
+> **Last rebuilt: 2026-06-11** (previous version frozen at 2026-05-22 — 20 days stale).
 
-## Top Priorities (This Week — Week 21)
+## Top Priorities (This Week — Week 24)
 
-|| Rank | Org | Item | Urgency | Impact | Owner | Due |
-||------|-----|------|---------|--------|-------|-----|
-|| 1 | WFC | Human review of Greene + Patel outreach drafts (⚠ 24hr to deadline) | CRITICAL | HIGH | Human | 2026-05-24 |
-|| 2 | LTC | Draft SCCOE partnership outreach to Nabil Shahin | HIGH | HIGH | Orchestrator | 2026-05-23 |
-|| 3 | WFC | Draft Carl Shubs outreach — dossier reviewed 5/20, unblocked | HIGH | HIGH | Orchestrator | 2026-05-22 |
-|| 4 | WFC | Integrate Marin CAMFT 20 leads into WFC pipeline — overdue 3 days | HIGH | HIGH | Orchestrator | 2026-05-22 |
-|| 5 | WFC | Human review of Marin CAMFT top 10 dossiers | HIGH | HIGH | Human | 2026-05-26 |
-|| 6 | WFC | Human review of Tan + Levy drafts | HIGH | MEDIUM | Human | 2026-05-27 |
-|| 7 | LTC | Draft Alum Rock USD outreach to Brett Littrell | MEDIUM | HIGH | Orchestrator | 2026-05-23 |
-|| 8 | LTC | Review Beverly Hills USD LCAP | MEDIUM | HIGH | Orchestrator | 2026-05-26 |
+| Rank | Org | Item | Urgency | Impact | Owner | Due |
+|------|-----|------|---------|--------|-------|-----|
+| 1 | LTC | **Reach out to Erin Lindheim via LinkedIn** — schedule call. Speaks at schools, referral/speaker opportunity. | HIGH | HIGH | Human | 2026-06-12 |
+| 2 | LTC | **North Bridge Academy meeting prep** — Annie Crowder + Shannon Barkocy. Discovery call week of 6/15. | HIGH | HIGH | Human | 2026-06-15 |
+| 3 | LTC | **Apple Valley USD — awaiting response.** Sent 6/11 to jason_buchanan@avusd.org. Follow up ~6/18 if no reply. | MEDIUM | HIGH | — | 2026-06-18 |
+| 4 | WFC | **Social media campaign go-decision** — IG set up, TikTok started. Campaign documented, launch checklist ready. | CRITICAL | HIGH | Human | 2026-06-12 |
+| 5 | Shared | **Refresh MEMORY.md** — currently reflects 5/27 state. 15 days stale. | HIGH | HIGH | Orchestrator | 2026-06-11 |
+| 6 | LTC | **Blog semantic structure audit** — frank-lucido-site machine readability. Prerequisite before scaling content engine. | MEDIUM | HIGH | Orchestrator | 2026-06-13 |
+| 7 | WFC | **Content drafting session** — TikTok video + IG story + IG posts for WellFull Collective. | MEDIUM | MEDIUM | Human | 2026-06-11 |
+| 8 | WFC | **Begin website tips content production** — stock photos, photography pain points. | MEDIUM | MEDIUM | Orchestrator | 2026-06-14 |
 
 ## In Progress
 
-|| Item | Org | Started | Status | Blocker? |
-||------|-----|---------|--------|----------|
-|| Marin CAMFT pipeline integration | WFC | 2026-05-19 | Active | No |
-|| SCCOE partnership outreach drafting | LTC | 2026-05-22 | Not started | No |
-|| Alum Rock outreach drafting | LTC | 2026-05-22 | Not started | No |
+| Item | Org | Started | Status | Blocker? |
+|------|-----|---------|--------|----------|
+| Apple Valley USD outreach | LTC | 2026-06-11 | **Sent** — awaiting response | No |
+| Erin Lindheim dossier enrichment | LTC | 2026-06-11 | Complete | No |
+| Social media campaign pre-launch | WFC | 2026-06-11 | Awaiting go-decision | Human decision |
+| Jim Siegl outreach prep | LTC | 2026-06-09 | Draft ready, gated on Pauline meeting | No |
+| Edgar Fuentes InMail | LTC | 2026-06-11 | Sent — awaiting response | No |
+| SCCOE partnership outreach | LTC | 2026-05-22 | **ON HOLD** — hackathon gate | No |
+| Alum Rock outreach | LTC | 2026-05-22 | **ON HOLD** — hackathon gate | No |
 
 ## Upcoming (Next 7 Days)
 
-|| Item | Org | Due | Dependencies |
-||------|-----|-----|-------------|
-|| Send Greene + Patel outreach (post human review) | WFC | 2026-05-24 | Human review |
-|| Send Apple Valley outreach (post human review) | LTC | 2026-05-24 | Human review |
-|| Draft SCCOE partnership outreach (template ready) | LTC | 2026-05-23 | Template at [[Templates/ltc-outreach-template]] |
-|| Draft Shubs outreach | WFC | 2026-05-22 | Dossier reviewed 5/20 |
-|| Draft Alum Rock outreach to Brett Littrell | LTC | 2026-05-23 | Dossier at [[leads/ltc-santa-clara-county/alum-rock-usd-dossier]] |
-|| Human review Tan + Levy drafts | WFC | 2026-05-27 | Drafts exist |
-|| Marin top 10 approved → draft outreach | WFC | 2026-05-28 | Human dossier review |
-|| Review Beverly Hills LCAP | LTC | 2026-05-26 | — |
+| Item | Org | Due | Dependencies |
+|------|-----|-----|-------------|
+| Erin Lindheim reach-out via LinkedIn | LTC | 2026-06-12 | None |
+| North Bridge Academy discovery meeting | LTC | 2026-06-15 | Meeting prep review |
+| Apple Valley follow-up (if no reply) | LTC | 2026-06-18 | No response by ~6/18 |
+| Pauline Nagle peer meeting | LTC | 2026-06-17 | Meeting prep review |
+| Jim Siegl outreach send | LTC | 2026-06-20 | Pauline meeting complete |
+| WFC social media campaign launch | WFC | 2026-06-14 | Human go-decision |
+| WFC content drafting (TikTok + IG) | WFC | 2026-06-11 | None |
+| WFC website tips content (batch 1) | WFC | 2026-06-14 | Strategy doc complete |
+| WFC llms.txt deployment | WFC | 2026-06-16 | Content islands mapped |
+| Blog semantic structure audit | LTC | 2026-06-13 | frank-lucido-site access |
+| MEMORY.md refresh | Shared | 2026-06-11 | None |
+| Payload import map regeneration | LTC | 2026-06-13 | Terminal access |
+| Day 1 content review (blog + LinkedIn) | LTC | TBD | Human review |
+| Alum Rock USD — on hold | LTC | TBD | Hackathon showcase-ready |
+| SCCOE — on hold | LTC | TBD | Hackathon showcase-ready |
+| Beverly Hills USD — blocked | LTC | 2026-07-15 | CTO contact research |
 
-## Completed This Week
+## Completed (Since Last Rebuild — 5/22 to 6/11)
 
-|| Item | Org | Completed | Notes |
-||------|-----|-----------|-------|
-|| Marin CAMFT scrape + analysis | WFC | 2026-05-18 | 571 scraped, 364 audited, 20 priority dossiers |
-|| Competitive analysis | WFC | 2026-05-18 | No dominant agency in Marin therapist market |
-|| LTC pipeline seeded (3 entries) | LTC | 2026-05-19 | Apple Valley, Santa Clara, Beverly Hills |
-|| LTC lead discovery process defined | LTC | 2026-05-19 | 5-gate, education-specific |
-|| LinkedIn content integrated into Obsidian | LTC | 2026-05-19 | 7 posts + calendar + profile |
-|| Apple Valley CTO contact found | LTC | 2026-05-20 | Jason Buchanan (IT Dir), jason_buchanan@avusd.org |
-|| FCMAT FHRA Report analyzed (AVUSD) | LTC | 2026-05-20 | HIGH fiscal risk; Section 14 = perfect, Section 15 = failed |
-|| Santa Clara DataZone research complete | LTC | 2026-05-20 | 3 distressed districts; COE contacts identified |
-|| Alum Rock USD dossier created | LTC | 2026-05-20 | Full dossier with CTO contact |
-|| Pipeline reconfigured (25 WFC leads) | WFC | 2026-05-20 | 5 approved + 20 Marin scored |
-|| Revenue Dashboard corrected | Shared | 2026-05-20 | WFC $17,500 → $87,500; combined $152.5–187.5K |
-|| Launch marketing created | WFC | 2026-05-20 | LinkedIn + email campaign + skills review |
-|| Outreach sequencing strategy defined | WFC | 2026-05-20 | Marin top 5 ranked for first sends |
-|| Shubs dossier reviewed + draft created | WFC | 2026-05-20 | Approved, draft exists at [[leads/carl-shubs-lmft/draft]] |
-|| Tan + Levy dossiers reviewed + drafts created | WFC | 2026-05-20 | Approved, drafts at [[leads/jennifer-tan-lcsw/draft]] and [[leads/pamela-levy-lmft/draft]] |
-|| Apple Valley outreach drafted | LTC | 2026-05-21 | Full draft at [[leads/ltc-apple-valley-usd/draft]], awaiting human review |
-|| LTC outreach template drafted | LTC | 2026-05-21 | 4 variants at [[Templates/ltc-outreach-template]]: COE, SIS migration, CALPADS, general |
+| Item | Org | Completed | Notes |
+|------|-----|-----------|-------|
+| SCCOE partnership outreach drafted | LTC | 2026-05-22 | Draft at [[leads/leads-deferred/ltc-santa-clara-county/draft]] |
+| Alum Rock outreach drafted | LTC | 2026-05-22 | Draft at [[alum-rock-usd-draft]], Q3 hold |
+| Beverly Hills generic draft prepared | LTC | 2026-05-22 | Blocked on CTO contact |
+| 30-day sovereign-data content calendar built | LTC | 2026-05-27 | 64 pieces planned, Day 1 drafted as template |
+| Blog → LinkedIn draft generator built | LTC | 2026-06-03 | afterChange hook on Blog collection, frank-lucido-site |
+| WFC cold outreach retired | WFC | 2026-06-01 | Inbound-only strategy pivot |
+| WFC pipeline cleared | WFC | 2026-06-01 | 25 leads archived as market intelligence |
+| North Bridge Academy lead added | LTC | 2026-06-09 | Warm intro from Lauren Ogren, meeting next week |
+| Pauline Nagle lead added | LTC | 2026-06-09 | Peer networking, meeting June 17-18 |
+| Jim Siegl lead added | LTC | 2026-06-09 | FPF policy contact, outreach draft ready |
+| Erin Lindheim lead added | LTC | 2026-06-11 | LinkedIn connection, speaker engagement opportunity |
+| WFC content strategy documented | WFC | 2026-06-11 | Website tips + llms.txt + content islands |
+| Edgar Fuentes InMail sent | LTC | 2026-06-11 | Collaborator prospect at Globant AI Education Studio, awaiting response |
+| Apple Valley USD — email sent | LTC | 2026-06-11 | jason_buchanan@avusd.org, follow up ~6/18 if no reply |
+| SCCOE + Alum Rock — placed on hold | LTC | 2026-06-11 | Intentional hold, circle back after hackathon showcase-ready |
+| LTC LinkedIn posts — all 6 scheduled | LTC | 2026-06-11 | Pre-calendar batch complete |
 
 ## Weekly Completion Rate
 
-|| Week | Planned | Completed | Rate |
-||------|---------|-----------|------|
-|| 2026-W20 | 8 | 8 | 100% |
-|| 2026-W21 | 12 | 9 | 75% (in progress) |
+| Week | Planned | Completed | Rate |
+|------|---------|-----------|------|
+| 2026-W20 | 8 | 8 | 100% |
+| 2026-W21 | 12 | 9 | 75% |
+| 2026-W22 | — | — | No daily notes (gap) |
+| 2026-W23 | 3 | 3 | 100% (infrastructure-only) |
+| 2026-W24 | 8 | 2 | 25% (in progress) |
 
-## Revenue Triage Summary (2026-05-22)
+## Revenue Triage Summary (2026-06-11)
 
-**LTC Pipeline:** 4 active opportunities, $65–100K potential
-- Apple Valley USD: Draft complete → human review → send (deadline 5/24)
-- SCCOE: Research complete → draft outreach (deadline 5/28)
-- Alum Rock USD: Dossier complete → draft outreach (deadline 5/28)
-- Beverly Hills USD: Monitor — LCAP review needed (deadline 7/15)
+**LTC Pipeline:** 9 total — 1 sent + 5 fresh + 2 on hold + 1 blocked, $65–100K potential
+- Sent (1): Apple Valley — awaiting response from Jason Buchanan. Follow up ~6/18.
+- Fresh (5): North Bridge (meeting week of 6/15), Pauline Nagle (6/17-18), Jim Siegl (after Pauline), Erin Lindheim (reach out 6/12), Northridge (details TBD)
+- On Hold (2): SCCOE + Alum Rock — circle back after hackathon work (LFED SQL model, local data stack) is showcase-ready
+- Blocked (1): Beverly Hills (no CTO contact)
 
-**WFC Pipeline:** 25 leads, $87,500 one-time / $3,750/mo MRR
-- Draft ready (5): Greene, Patel, Shubs, Tan, Levy — all awaiting human review
-- Dossier review (20): Marin CAMFT scored 11–15, all awaiting human review
-- Zero outreach sent. Human review is sole bottleneck.
+**WFC Pipeline:** 0 active opportunities, $0 pipeline value
+- Strategy pivot 6/1: cold outreach retired, inbound-only
+- Social media campaign not yet launched — zero top-of-funnel
+- 25 archived leads preserved as market intelligence
 
-**Critical Path:** Human review → approve drafts → send outreach → book consults → proposals → revenue.
+**Critical Path:** WFC social campaign launch → inbound leads → consult calls → proposals. LTC LinkedIn networking → discovery meetings → warm pipeline.
+
+**Revenue Status:** $0 collected. Pre-revenue across both orgs.
+
+**Collaborator Pipeline (non-revenue):**
+- Edgar Fuentes: InMail sent 6/11. Globant AI Education Studio. Awaiting response. Potential AI/ML technical partner for LTC.

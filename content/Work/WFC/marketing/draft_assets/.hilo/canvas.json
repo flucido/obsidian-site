@@ -1,0 +1,315 @@
+{
+  "version": 1,
+  "mode": "workflow",
+  "nodes": [
+    {
+      "id": "d745e6ef-c248-46e7-8d9d-542d2ed4826b",
+      "type": "file",
+      "positions": {
+        "workflow": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "size": {
+        "width": 820,
+        "height": 480
+      },
+      "assetId": "d745e6ef-c248-46e7-8d9d-542d2ed4826b",
+      "data": {
+        "viewMode": "preview"
+      }
+    },
+    {
+      "id": "0aa97eff-d338-4eee-96e2-30b4743e43b0",
+      "type": "text",
+      "positions": {
+        "workflow": {
+          "x": 450,
+          "y": 0
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 500
+      },
+      "assetId": "0aa97eff-d338-4eee-96e2-30b4743e43b0"
+    },
+    {
+      "id": "9a7e6134-0f09-405d-bca9-b5b4cf7d262b",
+      "type": "text",
+      "positions": {
+        "workflow": {
+          "x": 900,
+          "y": 0
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 500
+      },
+      "assetId": "9a7e6134-0f09-405d-bca9-b5b4cf7d262b"
+    },
+    {
+      "id": "c5c63552-7517-4897-a35e-12dd8ff09db8",
+      "type": "file",
+      "positions": {
+        "workflow": {
+          "x": 1350,
+          "y": 0
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 76
+      },
+      "assetId": "c5c63552-7517-4897-a35e-12dd8ff09db8"
+    },
+    {
+      "id": "0167f35a-f800-44e2-9d79-562bfebeb0f4",
+      "type": "file",
+      "positions": {
+        "workflow": {
+          "x": 1800,
+          "y": 0
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 76
+      },
+      "assetId": "0167f35a-f800-44e2-9d79-562bfebeb0f4"
+    },
+    {
+      "id": "06ecc9a1-d9fc-4743-ae83-fca9c0109226",
+      "type": "text",
+      "positions": {
+        "workflow": {
+          "x": 2250,
+          "y": 0
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 500
+      },
+      "assetId": "06ecc9a1-d9fc-4743-ae83-fca9c0109226"
+    },
+    {
+      "id": "1024d406-1eef-4d87-afe6-432e6f0c88b5",
+      "type": "text",
+      "positions": {
+        "workflow": {
+          "x": 2700,
+          "y": 0
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 500
+      },
+      "assetId": "1024d406-1eef-4d87-afe6-432e6f0c88b5"
+    },
+    {
+      "id": "e6bf3c20-2c54-4f54-982d-f27f6232e5d6",
+      "type": "text",
+      "positions": {
+        "workflow": {
+          "x": 3150,
+          "y": 0
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 500
+      },
+      "assetId": "e6bf3c20-2c54-4f54-982d-f27f6232e5d6"
+    },
+    {
+      "id": "06f7bea8-b462-4b58-89b2-27a5e68d157f",
+      "type": "text",
+      "positions": {
+        "workflow": {
+          "x": 0,
+          "y": 600
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 500
+      },
+      "assetId": "06f7bea8-b462-4b58-89b2-27a5e68d157f"
+    },
+    {
+      "id": "d0b54d3b-fdb6-4734-b10f-d61a973f7eb6",
+      "type": "image",
+      "positions": {
+        "workflow": {
+          "x": 450,
+          "y": 600
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 350
+      },
+      "assetId": "d0b54d3b-fdb6-4734-b10f-d61a973f7eb6"
+    },
+    {
+      "id": "70d91f2a-c798-445e-8ca8-ddef743c81fa",
+      "type": "image",
+      "positions": {
+        "workflow": {
+          "x": 900,
+          "y": 600
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 350
+      },
+      "assetId": "70d91f2a-c798-445e-8ca8-ddef743c81fa"
+    },
+    {
+      "id": "dffe624b-127f-493a-91c0-318fb79a93bc",
+      "type": "text",
+      "positions": {
+        "workflow": {
+          "x": 1350,
+          "y": 600
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 500
+      },
+      "assetId": "dffe624b-127f-493a-91c0-318fb79a93bc"
+    },
+    {
+      "id": "e7bd4349-ce85-41e8-a717-3997d05bb542",
+      "type": "file",
+      "positions": {
+        "workflow": {
+          "x": 1800,
+          "y": 600
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 76
+      },
+      "assetId": "e7bd4349-ce85-41e8-a717-3997d05bb542"
+    },
+    {
+      "id": "70aa37d2-1025-492f-ac84-c2ed316001bb",
+      "type": "file",
+      "positions": {
+        "workflow": {
+          "x": 2250,
+          "y": 600
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 76
+      },
+      "assetId": "70aa37d2-1025-492f-ac84-c2ed316001bb"
+    },
+    {
+      "id": "19215880-1ba1-4b15-b554-03a4156203b8",
+      "type": "file",
+      "positions": {
+        "workflow": {
+          "x": 1303,
+          "y": 470.215576171875
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 76
+      },
+      "assetId": "976234d3-049f-4648-9ace-c1f3debdba20",
+      "data": {
+        "name": "ebook-onepager.html",
+        "path": "ebook-onepager.html"
+      }
+    },
+    {
+      "id": "56e913fb-94d9-4ba2-aabb-280d7a6027d2",
+      "type": "file",
+      "positions": {
+        "workflow": {
+          "x": 923,
+          "y": 860.715576171875
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 76
+      },
+      "assetId": "09cd83f2-1908-46fd-943a-f21da870bc4e",
+      "data": {
+        "name": "one-pager.html",
+        "path": "one-pager.html"
+      }
+    },
+    {
+      "id": "8dc27e2c-ee92-45f8-b4b9-0ffed20f7c89",
+      "type": "file",
+      "positions": {
+        "workflow": {
+          "x": 1280,
+          "y": 359.590576171875
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 76
+      },
+      "assetId": "b55f984a-215f-4407-a907-50b6bcbbb719",
+      "data": {
+        "name": "blog1.html",
+        "path": "blog1.html"
+      }
+    },
+    {
+      "id": "040caa1a-ceac-41c4-ab77-9532cb3b99bd",
+      "type": "file",
+      "positions": {
+        "workflow": {
+          "x": 1316,
+          "y": 250.590576171875
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 76
+      },
+      "assetId": "d3fa3e63-c49d-4d89-a48f-c683c838863e",
+      "data": {
+        "name": "blog3.html",
+        "path": "blog3.html"
+      }
+    },
+    {
+      "id": "d6d6d3e3-31b7-470b-8e22-88f005fe4dd0",
+      "type": "file",
+      "positions": {
+        "workflow": {
+          "x": 1299,
+          "y": 117.590576171875
+        }
+      },
+      "size": {
+        "width": 350,
+        "height": 76
+      },
+      "assetId": "293b9a62-4bcd-48d8-88ec-750b397cf8a1",
+      "data": {
+        "name": "blog2.html",
+        "path": "blog2.html"
+      }
+    }
+  ],
+  "edges": []
+}

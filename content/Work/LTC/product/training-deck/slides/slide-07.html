@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AB 1584 — Layer 5</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.slide-content {
+  width: 960px;
+  height: 540px;
+  position: relative;
+  transform-origin: center center;
+}
+</style>
+<script>
+function scaleSlide() {
+  const slide = document.querySelector('.slide-content');
+  if (!slide) return;
+  const slideWidth = 960;
+  const slideHeight = 540;
+  const scaleX = window.innerWidth / slideWidth;
+  const scaleY = window.innerHeight / slideHeight;
+  const scale = Math.min(scaleX, scaleY);
+  slide.style.width = slideWidth + 'px';
+  slide.style.height = slideHeight + 'px';
+  slide.style.transform = `scale(${scale})`;
+  slide.style.transformOrigin = 'center center';
+  slide.style.flexShrink = '0';
+}
+window.addEventListener('load', scaleSlide);
+window.addEventListener('resize', scaleSlide);
+</script>
+</head>
+<body>
+<div class="slide-content" style="background:#f4ecd8; font-family:'Times New Roman', serif; overflow:hidden;">
+
+  <!-- Layer badge -->
+  <svg width="120" height="26" viewBox="0 0 120 26" style="position:absolute; left:60px; top:46px;">
+    <rect width="120" height="26" rx="13" fill="#c5694e"/>
+    <text x="60" y="13" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="11" font-weight="700" fill="#fdfaf3" letter-spacing="2">LAYER 5 &middot; CA</text>
+  </svg>
+
+  <!-- Eyebrow -->
+  <p style="position:absolute; left:60px; top:84px; margin:0; font-size:11px; color:#a04a30; letter-spacing:4px; font-weight:700;">DISTRICT OWNERSHIP &amp; CONTROL</p>
+
+  <!-- Title -->
+  <h1 style="position:absolute; left:60px; top:108px; margin:0; font-size:46px; font-weight:700; color:#3d4a3a; line-height:1.05; letter-spacing:-0.5px;">AB 1584</h1>
+
+  <!-- Subtitle -->
+  <p style="position:absolute; left:60px; top:174px; margin:0; width:560px; font-size:15px; color:#7a5a40; line-height:1.5; font-style:italic;">Custodians vs. owners &mdash; a vital distinction for administrators.</p>
+
+  <!-- Accent -->
+  <svg width="64" height="4" style="position:absolute; left:60px; top:226px;" aria-hidden="true">
+    <rect width="64" height="4" rx="2" fill="#c5694e"/>
+  </svg>
+
+  <!-- Three bulleted items in card -->
+  <div style="position:absolute; left:60px; top:256px; width:480px;">
+
+    <!-- Item 1 -->
+    <div style="display:flex; align-items:flex-start; margin-bottom:14px; padding:14px 18px; background:#e8dcc4; border-radius:10px;">
+      <svg width="34" height="34" viewBox="0 0 34 34" style="flex-shrink:0; margin-right:14px;" aria-hidden="true">
+        <circle cx="17" cy="17" r="17" fill="#c5694e"/>
+        <path d="M11 17 L15 21 L23 13" stroke="#fdfaf3" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p style="margin:0; font-size:14px; color:#3d4a3a; line-height:1.45;">Districts must maintain <span style="font-weight:700;">physical control</span> of student records.</p>
+    </div>
+
+    <!-- Item 2 -->
+    <div style="display:flex; align-items:flex-start; margin-bottom:14px; padding:14px 18px; background:#e8dcc4; border-radius:10px;">
+      <svg width="34" height="34" viewBox="0 0 34 34" style="flex-shrink:0; margin-right:14px;" aria-hidden="true">
+        <circle cx="17" cy="17" r="17" fill="#c5694e"/>
+        <path d="M11 17 L15 21 L23 13" stroke="#fdfaf3" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p style="margin:0; font-size:14px; color:#3d4a3a; line-height:1.45;">Vendors are <span style="font-weight:700;">custodians, not owners</span>.</p>
+    </div>
+
+    <!-- Item 3 -->
+    <div style="display:flex; align-items:flex-start; padding:14px 18px; background:#e8dcc4; border-radius:10px;">
+      <svg width="34" height="34" viewBox="0 0 34 34" style="flex-shrink:0; margin-right:14px;" aria-hidden="true">
+        <circle cx="17" cy="17" r="17" fill="#c5694e"/>
+        <path d="M11 17 L15 21 L23 13" stroke="#fdfaf3" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p style="margin:0; font-size:14px; color:#3d4a3a; line-height:1.45;">Contracts must <span style="font-weight:700;">explicitly codify</span> district ownership.</p>
+    </div>
+  </div>
+
+  <!-- Right column: image + warning callout -->
+  <div style="position:absolute; right:40px; top:256px; width:340px;">
+    <img src="imgs/ab1584.jpg" alt="District ownership" style="width:340px; height:200px; object-fit:cover; border-radius:14px; display:block; box-shadow: 0 6px 20px rgba(120, 90, 50, 0.18);"/>
+    <div style="margin-top:14px; padding:14px; background:#a38060; border-radius:10px;">
+      <p style="margin:0; font-size:12px; color:#fdfaf3; line-height:1.5;"><span style="font-weight:700;">Warning:</span> If the contract doesn&rsquo;t codify ownership, it fails state law.</p>
+    </div>
+  </div>
+
+  <!-- Source -->
+  <p style="position:absolute; left:60px; bottom:32px; margin:0; font-size:10px; color:#a38060; letter-spacing:1px;">CALIFORNIA EDUCATION CODE &sect; 49073.6</p>
+
+  <!-- Page number badge -->
+  <svg style="position:absolute; right:32px; bottom:24px;" width="36" height="36" viewBox="0 0 36 36">
+    <circle cx="18" cy="18" r="18" fill="#8a9e7e"/>
+    <text x="18" y="18" text-anchor="middle" dominant-baseline="central" font-family="Times New Roman, serif" font-size="14" font-weight="600" fill="#fdfaf3">07</text>
+  </svg>
+
+</div>
+</body>
+</html>

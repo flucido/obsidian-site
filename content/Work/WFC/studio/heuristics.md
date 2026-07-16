@@ -1,7 +1,7 @@
-# NeroDesign Critique Heuristics
+# WellFull Collective — Critique Heuristics
 
 ## Purpose
-This framework provides a founder-facing checklist to evaluate any design against the NeroDesign system's evidence-based standards. Every design must pass these gates before client delivery.
+This framework provides a founder-facing checklist to evaluate any design against the WellFull Collective system's evidence-based standards. Every design must pass these gates before client delivery.
 
 ## How to Use
 1. Open the design (Figma, code, or prototype)
